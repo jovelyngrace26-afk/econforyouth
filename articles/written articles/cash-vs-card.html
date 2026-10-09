@@ -1,0 +1,701 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+<title>Cash vs Card: How Paying With Cash Can Help You Save Money | Econ For Youth</title>
+<meta name="description" content="Why paying with cash feels different from paying with a card, and how the "pain of paying" can help you spend less. An Econ For Youth article by Samiksha Meda.">
+<link rel="canonical" href="https://econforyouth.com/articles/cash-vs-card">
+<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+<meta name="author" content="Samiksha Meda">
+<meta name="theme-color" content="#1f4d3a">
+
+<!-- Open Graph -->
+<meta property="og:site_name" content="Econ For Youth">
+<meta property="og:type" content="article">
+<meta property="og:locale" content="en_US">
+<meta property="og:url" content="https://econforyouth.com/articles/cash-vs-card">
+<meta property="og:title" content="Cash vs Card: How Paying With Cash Can Help You Save Money | Econ For Youth">
+<meta property="og:description" content="Why paying with cash feels different from paying with a card, and how the "pain of paying" can help you spend less.">
+<meta property="og:image" content="https://econforyouth.com/assets/og-image.jpg">
+
+<!-- Twitter / X -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Cash vs Card: How Paying With Cash Can Help You Save Money | Econ For Youth">
+<meta name="twitter:description" content="Why paying with cash feels different from paying with a card, and how the "pain of paying" can help you spend less.">
+<meta name="twitter:image" content="https://econforyouth.com/assets/og-image.jpg">
+
+<link rel="apple-touch-icon" sizes="180x180" href="../icons/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="../icons/android-chrome-512x512.png">
+<link rel="icon" type="image/png" sizes="16x16" href="../icons/android-chrome-192x192.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,700&family=Source+Serif+4:opsz,wght@8..60,400;8..60,500;8..60,600;8..60,700&family=Montserrat:ital,wght@0,100;0,400;0,500;0,600;0,700;1,500&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink:#101d16;
+    --paper:#f6f4ec;
+    --paper-dim:#ece8db;
+    --forest:#1f4d3a;
+    --forest-deep:#122b20;
+    --lime:#c6ff6b;
+    --pink:#ff5fa2;
+    --line: rgba(16,29,22,.16);
+    --line-strong: rgba(16,29,22,.4);
+    --display: 'Source Serif 4', Georgia, serif;
+    --body: 'Montserrat', sans-serif;
+    --mono: 'Space Mono', monospace;
+    --maxw: 1180px;
+    --article-w: 720px;
+  }
+  *{margin:0;padding:0;box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    background:var(--paper);
+    color:var(--ink);
+    font-family:var(--body);
+    font-size:16px;
+    line-height:1.55;
+    overflow-x:hidden;
+    opacity:0;
+    transition:opacity .5s ease;
+  }
+  body.loaded{opacity:1;}
+  ::selection{background:#f6dbdf;color:var(--ink);}
+  a{color:inherit;text-decoration:none;}
+  img{max-width:100%;display:block;}
+
+  .wrap{max-width:var(--maxw); margin:0 auto; padding:0 28px;}
+  .eyebrow{
+    font-family:var(--mono);
+    font-size:12px;
+    letter-spacing:.14em;
+    text-transform:uppercase;
+    display:inline-flex;
+    align-items:center;
+    gap:8px;
+    color:var(--ink);
+  }
+  .eyebrow::before{content:"";width:7px;height:7px;background:var(--pink);border-radius:50%;display:inline-block;}
+
+  h1,h2,h3{font-family:var(--display); font-weight:600; letter-spacing:0; color:var(--ink);}
+
+  .btn{
+    font-family:var(--mono);
+    font-size:13px;
+    letter-spacing:.06em;
+    text-transform:uppercase;
+    border:1.5px solid var(--ink);
+    padding:13px 22px;
+    background:transparent;
+    border-radius:999px;
+    display:inline-flex;
+    align-items:center;
+    gap:10px;
+    cursor:pointer;
+    position:relative;
+    overflow:hidden;
+    transition: color .35s ease, border-color .35s ease;
+  }
+  .btn::before{
+    content:"";
+    position:absolute; inset:0;
+    background:var(--ink);
+    transform:translateY(101%);
+    transition:transform .35s cubic-bezier(.6,0,.3,1);
+    z-index:0;
+  }
+  .btn span{position:relative; z-index:1; transition:color .35s ease;}
+  .btn:hover{color:var(--paper);}
+  .btn:hover::before{transform:translateY(0);}
+  .btn.solid{background:var(--ink); color:var(--paper);}
+  .btn.solid::before{background:var(--lime);}
+  .btn.solid:hover{color:var(--ink);}
+
+  /* ---------- NAV ---------- */
+  nav{
+    position:fixed; top:0; left:0; right:0; z-index:150;
+    display:flex; align-items:center; justify-content:space-between;
+    padding:18px 28px;
+    transition:background .3s ease, border-color .3s ease;
+    border-bottom:1px solid transparent;
+  }
+  nav.scrolled{background:rgba(246,244,236,.86); backdrop-filter:blur(10px); border-color:var(--line);}
+  .nav-logo{
+    display:flex; align-items:center; gap:10px;
+    font-family:'Bricolage Grotesque', sans-serif; font-weight:700; font-size:17px;
+  }
+  .nav-globe{width:22px;height:22px;}
+  .nav-links{display:flex; gap:28px; font-family:var(--mono); font-size:12px; text-transform:uppercase; letter-spacing:.08em;}
+  .nav-links a{position:relative; padding-bottom:3px;}
+  .nav-links a::after{content:"";position:absolute;left:0;bottom:0;width:0;height:1.5px;background:var(--forest);transition:width .3s ease;}
+  .nav-links a:hover::after{width:100%;}
+  .nav-links a.current::after{width:100%;}
+  @media (max-width:720px){ .nav-links{display:none;} }
+
+  .nav-right{display:flex; align-items:center; gap:28px;}
+  .nav-cta{
+    padding:8px 16px;
+    border:1.5px solid var(--ink);
+    border-radius:999px;
+    transition:background .3s ease, color .3s ease;
+    font-family:var(--mono);
+    font-size:12px;
+    text-transform:uppercase;
+    letter-spacing:.08em;
+    position:relative;
+  }
+  .nav-cta::after{ display:none; }
+  .nav-cta:hover{ background:var(--ink); color:var(--paper); }
+  @media (max-width:720px){ .nav-cta{display:none;} }
+
+  .nav-burger{
+    display:none;
+    flex-direction:column;
+    justify-content:space-between;
+    width:26px; height:18px;
+    background:none; border:none; padding:0; cursor:pointer;
+    z-index:110;
+  }
+  .nav-burger span{
+    display:block; width:100%; height:2px;
+    background:var(--ink);
+    border-radius:2px;
+    transition:transform .3s ease, opacity .3s ease;
+  }
+  .nav-burger.open span:nth-child(1){ transform:translateY(8px) rotate(45deg); }
+  .nav-burger.open span:nth-child(2){ opacity:0; }
+  .nav-burger.open span:nth-child(3){ transform:translateY(-8px) rotate(-45deg); }
+
+  .mobile-nav{
+    display:none;
+    position:fixed;
+    top:0; left:0; right:0;
+    background:var(--paper);
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+    gap:20px;
+    padding:88px 28px 28px;
+    height:auto;
+    transform:translateY(-100%);
+    transition:transform .4s cubic-bezier(.2,.7,.3,1);
+    z-index:105;
+    font-family:var(--mono);
+    font-size:15px;
+    text-transform:uppercase;
+    letter-spacing:.08em;
+    border-bottom:1px solid var(--line-strong);
+    box-shadow:0 20px 40px -24px rgba(0,0,0,.3);
+  }
+  .mobile-nav.open{ transform:translateY(0); }
+
+  @media (max-width:720px){
+    .nav-burger{ display:flex; }
+    .mobile-nav{ display:flex; }
+  }
+
+  /* ---------- ARTICLE HEADER ---------- */
+  .article-header{
+    padding:150px 0 50px;
+    background: linear-gradient(356deg, rgba(246, 244, 236, 1) 0%, rgba(209, 255, 240, 0.77) 91%, rgba(246, 244, 236, 1) 100%);
+    border-bottom:1px solid var(--line-strong);
+  }
+  .article-header .inner{max-width:var(--article-w); margin:0 auto;}
+  .back-link{
+    font-family:var(--mono); font-size:12px; letter-spacing:.06em; text-transform:uppercase;
+    display:inline-flex; align-items:center; gap:8px; color:#33453b;
+    margin-bottom:26px;
+  }
+  .back-link svg{width:14px; height:14px;}
+  .back-link:hover{color:var(--ink);}
+  .article-header .tag{
+    font-family:var(--mono); font-size:11px; text-transform:uppercase; letter-spacing:.08em; color:var(--pink);
+  }
+  .article-header h1{
+    font-size:clamp(2rem,4.6vw,3.2rem);
+    line-height:1.1;
+    margin-top:16px;
+    max-width:22ch;
+  }
+  .article-header .dek{
+    font-size:18px;
+    color:#33453b;
+    margin-top:20px;
+    max-width:56ch;
+    line-height:1.6;
+  }
+  .byline{
+    display:flex; align-items:center; gap:14px;
+    margin-top:34px;
+    padding-top:24px;
+    border-top:1px solid var(--line);
+  }
+  .byline-avatar{
+    width:38px; height:38px; border-radius:50%;
+    background:var(--forest);
+    color:var(--paper);
+    display:flex; align-items:center; justify-content:center;
+    font-family:var(--display); font-weight:700; font-size:14px;
+    flex-shrink:0;
+  }
+  .byline-text{font-family:var(--mono); font-size:12px; letter-spacing:.02em; color:#33453b; line-height:1.5;}
+  .byline-text strong{color:var(--ink); font-weight:700; display:block; font-size:13px; margin-bottom:2px;}
+
+  /* ---------- smooth entrance ---------- */
+  .article-header .back-link,
+  .article-header .tag,
+  .article-header h1,
+  .article-header .dek,
+  .article-header .byline{
+    opacity:0;
+    transform:translateY(14px);
+  }
+  body.loaded .article-header .back-link{ animation: header-in .6s cubic-bezier(.2,.7,.3,1) .05s forwards; }
+  body.loaded .article-header .tag{ animation: header-in .6s cubic-bezier(.2,.7,.3,1) .12s forwards; }
+  body.loaded .article-header h1{ animation: header-in .6s cubic-bezier(.2,.7,.3,1) .18s forwards; }
+  body.loaded .article-header .dek{ animation: header-in .6s cubic-bezier(.2,.7,.3,1) .26s forwards; }
+  body.loaded .article-header .byline{ animation: header-in .6s cubic-bezier(.2,.7,.3,1) .34s forwards; }
+  @keyframes header-in{
+    to{ opacity:1; transform:translateY(0); }
+  }
+  @media (prefers-reduced-motion: reduce){
+    .article-header .back-link, .article-header .tag, .article-header h1, .article-header .dek, .article-header .byline{
+      animation:none !important; opacity:1; transform:none;
+    }
+  }
+
+  /* ---------- ARTICLE BODY ---------- */
+  .article-body{
+    max-width:var(--article-w);
+    margin:0 auto;
+    padding:56px 0 20px;
+  }
+  .article-body p{
+    font-size:17px;
+    line-height:1.75;
+    color:#1c2921;
+    margin-bottom:24px;
+  }
+  .article-body p:first-of-type{
+    font-size:19px;
+    color:var(--ink);
+  }
+  .article-body h2{
+    font-size:clamp(1.4rem,3vw,1.9rem);
+    line-height:1.25;
+    margin:52px 0 20px;
+  }
+  .article-body h3{
+    font-size:1.2rem;
+    line-height:1.3;
+    margin:38px 0 14px;
+  }
+  .article-body ul, .article-body ol{
+    margin:0 0 24px 22px;
+    font-size:17px;
+    line-height:1.75;
+    color:#1c2921;
+  }
+  .article-body li{margin-bottom:8px;}
+  .article-body figure{margin:40px 0;}
+  .article-body figure img{width:100%; border:1px solid var(--line-strong);}
+  .article-body figcaption{
+    font-family:var(--mono);
+    font-size:12px;
+    color:#5b6a5f;
+    margin-top:10px;
+    line-height:1.5;
+  }
+  blockquote{
+    margin:40px 0;
+    padding:4px 0 4px 26px;
+    border-left:2px solid var(--pink);
+    font-family:var(--display);
+    font-style:italic;
+    font-weight:500;
+    font-size:1.3rem;
+    line-height:1.45;
+    color:var(--ink);
+  }
+  .article-body strong{font-weight:700;}
+  .article-body a.inline-link{
+    text-decoration:underline;
+    text-decoration-color:var(--line-strong);
+    text-underline-offset:3px;
+    transition:text-decoration-color .25s ease;
+  }
+  .article-body a.inline-link:hover{text-decoration-color:var(--ink);}
+
+  .share-row{
+    display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:16px;
+    max-width:var(--article-w); margin:0 auto; padding:36px 0 60px; border-bottom:1px solid var(--line);
+  }
+  .tag-pill{
+    font-family:var(--mono); font-size:11px; text-transform:uppercase; letter-spacing:.06em;
+    border:1px solid var(--line-strong); padding:7px 14px;
+  }
+
+  /* ---------- REFERENCES ---------- */
+  .references{
+    max-width:var(--article-w);
+    margin:0 auto;
+    padding:56px 0 90px;
+  }
+  .references h2{
+    font-size:1.15rem;
+    text-transform:uppercase;
+    letter-spacing:.04em;
+    margin-bottom:26px;
+  }
+  .references ol{
+    list-style:none;
+    counter-reset:refs;
+    font-family:var(--body);
+    font-size:14px;
+    line-height:1.7;
+    color:#33453b;
+  }
+  .references li{
+    counter-increment:refs;
+    display:flex;
+    gap:14px;
+    padding:14px 0;
+    border-top:1px solid var(--line);
+  }
+  .references li:first-child{border-top:1px solid var(--line-strong);}
+  .references li::before{
+    content:counter(refs);
+    font-family:var(--mono);
+    font-size:12px;
+    color:var(--pink);
+    flex-shrink:0;
+    padding-top:1px;
+  }
+  .references li a{
+    text-decoration:underline;
+    text-decoration-color:var(--line-strong);
+    text-underline-offset:3px;
+    word-break:break-word;
+  }
+  .references li a:hover{text-decoration-color:var(--ink);}
+
+  /* ---------- FOOTER ---------- */
+  footer{background:var(--forest-deep); color:var(--paper); padding:70px 0 28px;}
+  .foot-top{display:flex; justify-content:center; gap:30px; flex-wrap:wrap; padding-bottom:50px; border-bottom:1px solid rgba(246,244,236,.15);}
+  .foot-cta{display:flex; flex-direction:column; gap:16px; align-items:center; text-align:center;}
+  .foot-links{font-family:var(--mono); font-size:12px; text-transform:uppercase; letter-spacing:.06em; display:flex; justify-content:center; gap:22px; flex-wrap:wrap;}
+  .foot-bottom{display:flex; justify-content:space-between; padding-top:24px; font-family:var(--mono); font-size:11px; color:#a9b3ab; flex-wrap:wrap; gap:10px;}
+
+  /* ---------- RESPONSIVE: tablet / iPad ---------- */
+  html{-webkit-text-size-adjust:100%; text-size-adjust:100%;}
+  .article-body p, .article-body li, .references li{overflow-wrap:break-word;}
+  .nav-burger{position:relative;}
+  .nav-burger::after{content:"";position:absolute; inset:-14px;} /* bigger tap area */
+  .mobile-nav a{padding:6px 0;}
+
+  @media (max-width:1024px){
+    .wrap{padding:0 40px;}
+    nav{padding:16px 32px;}
+    .article-header{padding:128px 0 44px;}
+    .article-header h1{max-width:none;}
+    .article-body, .share-row, .references{max-width:680px;}
+  }
+
+  /* ---------- RESPONSIVE: phones ---------- */
+  @media (max-width:720px){
+    .wrap{padding:0 20px;}
+    nav{padding:14px 20px; padding-top:max(14px, env(safe-area-inset-top));}
+    .mobile-nav{padding:84px 24px 28px;}
+    .article-header{padding:100px 0 32px;}
+    .back-link{margin-bottom:20px;}
+    .article-header h1{font-size:clamp(1.75rem,7.4vw,2.3rem); line-height:1.15; margin-top:12px;}
+    .article-header .dek{font-size:16px; line-height:1.6; margin-top:16px;}
+    .byline{margin-top:26px; padding-top:20px;}
+
+    .article-body{padding:34px 0 8px;}
+    .article-body p{font-size:16.5px; line-height:1.7; margin-bottom:20px;}
+    .article-body p:first-of-type{font-size:17.5px;}
+    .article-body h2{margin:38px 0 14px;}
+    .article-body h3{margin:30px 0 12px;}
+    .article-body ul, .article-body ol{font-size:16.5px; margin-left:20px;}
+    blockquote{margin:28px 0; padding-left:18px; font-size:1.12rem; line-height:1.45;}
+
+    .share-row{flex-direction:column; align-items:flex-start; padding:26px 0 40px;}
+    .share-row .btn{width:100%; justify-content:center;}
+    .btn{min-height:46px;}
+
+    .references{padding:36px 0 60px;}
+    .references h2{font-size:1.05rem; margin-bottom:20px;}
+    .references li{font-size:13.5px; gap:12px; padding:13px 0; line-height:1.65;}
+
+    footer{padding:52px 0 calc(24px + env(safe-area-inset-bottom));}
+    .foot-top{padding-bottom:36px;}
+    .foot-cta .btn{width:100%; justify-content:center;}
+    .foot-links{gap:14px 20px;}
+    .foot-bottom{flex-direction:column; align-items:center; text-align:center; gap:8px;}
+  }
+
+  @media (max-width:380px){
+    .wrap{padding:0 16px;}
+    .article-body p{font-size:16px;}
+    .article-body p:first-of-type{font-size:17px;}
+  }
+
+  /* landscape phones: don't let the dropdown menu overflow */
+  @media (max-height:480px) and (max-width:900px){
+    .mobile-nav{padding-top:70px; gap:10px; overflow-y:auto; max-height:100vh;}
+  }
+
+  /* ---------- READABILITY & DEVICE POLISH ---------- */
+  .article-body p, .article-body li, .article-header .dek{text-wrap:pretty;}
+  .article-header h1, .article-body h2, .article-body h3, blockquote{text-wrap:balance;}
+  nav.scrolled{backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px);}
+  a, button{-webkit-tap-highlight-color:rgba(31,77,58,.12);}
+  .references li a{overflow-wrap:anywhere;}
+  .references li::before{min-width:1.6em;}
+  .byline{flex-wrap:wrap;}
+
+  /* iPad / tablets */
+  @media (min-width:721px) and (max-width:1024px){
+    .article-body p, .article-body ul, .article-body ol{font-size:17.5px; line-height:1.75;}
+    .article-body p:first-of-type{font-size:19px;}
+    .article-body h2{margin-top:48px;}
+    .references li{font-size:14.5px;}
+  }
+
+  /* phones */
+  @media (max-width:720px){
+    .byline-text{font-size:12.5px;}
+    .tag-pill{font-size:10.5px;}
+    .mobile-nav{max-height:100vh; max-height:100dvh; overflow-y:auto;}
+  }
+
+  @media (prefers-reduced-motion: reduce){
+    body{transition:none;}
+    html{scroll-behavior:auto;}
+  }
+</style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+{
+  "@type": "Article",
+  "@id": "https://econforyouth.com/articles/cash-vs-card#article",
+  "headline": "Cash vs Card: How Paying With Cash Can Help You Save Money",
+  "description": "Why paying with cash feels different from paying with a card, and how the "pain of paying" can help you spend less.",
+  "author": { "@type": "Person", "name": "Samiksha Meda" },
+  "publisher": { "@type": "NGO", "name": "Econ For Youth", "url": "https://econforyouth.com/" },
+  "mainEntityOfPage": "https://econforyouth.com/articles/cash-vs-card",
+  "inLanguage": "en"
+},
+{
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://econforyouth.com/" },
+      { "@type": "ListItem", "position": 2, "name": "Articles", "item": "https://econforyouth.com/articles" },
+      { "@type": "ListItem", "position": 3, "name": "Cash vs Card: How Paying With Cash Can Help You Save Money", "item": "https://econforyouth.com/articles/cash-vs-card" }
+  ]
+}
+]
+}
+</script>
+</head>
+<body>
+
+<nav id="nav">
+  <a class="nav-logo" href="../index.html#top">
+    <svg class="nav-globe" viewBox="0 0 100 100" fill="none" stroke="currentColor" stroke-width="1.4">
+      <circle cx="50" cy="50" r="42"/>
+      <ellipse cx="50" cy="50" rx="18" ry="42"/>
+      <ellipse cx="50" cy="50" rx="42" ry="18"/>
+      <path d="M8,50 A42,42 0 0,1 92,50" />
+      <path d="M14,32 A42,42 0 0,1 86,32" />
+      <path d="M14,68 A42,42 0 0,1 86,68" />
+    </svg>
+    Econ For Youth
+  </a>
+  <div class="nav-right">
+    <div class="nav-links">
+      <a href="../index.html#about">About</a>
+      <a href="../index.html#mission">Mission</a>
+      <a href="index.html" class="current">Articles</a>
+    </div>
+    <a href="../opportunities/volunteer.html" class="nav-cta">Join Our Team</a>
+    <button class="nav-burger" id="navBurger" aria-label="Open menu" aria-expanded="false">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+  </div>
+</nav>
+
+<div class="mobile-nav" id="mobileNav">
+  <a href="../index.html#about">About</a>
+  <a href="../index.html#mission">Mission</a>
+  <a href="index.html">Articles</a>
+  <a href="../opportunities/volunteer.html">Join Our Team</a>
+</div>
+
+<!-- ================= ARTICLE HEADER ================= -->
+<header class="article-header">
+  <div class="wrap">
+    <div class="inner">
+      <a class="back-link" href="index.html">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+        Back to Articles
+      </a>
+      <div class="tag">Behavioral</div>
+      <h1>Cash vs Card: How Paying With Cash Can Help You Save Money</h1>
+      <p class="dek">From the stock market crash of 1929 to the tap of a card today, the way money feels shapes how we spend it. Here is the psychology behind it, and how to use it to your advantage.</p>
+      <div class="byline">
+        <div class="byline-avatar">SM</div>
+        <div class="byline-text">
+          <strong>Samiksha Meda</strong>
+          5 min read · Econ For Youth
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<main class="wrap">
+
+  <!-- ================= ARTICLE BODY ================= -->
+  <!--
+    Article content goes here. Use <h2> for major sections, <h3> for
+    sub-sections, <p> for body copy, and <blockquote> to pull out a
+    key line. Swap the placeholder paragraphs below for the real text.
+  -->
+  <article class="article-body">
+    <p>In the 1920s, people borrowed money to pay for stocks they couldn’t afford. When prices fell, that behavior helped turn a market crash into one of the biggest financial crises in history, also known as the Great Depression. Now, nearly a century later, our minds still influence the way we spend money, and we can use this to our advantage.</p>
+
+    <h2>The History</h2>
+    <p>In the 1920s, it was common practice for investors to buy stocks by only paying 10% of the actual price, borrowing the rest from brokers and banks. They were optimistic that the stock prices would continue rising, and they would earn their money back anyway.</p>
+    <p>On October 23rd, 1929, the value of the stock market dipped sharply by 4.6%. The following day, October 24, became known as Black Thursday, which was when there was heavy selling of stocks and panic spread throughout the market.</p>
+    <p>What happened was that brokers demanded money from the investors to cover the difference, due to the value of the stock not being able to cover the amount of money borrowed by the investor. However, many investors didn’t have that money available to pay the broker, forcing brokers to sell millions of stocks at whatever price they could in hopes of recovering their loaned amount back. This massive selling all at once drove the prices of the stocks down dramatically.</p>
+    <p>Commercial banks at the time were also involved in stock-market lending, providing loans to brokers and other participants using their deposits. Brokers would invest in the stock market on the banks behalf.</p>
+    <p>When the value of the stocks crashed, brokers weren’t able to pay back the loans given by the banks, leaving banks with large amounts of debt and worthless stock collateral. It puts pressure on the financial system. A few years later, in the late 1930s, fears about the banks caused the depositors to rapidly withdraw their money. This resulted in bank runs, when people crowded outside banks demanding their deposits back.</p>
+    <p>Since banks do not keep all of their deposits in cash, commercial banks were suspended, causing millions of families to lose their life savings even if they didn’t invest in the stock market. This, and many other financial crises and banking panics, eventually led to the crisis we now know as The Great Depression.</p>
+
+    <h2>The Science</h2>
+    <p>The stock market crash and the banking panics show how strongly human behavior can influence financial outcomes. Investors became caught up in optimism and speculation, while fear later led people to rush to withdraw their money. These decisions were not based purely on calculations, they were influenced by how people perceived risk, loss, and money.</p>
+    <p>Almost a century later, we still make financial decisions based on how money feels. But instead of determining whether we invest in a stock market share or rush to a bank, these psychological effects can influence something much more ordinary, how much we spend.</p>
+    <p>So, if the amount of money doesn't change, why can paying with cash feel different from paying with a card?</p>
+    <p>Well, Forbes conducted a survey asking over 2,000 people what payment methods would make them spend the most money. 23% of people reported that using cash would make them spend more. Over double that, 58%, said that paying with card resulted in spending more. When it comes to impulse buys, 52% of people said they make more impulsive decisions to buy something when paying with card compared to the 24% of people who said cash.</p>
+    <p>This study supports the idea that paying with cash makes people more conscious of what they’re spending, also making it hurt more than paying with card. This concept is called “pain of paying”.</p>
+
+    <blockquote>When you pay for something with cash, you are forced to physically hand over the bills.</blockquote>
+
+    <p>This makes the financial loss more immediate and noticeable for you compared to paying with card, as you don’t physically give up something.</p>
+    <p>As another perspective, researchers of Carnegie Mellon, Stanford, and MIT conducted a study to research this theory. They gave participants cash, then showed the prices of objects they could buy while scanning their brains in an MRI machine. When they encountered prices they considered too high, they had to make decisions on whether or not to purchase the items.</p>
+    <p>When researchers saw the results of the MRI, they noticed that when the participants saw the prices that were “too high”, it correlated with increased activity in the insula. This isn’t necessarily the brain’s pain center, but is more so activated during decision making and connecting internal thoughts to external action, like deciding whether to buy the items or not.</p>
+    <p>It is also involved in processing a range of emotional signals, often associated with the unpleasantness of a situation, like pain. Though the “pain of paying” concept involves more than just one region of the brain lighting up, this study is consistent with the concept, as it shows how your brain can respond to things like decision making and the pain of seeing high prices.</p>
+
+    <h2>The Application</h2>
+    <p>Although this may sound hard to combat in our daily lives, there are ways we can better manage our money by using this idea. One method is called “Cash Stuffing”. This is a method where you use physical cash and allocate it into different envelopes for different expenses, replenishing them each “cycle”.</p>
+    <p>For example, imagine you give yourself a budget of $100 for a cycle of one month. Rather than normally keeping that amount available on your card for any purchase, you divide it based on different expenses. Maybe you allocate $25 towards dining out. Once that $25 is spent, you shouldn’t take money from the other envelopes and use it on dining out. You must wait until the end of the cycle, in this case a month, before replacing the $25.</p>
+    <p>This helps so that you can easily manage each portion of your budget, rather than splurging it on one category and not having enough money left for the others. This method stems from the idea of “mental accounting”, which is the separation of money into mental categories, and can help manage spending more efficiently.</p>
+    <p>Other ways you can reduce spending could be by removing saved card details, waiting 24 hours before buying something to ensure you really need it, and checking your balance before and after a purchase to make it more noticeable.</p>
+    <p>The common theme throughout these methods is that they all add friction when purchasing products, leading to a reduction in your expenditure. It’s the process of making spending slightly less effortless, which helps us thoroughly think through our purchases and make more deliberate decisions.</p>
+
+    <h2>The Takeaway</h2>
+    <p>From the investors of the 1920s to our purchases today, financial decisions are influenced by more than mathematical calculations. The goal isn't to completely abandon cards or carry cash everywhere. Instead, understanding the psychology behind spending can help us make better decisions for ourselves. Sometimes, spending less isn't about having more self-control. It might simply be about making the cost feel real.</p>
+  </article>
+
+  <div class="share-row">
+    <span class="tag-pill">Behavioral Economics</span>
+    <a class="btn solid" href="index.html"><span>More articles</span></a>
+  </div>
+
+  <!-- ================= REFERENCES ================= -->
+  <!--
+    Add one <li> per source. The number is generated automatically —
+    just paste the citation text and link.
+  -->
+  <section class="references">
+    <h2>References</h2>
+    <ol>
+      <li><a href="https://www.forbes.com/advisor/business/software/people-twice-likely-spend-using-card-than-cash/" target="_blank" rel="noopener">Haan, K. (2024, May 16). People Are Twice As Likely To Spend More Money When Using Card Than Cash In 2024 – Forbes Advisor. Www.Forbes.Com.</a></li>
+      <li><a href="https://www.cmu.edu/homepage/practical/2007/winter/spending-til-it-hurts.shtml" target="_blank" rel="noopener">Spend “Til It Hurts - Carnegie Mellon University | CMU. (n.d.). Www.Cmu.Edu.</a></li>
+      <li><a href="https://doi.org/10.1016/j.elerap.2015.03.002" target="_blank" rel="noopener">Runnemark, E., Hedman, J., & Xiao, X. (2015). Do consumers pay more using debit cards than cash? <em>Electronic Commerce Research and Applications, 14</em>(5), 285–291.</a></li>
+      <li><a href="https://www.investopedia.com/articles/pf/08/pay-in-cash.asp" target="_blank" rel="noopener">Beattie, A. (2020). Should You Pay in Cash? <em>Investopedia.</em></a></li>
+      <li><a href="https://www.bajajamc.com/knowledge-centre/psychology-of-spending-cash-vs-upi" target="_blank" rel="noopener">Cash vs UPI: The Psychology Behind Spending Habits. (2025, November). Bajaj Finserv Amc.</a></li>
+      <li><a href="https://insidebe.com/articles/pain-of-paying/" target="_blank" rel="noopener">InsideBE. (2022, August 5). Pain of Paying – Everything You Need to Know. <em>InsideBE.</em></a></li>
+      <li><a href="https://www.federalreservehistory.org/essays/stock-market-crash-of-1929" target="_blank" rel="noopener">Richardson, G., Komai, A., Gou, M., & Park, D. (2013, November 22). Stock market crash of 1929. <em>Federal Reserve History.</em></a></li>
+      <li><a href="https://www.ebsco.com/research-starters/history/stock-market-crash-1929/" target="_blank" rel="noopener">Selby, S. (2022). Stock market crash of 1929. In <em>Research Starters.</em> EBSCO.</a></li>
+      <li><a href="https://billofrightsinstitute.org/essays/the-crash-of-1929/" target="_blank" rel="noopener">Dickson, P., & Independent Historian. (2020). The Crash of 1929. <em>Bill of Rights Institute.</em></a></li>
+      <li><a href="https://doi.org/10.1093/jcr/ucag027" target="_blank" rel="noopener">Bechler, C. J., Catapano, R., Huang, S., & Urminsky, O. (2026). A Mega-Replication of the Effect of Cash Versus Card Payment on Pain of Paying: Magnitude, Behavioral Outcomes, and Moderators. <em>Journal of Consumer Research.</em></a></li>
+    </ol>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="foot-top">
+      <div class="foot-cta">
+        <a href="https://ig.me/m/econforyouth" class="btn solid"><span>DM for collaborations</span></a>
+        <div class="foot-links">
+          <a href="../index.html#about">About</a>
+          <a href="../index.html#mission">Mission</a>
+          <a href="../articles/index.html">Articles</a>
+          <a href="volunteer.html">Volunteer</a>
+          <a href="https://instagram.com/econforyouth">Instagram</a>
+        </div>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>© 2026 Econ For Youth — Student-Led Initiative</span>
+      <span>Exploring Economics Together Through Curiosity</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+  // reveal the page only once fonts are ready, so there's no visible font swap/glitch,
+  // and it triggers the header's entrance animation for a smooth open
+  function revealPage(){ document.body.classList.add('loaded'); }
+  if (document.fonts && document.fonts.ready) {
+    document.fonts.ready.then(revealPage);
+    setTimeout(revealPage, 600); // safety fallback if fonts take too long
+  } else {
+    revealPage();
+  }
+
+  const nav = document.getElementById('nav');
+  window.addEventListener('scroll', () => {
+    nav.classList.toggle('scrolled', window.scrollY > 40);
+  }, { passive: true });
+
+  const navBurger = document.getElementById('navBurger');
+  const mobileNav = document.getElementById('mobileNav');
+  function closeMobileNav(){
+    navBurger.classList.remove('open');
+    mobileNav.classList.remove('open');
+    navBurger.setAttribute('aria-expanded','false');
+  }
+  navBurger.addEventListener('click', () => {
+    const isOpen = navBurger.classList.toggle('open');
+    mobileNav.classList.toggle('open', isOpen);
+    navBurger.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+  });
+  mobileNav.querySelectorAll('a').forEach(a => {
+    a.addEventListener('click', closeMobileNav);
+  });
+
+  if (window.matchMedia('(hover: hover)').matches) {
+    document.querySelectorAll('.btn').forEach(btn => {
+      btn.addEventListener('mousemove', (e) => {
+        const r = btn.getBoundingClientRect();
+        const x = (e.clientX - r.left - r.width / 2) * 0.18;
+        const y = (e.clientY - r.top - r.height / 2) * 0.3;
+        btn.style.transform = `translate(${x}px, ${y}px)`;
+      });
+      btn.addEventListener('mouseleave', () => { btn.style.transform = 'translate(0,0)'; });
+    });
+  }
+</script>
+</body>
+</html>
