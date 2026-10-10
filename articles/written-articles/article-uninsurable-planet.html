@@ -2,27 +2,27 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Understanding Behavioral Economics | Econ For Youth</title>
-<meta name="description" content="Exploring how psychology and cognitive biases shape the way we make economic decisions — an Econ For Youth article by Minnoli Tiwari.">
-<link rel="canonical" href="https://econforyouth.com/articles/understanding-behavioral-economics">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+<title>An Uninsurable Planet: Cacophony of the Collapsing World | Econ For Youth</title>
+<meta name="description" content="How climate change is straining property insurance, and what governments can do to keep homes and businesses protected. An Econ For Youth article by Fawad Waheed.">
+<link rel="canonical" href="https://econforyouth.com/articles/uninsurable-planet">
 <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
-<meta name="author" content="Minnoli Tiwari">
+<meta name="author" content="Fawad Waheed">
 <meta name="theme-color" content="#1f4d3a">
 
 <!-- Open Graph -->
 <meta property="og:site_name" content="Econ For Youth">
 <meta property="og:type" content="article">
 <meta property="og:locale" content="en_US">
-<meta property="og:url" content="https://econforyouth.com/articles/understanding-behavioral-economics">
-<meta property="og:title" content="Understanding Behavioral Economics | Econ For Youth">
-<meta property="og:description" content="Exploring how psychology and cognitive biases shape the way we make economic decisions.">
+<meta property="og:url" content="https://econforyouth.com/articles/uninsurable-planet">
+<meta property="og:title" content="An Uninsurable Planet: Cacophony of the Collapsing World | Econ For Youth">
+<meta property="og:description" content="How climate change is straining property insurance, and what governments can do to keep homes and businesses protected.">
 <meta property="og:image" content="https://econforyouth.com/assets/og-image.jpg">
 
 <!-- Twitter / X -->
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Understanding Behavioral Economics | Econ For Youth">
-<meta name="twitter:description" content="Exploring how psychology and cognitive biases shape the way we make economic decisions.">
+<meta name="twitter:title" content="An Uninsurable Planet: Cacophony of the Collapsing World | Econ For Youth">
+<meta name="twitter:description" content="How climate change is straining property insurance, and what governments can do to keep homes and businesses protected.">
 <meta name="twitter:image" content="https://econforyouth.com/assets/og-image.jpg">
 
 <link rel="apple-touch-icon" sizes="180x180" href="../icons/apple-touch-icon.png">
@@ -386,6 +386,102 @@
   .foot-cta{display:flex; flex-direction:column; gap:16px; align-items:center; text-align:center;}
   .foot-links{font-family:var(--mono); font-size:12px; text-transform:uppercase; letter-spacing:.06em; display:flex; justify-content:center; gap:22px; flex-wrap:wrap;}
   .foot-bottom{display:flex; justify-content:space-between; padding-top:24px; font-family:var(--mono); font-size:11px; color:#a9b3ab; flex-wrap:wrap; gap:10px;}
+
+  /* ---------- RESPONSIVE: tablet / iPad ---------- */
+  html{-webkit-text-size-adjust:100%; text-size-adjust:100%;}
+  .article-body p, .article-body li, .references li{overflow-wrap:break-word;}
+  .nav-burger{position:relative;}
+  .nav-burger::after{content:"";position:absolute; inset:-14px;} /* bigger tap area */
+  .mobile-nav a{padding:6px 0;}
+
+  @media (max-width:1024px){
+    .wrap{padding:0 40px;}
+    nav{padding:16px 32px;}
+    .article-header{padding:128px 0 44px;}
+    .article-header h1{max-width:none;}
+    .article-body, .share-row, .references{max-width:680px;}
+  }
+
+  /* ---------- RESPONSIVE: phones ---------- */
+  @media (max-width:720px){
+    .wrap{padding:0 20px;}
+    nav{padding:14px 20px; padding-top:max(14px, env(safe-area-inset-top));}
+    .mobile-nav{padding:84px 24px 28px;}
+    .article-header{padding:100px 0 32px;}
+    .back-link{margin-bottom:20px;}
+    .article-header h1{font-size:clamp(1.75rem,7.4vw,2.3rem); line-height:1.15; margin-top:12px;}
+    .article-header .dek{font-size:16px; line-height:1.6; margin-top:16px;}
+    .byline{margin-top:26px; padding-top:20px;}
+
+    .article-body{padding:34px 0 8px;}
+    .article-body p{font-size:16.5px; line-height:1.7; margin-bottom:20px;}
+    .article-body p:first-of-type{font-size:17.5px;}
+    .article-body h2{margin:38px 0 14px;}
+    .article-body h3{margin:30px 0 12px;}
+    .article-body ul, .article-body ol{font-size:16.5px; margin-left:20px;}
+    blockquote{margin:28px 0; padding-left:18px; font-size:1.12rem; line-height:1.45;}
+
+    .share-row{flex-direction:column; align-items:flex-start; padding:26px 0 40px;}
+    .share-row .btn{width:100%; justify-content:center;}
+    .btn{min-height:46px;}
+
+    .references{padding:36px 0 60px;}
+    .references h2{font-size:1.05rem; margin-bottom:20px;}
+    .references li{font-size:13.5px; gap:12px; padding:13px 0; line-height:1.65;}
+
+    footer{padding:52px 0 calc(24px + env(safe-area-inset-bottom));}
+    .foot-top{padding-bottom:36px;}
+    .foot-cta .btn{width:100%; justify-content:center;}
+    .foot-links{gap:14px 20px;}
+    .foot-bottom{flex-direction:column; align-items:center; text-align:center; gap:8px;}
+  }
+
+  @media (max-width:380px){
+    .wrap{padding:0 16px;}
+    .article-body p{font-size:16px;}
+    .article-body p:first-of-type{font-size:17px;}
+  }
+
+  /* landscape phones: don't let the dropdown menu overflow */
+  @media (max-height:480px) and (max-width:900px){
+    .mobile-nav{padding-top:70px; gap:10px; overflow-y:auto; max-height:100vh;}
+  }
+
+  /* ---------- READABILITY & DEVICE POLISH ---------- */
+  .article-body p, .article-body li, .article-header .dek{text-wrap:pretty;}
+  .article-header h1, .article-body h2, .article-body h3, blockquote{text-wrap:balance;}
+  nav.scrolled{backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px);}
+  a, button{-webkit-tap-highlight-color:rgba(31,77,58,.12);}
+  .references li a{overflow-wrap:anywhere;}
+  .references li::before{min-width:1.6em;}
+  .byline{flex-wrap:wrap;}
+
+  /* iPad / tablets */
+  @media (min-width:721px) and (max-width:1024px){
+    .article-body p, .article-body ul, .article-body ol{font-size:17.5px; line-height:1.75;}
+    .article-body p:first-of-type{font-size:19px;}
+    .article-body h2{margin-top:48px;}
+    .references li{font-size:14.5px;}
+  }
+
+  /* phones */
+  @media (max-width:720px){
+    .byline-text{font-size:12.5px;}
+    .tag-pill{font-size:10.5px;}
+    .mobile-nav{max-height:100vh; max-height:100dvh; overflow-y:auto;}
+  }
+
+  @media (prefers-reduced-motion: reduce){
+    body{transition:none;}
+    html{scroll-behavior:auto;}
+  }
+
+  /* ---------- in-text citation markers ---------- */
+  .article-body sup.cite{font-family:var(--mono); font-size:.68em; line-height:0; margin-left:2px; white-space:nowrap;}
+  .article-body sup.cite a{color:var(--pink); text-decoration:none; padding:0 1px;}
+  .article-body sup.cite a:hover{text-decoration:underline;}
+  .references li{scroll-margin-top:100px;}
+  .references li:target{background:rgba(198,255,107,.28);}
 </style>
 <script type="application/ld+json">
 {
@@ -393,12 +489,13 @@
   "@graph": [
 {
   "@type": "Article",
-  "@id": "https://econforyouth.com/articles/understanding-behavioral-economics#article",
-  "headline": "Understanding Behavioral Economics",
-  "description": "Exploring how psychology and cognitive biases shape the way we make economic decisions.",
-  "author": { "@type": "Person", "name": "Minnoli Tiwari" },
+  "@id": "https://econforyouth.com/articles/uninsurable-planet#article",
+  "headline": "An Uninsurable Planet: Cacophony of the Collapsing World",
+  "description": "How climate change is straining property insurance, and what governments can do to keep homes and businesses protected.",
+  "author": { "@type": "Person", "name": "Fawad Waheed" },
   "publisher": { "@type": "NGO", "name": "Econ For Youth", "url": "https://econforyouth.com/" },
-  "mainEntityOfPage": "https://econforyouth.com/articles/understanding-behavioral-economics",
+  "mainEntityOfPage": "https://econforyouth.com/articles/uninsurable-planet",
+  "datePublished": "2026-10-10",
   "inLanguage": "en"
 },
 {
@@ -406,7 +503,7 @@
   "itemListElement": [
       { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://econforyouth.com/" },
       { "@type": "ListItem", "position": 2, "name": "Articles", "item": "https://econforyouth.com/articles" },
-      { "@type": "ListItem", "position": 3, "name": "Understanding Behavioral Economics", "item": "https://econforyouth.com/articles/understanding-behavioral-economics" }
+      { "@type": "ListItem", "position": 3, "name": "An Uninsurable Planet: Cacophony of the Collapsing World", "item": "https://econforyouth.com/articles/uninsurable-planet" }
   ]
 }
 ]
@@ -457,14 +554,14 @@
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
         Back to Articles
       </a>
-      <div class="tag">Behavioral</div>
-      <h1>Understanding Behavioral Economics</h1>
-      <p class="dek">Exploring how psychology and cognitive biases shape the way we make economic decisions.</p>
+      <div class="tag">Environmental</div>
+      <h1>An Uninsurable Planet: Cacophony of the Collapsing World</h1>
+      <p class="dek">Extreme weather is driving up the cost of insuring homes and businesses. Here is how governments and communities can adapt before coverage disappears.</p>
       <div class="byline">
-        <div class="byline-avatar">MT</div>
+        <div class="byline-avatar">FW</div>
         <div class="byline-text">
-          <strong>Minnoli Tiwari</strong>
-          Published <time datetime="2026-09-26">September 26, 2026</time> · 5 min read
+          <strong>Fawad Waheed</strong>
+          Published <time datetime="2026-10-10">October 10, 2026</time> · 3 min read
         </div>
       </div>
     </div>
@@ -475,40 +572,35 @@
 
   <!-- ================= ARTICLE BODY ================= -->
   <!--
-    use <h2> for major sections, <h3> for
+    Article content goes here. Use <h2> for major sections, <h3> for
     sub-sections, <p> for body copy, and <blockquote> to pull out a
-    key line. 
+    key line. Swap the placeholder paragraphs below for the real text.
   -->
   <article class="article-body">
-    <p>Behavioral economics is a truly interdisciplinary phenomenon that integrates insights from psychology, cognitive science, and economics to analyze financial decision-making processes and resource allocation. Contrary to traditional neoclassical economics — which views human beings as <em>Homo economicus</em>, hyper-rational actors who make optimal choices without error — behavioral economics recognizes that human decision-making is systematically influenced by cognitive biases, emotional states, and social context. By bridging theoretical models with empirical reality, behavioral economics provides a far more accurate framework for understanding both individual and societal attitudes toward money.</p>
+    <p>Imagine the world burning and colliding from east to west, but the only concern in the mind won’t be the damage to the buildings; it will also be the destructive impact on the global economy and commercial properties.</p>
 
-    <h2>Bounded rationality and heuristics</h2>
-    <p>At the core of behavioral economics are the concepts of bounded rationality and heuristics. Coined by Herbert Simon, bounded rationality posits that an individual's ability to make strictly optimal decisions is inherently constrained by limited information, finite computational ability, and time pressure. To navigate a complex world under these constraints, people rely on heuristics — mental shortcuts that reduce decision-making complexity. While heuristics allow individuals to make swift choices, they frequently introduce systematic cognitive biases. Rather than systematically evaluating every possible alternative, individuals settle for solutions that are simply "good enough," departing significantly from the idealized choices predicted by classical models.</p>
+    <p>The Cacophony of the collapsing world has disrupted not only the climate system of our planet, but in turn, it has also affected the commercial market of private properties. When, due to the grisly activities that affect the environment, we leap into heaps of climate change that result in frequent and extreme weather events, they damage the whole economic foundation on which lies the global market.</p>
 
-    <h2>Prospect theory and loss aversion</h2>
-    <p>The divergence between traditional economic theory and real-world behavior is clearly illustrated by Prospect Theory, developed by Daniel Kahneman and Amos Tversky in 1979. Traditional Expected Utility Theory asserts that individuals weigh decisions purely by calculating the expected value and magnitude of potential outcomes. Prospect Theory demonstrates that people evaluate choices relative to a subjective reference point rather than absolute wealth.</p>
+    <p>When mankind shifted energy resources to fossil fuels, the planet has been experiencing extreme weather events more than the usual number. The increase emission of Greenhouse gases have resulted in rising global temperature that resulted in floods, extreme heat waves, drought, and rising sea levels. This not only impacts the global ecosystem but also the economic system, as markets hit a crisis.<sup class="cite"><a href="#ref-2" aria-label="Reference 2">[2]</a></sup></p>
 
-    <blockquote>The psychological pain of losing $100 is roughly twice as intense as the pleasure of gaining the same amount.</blockquote>
+    <p>The rising catastrophe losses have raised concerns in the market for private properties due to increased winds and floods that damage residential buildings. For instance, losses of 9.2 billion in 1990 shot to 50 billion dollars now, clearly showcasing how the situation has worsened over the decade.<sup class="cite"><a href="#ref-1" aria-label="Reference 1">[1]</a></sup> In certain parts of the world, such as the US, the UK, and Australia, we have witnessed premium private property coverages that prove to be substantial for an average citizen.<sup class="cite"><a href="#ref-3" aria-label="Reference 3">[3]</a></sup></p>
 
-    <p>This is the central finding of Prospect Theory known as loss aversion. Consequently, individuals often take disproportionate risks to avoid realization of a loss while acting risk-averse when preserving gains.</p>
+    <p>The systematic climate failure threatens the global economic stability, as stated by WWF, and calls for certain actions that need to be implemented before the world drowns in floods and debt. The nightmarish situation can be improved by creating residential buildings with wind-resistant materials or ember-resistant landscaping. Reports have shown that such buildings experience 40% less damage than an average low-quality property.</p>
 
-    <h2>Present bias and hyperbolic discounting</h2>
-    <p>Furthermore, traditional models assume consistent time preferences, whereas behavioral economics accounts for human inconsistency across time through present bias, or hyperbolic discounting. Present bias explains why individuals consistently overvalue immediate rewards while heavily discounting long-term benefits. For instance, an individual might fully recognize that maintaining a caloric deficit or saving money is essential for long-term health and financial stability, yet still succumb to immediate temptations, such as buying discounted ice cream or making an impulse purchase.</p>
+    <blockquote>Such buildings experience 40% less damage than an average low-quality property.</blockquote>
 
-    <h2>Framing, anchoring, and mental accounting</h2>
-    <p>Decision-making is heavily dictated by context and presentation, as demonstrated by the framing effect and anchoring bias. The framing effect reveals that people react differently to the exact same choice depending on whether it is presented as a gain or a loss. Similarly, anchoring bias occurs when individuals rely disproportionately on the first piece of information encountered — the anchor — when making subsequent evaluations.</p>
-    <p>These biases collectively drive phenomena like mental accounting, a concept identified by Nobel laureate Richard Thaler. Mental accounting describes how people violate the economic principle of fungibility by categorizing money into distinct mental "envelopes." For example, a person might strictly preserve $500 in a dedicated vacation savings account yet view an unexpected $500 tax refund as "free money," spending it impulsively on short-term entertainment.</p>
+    <p>Moreover, the traditional twelve-month Financial Insurance system does not account for the degree of damage done to buildings. Therefore, such a system needs to be deployed. Parametric insurance needs immense attention from our Government because it pays out a fixed amount of pre-agreed money to the victims when a certain climate threshold is breached, such as Category 3 or Category 4. Apart from this, Commercial properties should be tied to incorporate climate adaptation benchmarks.</p>
 
-    <h2>Nudges and choice architecture</h2>
-    <p>The practical insights of behavioral economics have yielded profound real-world applications, particularly through the implementation of choice architecture and nudges. Rather than restricting freedom of choice, subtle changes in how choices are presented can steer individuals toward better decisions. A prominent application is retirement savings: by shifting company pension plans from an opt-in model to automatic default enrollment, participation rates increase dramatically without forcing compliance. Similar behavioral interventions have successfully promoted public health initiatives — such as encouraging regular hand washing or eye-level placement of healthy foods — and significantly raised organ donor registration rates simply by shifting policy from opt-in to presumed consent defaults.</p>
+    <p>How would all of such initiatives help out to uplift the burden on taxpayers? When the stress of destructive climate impacts is laid upon the average tax-paying citizens; Government must not look away; rather they should implement certain policies for private properties that would be advantageous to them. When extreme weather events become frequent, they are not restricted to a single country; They affect the whole region. In Africa, many countries have created a mutual climate fund pool to lower the economic burden on their citizens.<sup class="cite"><a href="#ref-5" aria-label="Reference 5">[5]</a></sup></p>
 
-    <h2>The takeaway</h2>
-    <p>Today, behavioral economics has evolved from an academic fringe discipline into an indispensable framework for policy and business. Governments worldwide now rely on specialized research units, such as the UK's Behavioural Insights Team ("Nudge Unit") and the US Social and Behavioral Sciences Team, to design public policies. By recognizing human irrationality not as random chaos, but as a series of predictable psychological patterns, behavioral economics continues to transform how society addresses complex challenges across healthcare, public finance, environmental sustainability, and personal finance.</p>
+    <p>The Government should introduce the CAT Bonds (The catastrophe bonds) that shift the financial burden directly to global capitals that aim at providing reliefs when a major disastrous climate benchmark is approached.<sup class="cite"><a href="#ref-4" aria-label="Reference 4">[4]</a></sup> Ultimately, the overall expenditure on reconstruction and re-insurance takes a new turn.</p>
+
+    <p>The global climate system is continuously shifting towards a worsening side that impacts not only the ecosystem but the global economic growth as well. Instead of focusing on mourning the destruction by frequent events, the masses should focus upon working on establishing certain frameworks that adapt to the issue. Only then can we expect a future that puts climate and nature at the heart of financial resilience strategies.</p>
   </article>
 
   <div class="share-row">
-    <span class="tag-pill">Behavioral Economics</span>
-    <a class="btn solid" href="../index.html"><span>More articles</span></a>
+    <span class="tag-pill">Climate &amp; Insurance</span>
+    <a class="btn solid" href="index.html"><span>More articles</span></a>
   </div>
 
   <!-- ================= REFERENCES ================= -->
@@ -519,11 +611,11 @@
   <section class="references">
     <h2>References</h2>
     <ol>
-      <li><a href="https://doi.org/10.2307/1914185" target="_blank" rel="noopener">Kahneman, D., & Tversky, A. (1979). Prospect theory: An analysis of decision under risk. <em>Econometrica, 47</em>(2), 263–291.</a></li>
-      <li><a href="https://doi.org/10.1162/003355397555253" target="_blank" rel="noopener">Laibson, D. (1997). Golden eggs and hyperbolic discounting. <em>The Quarterly Journal of Economics, 112</em>(2), 443–478.</a></li>
-      <li><a href="https://doi.org/10.2307/1884852" target="_blank" rel="noopener">Simon, H. A. (1955). A behavioral model of rational choice. <em>The Quarterly Journal of Economics, 69</em>(1), 99–118.</a></li>
-      <li><a href="https://doi.org/10.1002/(SICI)1099-0771(199909)12:3%3C183::AID-BDM318%3E3.0.CO;2-F" target="_blank" rel="noopener">Thaler, R. H. (1999). Mental accounting matters. <em>Journal of Behavioral Decision Making, 12</em>(3), 183–206.</a></li>
-      <li>Thaler, R. H., & Sunstein, C. R. (2008). <em>Nudge: Improving decisions about health, wealth, and happiness.</em> Yale University Press.</li>
+      <li id="ref-1">Citizens’ Climate Lobby Canada. <em>Laser Talk: Our Uninsurable World</em> (updated February 3, 2026).</li>
+      <li id="ref-2"><a href="https://yalelawjournal.org/essay/the-uninsurable-future-the-climate-threat-to-property-insurance-and-how-to-stop-it" target="_blank" rel="noopener">Jones, D. (2025, December 3). The Uninsurable Future: The Climate Threat to Property Insurance, and How to Stop It. <em>The Yale Law Journal Forum, 135.</em></a></li>
+      <li id="ref-3">BBC. <em>Files on 4 Investigations: An Uninsurable Planet</em> (BBC radio investigation).</li>
+      <li id="ref-4">World Economic Forum. <em>Catastrophe Bonds and the Climate Crisis.</em></li>
+      <li id="ref-5">UNDP Insurance and Risk Finance Facility (IRFF). <em>Africa: climate risk financing pools.</em></li>
     </ol>
   </section>
 
