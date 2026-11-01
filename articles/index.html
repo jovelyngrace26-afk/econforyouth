@@ -245,8 +245,12 @@
     display:flex; gap:10px; flex-wrap:wrap; margin:40px 0 44px;
     font-family:var(--mono); font-size:12px; text-transform:uppercase; letter-spacing:.05em;
   }
-  .chip{border:1px solid var(--line-strong); padding:7px 14px; border-radius:0; cursor:pointer; background:transparent; transition:background .25s ease, color .25s ease, border-color .25s ease;}
+  .chip{touch-action:manipulation; -webkit-tap-highlight-color:transparent; border:1px solid var(--line-strong); padding:7px 14px; border-radius:0; cursor:pointer; background:transparent; transition:background .25s ease, color .25s ease, border-color .25s ease;}
   .chip.active, .chip:hover{background:var(--ink); color:var(--paper); border-color:var(--ink);}
+  .articles-grid .post.is-hidden{display:none;}
+  @keyframes fadeIn{ from{opacity:0; transform:translateY(6px);} to{opacity:1; transform:none;} }
+  .articles-grid .post.fade{animation:fadeIn .8s cubic-bezier(.22,.61,.36,1) both;}
+  @media (prefers-reduced-motion:reduce){ .articles-grid .post.fade{animation:none;} }
 
   /* ---------- ARTICLES GRID ---------- */
   .articles-grid{display:flex; flex-wrap:wrap; gap:16px; margin-bottom:60px;}
@@ -436,7 +440,9 @@
 
   <!-- ================= FILTERS ================= -->
   <div class="articles-toolbar reveal">
-    <span class="chip active">All</span>
+    <span class="chip active" data-filter="all">All</span>
+    <span class="chip" data-filter="behavioral">Behavioral</span>
+    <span class="chip" data-filter="environmental">Environmental</span>
   </div>
 
   <!-- ================= ARTICLES GRID ================= -->
@@ -448,37 +454,18 @@
   -->
   <div class="articles-grid reveal">
 
-    <a class="post post-white" href="written-articles/understanding-behavioral-economics.html">
+    <a class="post post-white" data-tag="behavioral" href="written-articles/article-economy-of-creating-a-problem.html">
       <span class="tag">Behavioral</span>
       <div class="post-image">
-        <img src="" alt="behavioral icon" onerror="this.parentElement.style.display='none'">
+        <img src="" alt="economy of creating a problem icon" onerror="this.parentElement.style.display='none'">
   </div>
-      <h3>Understanding Behavioral Economics</h3>
-      <p class="author">By Minnoli Tiwari</p>
-      <p class="summary">Exploring how psychology and cognitive biases shape the way we make economic decisions.</p>
-      <div class="meta"><span>5 min read -></span></div>
+      <h3>The Economy of Creating a Problem</h3>
+      <p class="author">By Rym Slimane</p>
+      <p class="summary">Delving deeper into tactical consumer manipulation: how providers exploit loopholes to spread and capitalize on the marketed assumption of &ldquo;necessity.&rdquo;</p>
+      <div class="meta"><span>Nov 1, 2026</span><span>5 min read -></span></div>
     </a>
-      <a class="post post-white" href="written-articles/cash-vs-card.html">
-      <span class="tag">Behavioral</span>
-      <div class="post-image">
-        <img src="" alt="cash vs card icon" onerror="this.parentElement.style.display='none'">
-  </div>
-      <h3>Cash vs Card: How Paying With Cash Can Help You Save Money</h3>
-      <p class="author">By Samiksha Meda</p>
-      <p class="summary">Why paying with cash feels different from paying with a card, and how the "pain of paying" can help you spend less.</p>
-      <div class="meta"><span>5 min read -></span></div>
-    </a>
-        <a class="post post-white" href="written-articles/article-uninsurable-planet.html">
-      <span class="tag">Environmental</span>
-      <div class="post-image">
-        <img src="" alt="uninsurable planet icon" onerror="this.parentElement.style.display='none'">
-  </div>
-      <h3>An Uninsurable Planet: Cacophony of the Collapsing World</h3>
-      <p class="author">By Fawad Waheed</p>
-      <p class="summary">How climate change is straining property insurance, and what governments can do to keep homes and businesses protected.</p>
-      <div class="meta"><span>3 min read -></span></div>
-    </a>
-    <a class="post post-white" href="written-articles/article-renewable-energy-transition.html">
+
+    <a class="post post-white" data-tag="environmental" href="written-articles/article-renewable-energy-transition.html">
       <span class="tag">Environmental</span>
       <div class="post-image">
         <img src="" alt="renewable energy transition icon" onerror="this.parentElement.style.display='none'">
@@ -486,7 +473,40 @@
       <h3>The Economics of Renewable Energy Transition</h3>
       <p class="author">By Minnoli Tiwari</p>
       <p class="summary">Clean energy is shifting economies from fuel-heavy to capital-heavy. Here is what that means for costs, jobs, risk and who gets to pay for it.</p>
-      <div class="meta"><span>3 min read -></span></div>
+      <div class="meta"><span>Oct 29, 2026</span><span>3 min read -></span></div>
+    </a>
+
+    <a class="post post-white" data-tag="environmental" href="written-articles/article-uninsurable-planet.html">
+      <span class="tag">Environmental</span>
+      <div class="post-image">
+        <img src="" alt="uninsurable planet icon" onerror="this.parentElement.style.display='none'">
+  </div>
+      <h3>An Uninsurable Planet: Cacophony of the Collapsing World</h3>
+      <p class="author">By Fawad Waheed</p>
+      <p class="summary">How climate change is straining property insurance, and what governments can do to keep homes and businesses protected.</p>
+      <div class="meta"><span>Oct 10, 2026</span><span>3 min read -></span></div>
+    </a>
+
+    <a class="post post-white" data-tag="behavioral" href="written-articles/cash-vs-card.html">
+      <span class="tag">Behavioral</span>
+      <div class="post-image">
+        <img src="" alt="cash vs card icon" onerror="this.parentElement.style.display='none'">
+  </div>
+      <h3>Cash vs Card: How Paying With Cash Can Help You Save Money</h3>
+      <p class="author">By Samiksha Meda</p>
+      <p class="summary">Why paying with cash feels different from paying with a card, and how the "pain of paying" can help you spend less.</p>
+      <div class="meta"><span>Oct 9, 2026</span><span>5 min read -></span></div>
+    </a>
+
+    <a class="post post-white" data-tag="behavioral" href="written-articles/understanding-behavioral-economics.html">
+      <span class="tag">Behavioral</span>
+      <div class="post-image">
+        <img src="" alt="behavioral icon" onerror="this.parentElement.style.display='none'">
+  </div>
+      <h3>Understanding Behavioral Economics</h3>
+      <p class="author">By Minnoli Tiwari</p>
+      <p class="summary">Exploring how psychology and cognitive biases shape the way we make economic decisions.</p>
+      <div class="meta"><span>Sep 26, 2026</span><span>5 min read -></span></div>
     </a>
   </div>
 
@@ -558,11 +578,19 @@
     });
   });
 
-  // simple filter chip toggle (visual only for now)
+  // filter chips: show matching posts with a soft fade
   document.querySelectorAll('.chip').forEach(chip => {
     chip.addEventListener('click', () => {
       document.querySelectorAll('.chip').forEach(c => c.classList.remove('active'));
       chip.classList.add('active');
+      const f = chip.dataset.filter;
+      document.querySelectorAll('.articles-grid .post').forEach(p => {
+        const show = f === 'all' || p.dataset.tag === f;
+        p.classList.toggle('is-hidden', !show);
+        p.classList.remove('fade');
+        void p.offsetWidth;
+        if (show) p.classList.add('fade');
+      });
     });
   });
 
