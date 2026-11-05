@@ -1,0 +1,739 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+<title>Inflation: More Than Just Rising Prices | Econ For Youth</title>
+<meta name="description" content="Why inflation in Pakistan is more than rising prices: fiscal deficits, energy costs, food supply and expectations, and what can be done. An Econ For Youth article by Asadullah bin Munir.">
+<link rel="canonical" href="https://econforyouth.com/articles/inflation-more-than-rising-prices">
+<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+<meta name="author" content="Asadullah bin Munir">
+<meta name="theme-color" content="#1f4d3a">
+
+<!-- Open Graph -->
+<meta property="og:site_name" content="Econ For Youth">
+<meta property="og:type" content="article">
+<meta property="og:locale" content="en_US">
+<meta property="og:url" content="https://econforyouth.com/articles/inflation-more-than-rising-prices">
+<meta property="og:title" content="Inflation: More Than Just Rising Prices | Econ For Youth">
+<meta property="og:description" content="Why inflation in Pakistan is more than rising prices: fiscal deficits, energy costs, food supply and expectations, and what can be done.">
+<meta property="og:image" content="https://econforyouth.com/assets/og-image.jpg">
+
+<!-- Twitter / X -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Inflation: More Than Just Rising Prices | Econ For Youth">
+<meta name="twitter:description" content="Why inflation in Pakistan is more than rising prices: fiscal deficits, energy costs, food supply and expectations, and what can be done.">
+<meta name="twitter:image" content="https://econforyouth.com/assets/og-image.jpg">
+
+<link rel="apple-touch-icon" sizes="180x180" href="https://econforyouth.com/icons/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://econforyouth.com/icons/android-chrome-512x512.png">
+<link rel="icon" type="image/png" sizes="16x16" href="https://econforyouth.com/icons/android-chrome-192x192.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,700&family=Source+Serif+4:opsz,wght@8..60,400;8..60,500;8..60,600;8..60,700&family=Montserrat:ital,wght@0,100;0,400;0,500;0,600;0,700;1,500&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink:#101d16;
+    --paper:#f6f4ec;
+    --paper-dim:#ece8db;
+    --forest:#1f4d3a;
+    --forest-deep:#122b20;
+    --lime:#c6ff6b;
+    --pink:#ff5fa2;
+    --line: rgba(16,29,22,.16);
+    --line-strong: rgba(16,29,22,.4);
+    --display: 'Source Serif 4', Georgia, serif;
+    --body: 'Montserrat', sans-serif;
+    --mono: 'Space Mono', monospace;
+    --maxw: 1180px;
+    --article-w: 720px;
+  }
+  *{margin:0;padding:0;box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    background:var(--paper);
+    color:var(--ink);
+    font-family:var(--body);
+    font-size:16px;
+    line-height:1.55;
+    overflow-x:hidden;
+    opacity:0;
+    transition:opacity .5s ease;
+  }
+  body.loaded{opacity:1;}
+  ::selection{background:#f6dbdf;color:var(--ink);}
+  a{color:inherit;text-decoration:none;}
+  img{max-width:100%;display:block;}
+
+  .wrap{max-width:var(--maxw); margin:0 auto; padding:0 28px;}
+  .eyebrow{
+    font-family:var(--mono);
+    font-size:12px;
+    letter-spacing:.14em;
+    text-transform:uppercase;
+    display:inline-flex;
+    align-items:center;
+    gap:8px;
+    color:var(--ink);
+  }
+  .eyebrow::before{content:"";width:7px;height:7px;background:var(--pink);border-radius:50%;display:inline-block;}
+
+  h1,h2,h3{font-family:var(--display); font-weight:600; letter-spacing:0; color:var(--ink);}
+
+  .btn{
+    font-family:var(--mono);
+    font-size:13px;
+    letter-spacing:.06em;
+    text-transform:uppercase;
+    border:1.5px solid var(--ink);
+    padding:13px 22px;
+    background:transparent;
+    border-radius:999px;
+    display:inline-flex;
+    align-items:center;
+    gap:10px;
+    cursor:pointer;
+    position:relative;
+    overflow:hidden;
+    transition: color .35s ease, border-color .35s ease;
+  }
+  .btn::before{
+    content:"";
+    position:absolute; inset:0;
+    background:var(--ink);
+    transform:translateY(101%);
+    transition:transform .35s cubic-bezier(.6,0,.3,1);
+    z-index:0;
+  }
+  .btn span{position:relative; z-index:1; transition:color .35s ease;}
+  .btn:hover{color:var(--paper);}
+  .btn:hover::before{transform:translateY(0);}
+  .btn.solid{background:var(--ink); color:var(--paper);}
+  .btn.solid::before{background:var(--lime);}
+  .btn.solid:hover{color:var(--ink);}
+
+  /* ---------- NAV ---------- */
+  nav{
+    position:fixed; top:0; left:0; right:0; z-index:150;
+    display:flex; align-items:center; justify-content:space-between;
+    padding:18px 28px;
+    transition:background .3s ease, border-color .3s ease;
+    border-bottom:1px solid transparent;
+  }
+  nav.scrolled{background:rgba(246,244,236,.86); backdrop-filter:blur(10px); border-color:var(--line);}
+  .nav-logo{
+    display:flex; align-items:center; gap:10px;
+    font-family:'Bricolage Grotesque', sans-serif; font-weight:700; font-size:17px;
+  }
+  .nav-globe{width:22px;height:22px;}
+  .nav-links{display:flex; gap:28px; font-family:var(--mono); font-size:12px; text-transform:uppercase; letter-spacing:.08em;}
+  .nav-links a{position:relative; padding-bottom:3px;}
+  .nav-links a::after{content:"";position:absolute;left:0;bottom:0;width:0;height:1.5px;background:var(--forest);transition:width .3s ease;}
+  .nav-links a:hover::after{width:100%;}
+  .nav-links a.current::after{width:100%;}
+  @media (max-width:720px){ .nav-links{display:none;} }
+
+  .nav-right{display:flex; align-items:center; gap:28px;}
+  .nav-cta{
+    padding:8px 16px;
+    border:1.5px solid var(--ink);
+    border-radius:999px;
+    transition:background .3s ease, color .3s ease;
+    font-family:var(--mono);
+    font-size:12px;
+    text-transform:uppercase;
+    letter-spacing:.08em;
+    position:relative;
+  }
+  .nav-cta::after{ display:none; }
+  .nav-cta:hover{ background:var(--ink); color:var(--paper); }
+  @media (max-width:720px){ .nav-cta{display:none;} }
+
+  .nav-burger{
+    display:none;
+    flex-direction:column;
+    justify-content:space-between;
+    width:26px; height:18px;
+    background:none; border:none; padding:0; cursor:pointer;
+    z-index:110;
+  }
+  .nav-burger span{
+    display:block; width:100%; height:2px;
+    background:var(--ink);
+    border-radius:2px;
+    transition:transform .3s ease, opacity .3s ease;
+  }
+  .nav-burger.open span:nth-child(1){ transform:translateY(8px) rotate(45deg); }
+  .nav-burger.open span:nth-child(2){ opacity:0; }
+  .nav-burger.open span:nth-child(3){ transform:translateY(-8px) rotate(-45deg); }
+
+  .mobile-nav{
+    display:none;
+    position:fixed;
+    top:0; left:0; right:0;
+    background:var(--paper);
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+    gap:20px;
+    padding:88px 28px 28px;
+    height:auto;
+    transform:translateY(-100%);
+    transition:transform .4s cubic-bezier(.2,.7,.3,1);
+    z-index:105;
+    font-family:var(--mono);
+    font-size:15px;
+    text-transform:uppercase;
+    letter-spacing:.08em;
+    border-bottom:1px solid var(--line-strong);
+    box-shadow:0 20px 40px -24px rgba(0,0,0,.3);
+  }
+  .mobile-nav.open{ transform:translateY(0); }
+
+  @media (max-width:720px){
+    .nav-burger{ display:flex; }
+    .mobile-nav{ display:flex; }
+  }
+
+  /* ---------- ARTICLE HEADER ---------- */
+  .article-header{
+    padding:150px 0 50px;
+    background: linear-gradient(356deg, rgba(246, 244, 236, 1) 0%, rgba(209, 255, 240, 0.77) 91%, rgba(246, 244, 236, 1) 100%);
+    border-bottom:1px solid var(--line-strong);
+  }
+  .article-header .inner{max-width:var(--article-w); margin:0 auto;}
+  .back-link{
+    font-family:var(--mono); font-size:12px; letter-spacing:.06em; text-transform:uppercase;
+    display:inline-flex; align-items:center; gap:8px; color:#33453b;
+    margin-bottom:26px;
+  }
+  .back-link svg{width:14px; height:14px;}
+  .back-link:hover{color:var(--ink);}
+  .article-header .tag{
+    font-family:var(--mono); font-size:11px; text-transform:uppercase; letter-spacing:.08em; color:var(--pink);
+  }
+  .article-header h1{
+    font-size:clamp(2rem,4.6vw,3.2rem);
+    line-height:1.1;
+    margin-top:16px;
+    max-width:22ch;
+  }
+  .article-header .dek{
+    font-size:18px;
+    color:#33453b;
+    margin-top:20px;
+    max-width:56ch;
+    line-height:1.6;
+  }
+  .byline{
+    display:flex; align-items:center; gap:14px;
+    margin-top:34px;
+    padding-top:24px;
+    border-top:1px solid var(--line);
+  }
+  .byline-avatar{
+    width:38px; height:38px; border-radius:50%;
+    background:var(--forest);
+    color:var(--paper);
+    display:flex; align-items:center; justify-content:center;
+    font-family:var(--display); font-weight:700; font-size:14px;
+    flex-shrink:0;
+  }
+  .byline-text{font-family:var(--mono); font-size:12px; letter-spacing:.02em; color:#33453b; line-height:1.5;}
+  .byline-text strong{color:var(--ink); font-weight:700; display:block; font-size:13px; margin-bottom:2px;}
+
+  /* ---------- smooth entrance ---------- */
+  .article-header .back-link,
+  .article-header .tag,
+  .article-header h1,
+  .article-header .dek,
+  .article-header .byline{
+    opacity:0;
+    transform:translateY(14px);
+  }
+  body.loaded .article-header .back-link{ animation: header-in .6s cubic-bezier(.2,.7,.3,1) .05s forwards; }
+  body.loaded .article-header .tag{ animation: header-in .6s cubic-bezier(.2,.7,.3,1) .12s forwards; }
+  body.loaded .article-header h1{ animation: header-in .6s cubic-bezier(.2,.7,.3,1) .18s forwards; }
+  body.loaded .article-header .dek{ animation: header-in .6s cubic-bezier(.2,.7,.3,1) .26s forwards; }
+  body.loaded .article-header .byline{ animation: header-in .6s cubic-bezier(.2,.7,.3,1) .34s forwards; }
+  @keyframes header-in{
+    to{ opacity:1; transform:translateY(0); }
+  }
+  @media (prefers-reduced-motion: reduce){
+    .article-header .back-link, .article-header .tag, .article-header h1, .article-header .dek, .article-header .byline{
+      animation:none !important; opacity:1; transform:none;
+    }
+  }
+
+  /* ---------- ARTICLE BODY ---------- */
+  .article-body{
+    max-width:var(--article-w);
+    margin:0 auto;
+    padding:56px 0 20px;
+  }
+  .article-body p{
+    font-size:17px;
+    line-height:1.75;
+    color:#1c2921;
+    margin-bottom:24px;
+  }
+  .article-body p:first-of-type{
+    font-size:19px;
+    color:var(--ink);
+  }
+  .article-body h2{
+    font-size:clamp(1.4rem,3vw,1.9rem);
+    line-height:1.25;
+    margin:52px 0 20px;
+  }
+  .article-body h3{
+    font-size:1.2rem;
+    line-height:1.3;
+    margin:38px 0 14px;
+  }
+  .article-body ul, .article-body ol{
+    margin:0 0 24px 22px;
+    font-size:17px;
+    line-height:1.75;
+    color:#1c2921;
+  }
+  .article-body li{margin-bottom:8px;}
+  .article-body figure{margin:40px 0;}
+  .article-body figure img{width:100%; border:1px solid var(--line-strong);}
+  .article-body figcaption{
+    font-family:var(--mono);
+    font-size:12px;
+    color:#5b6a5f;
+    margin-top:10px;
+    line-height:1.5;
+  }
+  blockquote{
+    margin:40px 0;
+    padding:4px 0 4px 26px;
+    border-left:2px solid var(--pink);
+    font-family:var(--display);
+    font-style:italic;
+    font-weight:500;
+    font-size:1.3rem;
+    line-height:1.45;
+    color:var(--ink);
+  }
+  .article-body strong{font-weight:700;}
+  .article-body a.inline-link{
+    text-decoration:underline;
+    text-decoration-color:var(--line-strong);
+    text-underline-offset:3px;
+    transition:text-decoration-color .25s ease;
+  }
+  .article-body a.inline-link:hover{text-decoration-color:var(--ink);}
+
+  .share-row{
+    display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:16px;
+    max-width:var(--article-w); margin:0 auto; padding:36px 0 60px; border-bottom:1px solid var(--line);
+  }
+  .tag-pill{
+    font-family:var(--mono); font-size:11px; text-transform:uppercase; letter-spacing:.06em;
+    border:1px solid var(--line-strong); padding:7px 14px;
+  }
+
+  /* ---------- REFERENCES ---------- */
+  .references{
+    max-width:var(--article-w);
+    margin:0 auto;
+    padding:56px 0 90px;
+  }
+  .references h2{
+    font-size:1.15rem;
+    text-transform:uppercase;
+    letter-spacing:.04em;
+    margin-bottom:26px;
+  }
+  .references ol{
+    list-style:none;
+    counter-reset:refs;
+    font-family:var(--body);
+    font-size:14px;
+    line-height:1.7;
+    color:#33453b;
+  }
+  .references li{
+    counter-increment:refs;
+    display:flex;
+    gap:14px;
+    padding:14px 0;
+    border-top:1px solid var(--line);
+  }
+  .references li:first-child{border-top:1px solid var(--line-strong);}
+  .references li::before{
+    content:counter(refs);
+    font-family:var(--mono);
+    font-size:12px;
+    color:var(--pink);
+    flex-shrink:0;
+    padding-top:1px;
+  }
+  .references li a{
+    text-decoration:underline;
+    text-decoration-color:var(--line-strong);
+    text-underline-offset:3px;
+    word-break:break-word;
+  }
+  .references li a:hover{text-decoration-color:var(--ink);}
+
+  /* ---------- FOOTER ---------- */
+  footer{background:var(--forest-deep); color:var(--paper); padding:70px 0 28px;}
+  .foot-top{display:flex; justify-content:center; gap:30px; flex-wrap:wrap; padding-bottom:50px; border-bottom:1px solid rgba(246,244,236,.15);}
+  .foot-cta{display:flex; flex-direction:column; gap:16px; align-items:center; text-align:center;}
+  .foot-links{font-family:var(--mono); font-size:12px; text-transform:uppercase; letter-spacing:.06em; display:flex; justify-content:center; gap:22px; flex-wrap:wrap;}
+  .foot-bottom{display:flex; justify-content:space-between; padding-top:24px; font-family:var(--mono); font-size:11px; color:#a9b3ab; flex-wrap:wrap; gap:10px;}
+
+  /* ---------- RESPONSIVE: tablet / iPad ---------- */
+  html{-webkit-text-size-adjust:100%; text-size-adjust:100%;}
+  .article-body p, .article-body li, .references li{overflow-wrap:break-word;}
+  .nav-burger{position:relative;}
+  .nav-burger::after{content:"";position:absolute; inset:-14px;} /* bigger tap area */
+  .mobile-nav a{padding:6px 0;}
+
+  @media (max-width:1024px){
+    .wrap{padding:0 40px;}
+    nav{padding:16px 32px;}
+    .article-header{padding:128px 0 44px;}
+    .article-header h1{max-width:none;}
+    .article-body, .share-row, .references{max-width:680px;}
+  }
+
+  /* ---------- RESPONSIVE: phones ---------- */
+  @media (max-width:720px){
+    .wrap{padding:0 20px;}
+    nav{padding:14px 20px; padding-top:max(14px, env(safe-area-inset-top));}
+    .mobile-nav{padding:84px 24px 28px;}
+    .article-header{padding:100px 0 32px;}
+    .back-link{margin-bottom:20px;}
+    .article-header h1{font-size:clamp(1.75rem,7.4vw,2.3rem); line-height:1.15; margin-top:12px;}
+    .article-header .dek{font-size:16px; line-height:1.6; margin-top:16px;}
+    .byline{margin-top:26px; padding-top:20px;}
+
+    .article-body{padding:34px 0 8px;}
+    .article-body p{font-size:16.5px; line-height:1.7; margin-bottom:20px;}
+    .article-body p:first-of-type{font-size:17.5px;}
+    .article-body h2{margin:38px 0 14px;}
+    .article-body h3{margin:30px 0 12px;}
+    .article-body ul, .article-body ol{font-size:16.5px; margin-left:20px;}
+    blockquote{margin:28px 0; padding-left:18px; font-size:1.12rem; line-height:1.45;}
+
+    .share-row{flex-direction:column; align-items:flex-start; padding:26px 0 40px;}
+    .share-row .btn{width:100%; justify-content:center;}
+    .btn{min-height:46px;}
+
+    .references{padding:36px 0 60px;}
+    .references h2{font-size:1.05rem; margin-bottom:20px;}
+    .references li{font-size:13.5px; gap:12px; padding:13px 0; line-height:1.65;}
+
+    footer{padding:52px 0 calc(24px + env(safe-area-inset-bottom));}
+    .foot-top{padding-bottom:36px;}
+    .foot-cta .btn{width:100%; justify-content:center;}
+    .foot-links{gap:14px 20px;}
+    .foot-bottom{flex-direction:column; align-items:center; text-align:center; gap:8px;}
+  }
+
+  @media (max-width:380px){
+    .wrap{padding:0 16px;}
+    .article-body p{font-size:16px;}
+    .article-body p:first-of-type{font-size:17px;}
+  }
+
+  /* landscape phones: don't let the dropdown menu overflow */
+  @media (max-height:480px) and (max-width:900px){
+    .mobile-nav{padding-top:70px; gap:10px; overflow-y:auto; max-height:100vh;}
+  }
+
+  /* ---------- READABILITY & DEVICE POLISH ---------- */
+  .article-body p, .article-body li, .article-header .dek{text-wrap:pretty;}
+  .article-header h1, .article-body h2, .article-body h3, blockquote{text-wrap:balance;}
+  nav.scrolled{backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px);}
+  a, button{-webkit-tap-highlight-color:rgba(31,77,58,.12);}
+  .references li a{overflow-wrap:anywhere;}
+  .references li::before{min-width:1.6em;}
+  .byline{flex-wrap:wrap;}
+
+  /* iPad / tablets */
+  @media (min-width:721px) and (max-width:1024px){
+    .article-body p, .article-body ul, .article-body ol{font-size:17.5px; line-height:1.75;}
+    .article-body p:first-of-type{font-size:19px;}
+    .article-body h2{margin-top:48px;}
+    .references li{font-size:14.5px;}
+  }
+
+  /* phones */
+  @media (max-width:720px){
+    .byline-text{font-size:12.5px;}
+    .tag-pill{font-size:10.5px;}
+    .mobile-nav{max-height:100vh; max-height:100dvh; overflow-y:auto;}
+  }
+
+  @media (prefers-reduced-motion: reduce){
+    body{transition:none;}
+    html{scroll-behavior:auto;}
+  }
+
+  /* ---------- in-text citation markers ---------- */
+  .article-body sup.cite{font-family:var(--mono); font-size:.68em; line-height:0; margin-left:2px; white-space:nowrap;}
+  .article-body sup.cite a{color:var(--pink); text-decoration:none; padding:0 1px;}
+  .article-body sup.cite a:hover{text-decoration:underline;}
+  .references li{scroll-margin-top:100px;}
+  .references li:target{background:rgba(198,255,107,.28);}
+
+  .article-body ul li strong{font-weight:700;}
+
+</style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+{
+  "@type": "Article",
+  "@id": "https://econforyouth.com/articles/inflation-more-than-rising-prices#article",
+  "headline": "Inflation: More Than Just Rising Prices",
+  "description": "Why inflation in Pakistan is more than rising prices: fiscal deficits, energy costs, food supply and expectations, and what can be done.",
+  "author": { "@type": "Person", "name": "Asadullah bin Munir" },
+  "publisher": { "@type": "NGO", "name": "Econ For Youth", "url": "https://econforyouth.com/" },
+  "mainEntityOfPage": "https://econforyouth.com/articles/inflation-more-than-rising-prices",
+  "datePublished": "2026-11-05",
+  "inLanguage": "en"
+},
+{
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://econforyouth.com/" },
+      { "@type": "ListItem", "position": 2, "name": "Articles", "item": "https://econforyouth.com/articles" },
+      { "@type": "ListItem", "position": 3, "name": "Inflation: More Than Just Rising Prices", "item": "https://econforyouth.com/articles/inflation-more-than-rising-prices" }
+  ]
+}
+]
+}
+</script>
+</head>
+<body>
+
+<nav id="nav">
+  <a class="nav-logo" href="https://econforyouth.com/">
+    <svg class="nav-globe" viewBox="0 0 100 100" fill="none" stroke="currentColor" stroke-width="1.4">
+      <circle cx="50" cy="50" r="42"/>
+      <ellipse cx="50" cy="50" rx="18" ry="42"/>
+      <ellipse cx="50" cy="50" rx="42" ry="18"/>
+      <path d="M8,50 A42,42 0 0,1 92,50" />
+      <path d="M14,32 A42,42 0 0,1 86,32" />
+      <path d="M14,68 A42,42 0 0,1 86,68" />
+    </svg>
+    Econ For Youth
+  </a>
+  <div class="nav-right">
+    <div class="nav-links">
+      <a href="https://econforyouth.com/#about">About</a>
+      <a href="https://econforyouth.com/#mission">Mission</a>
+      <a href="https://econforyouth.com/articles" class="current">Articles</a>
+    </div>
+    <a href="https://econforyouth.com/opportunities/volunteer" class="nav-cta">Join Our Team</a>
+    <button class="nav-burger" id="navBurger" aria-label="Open menu" aria-expanded="false">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+  </div>
+</nav>
+
+<div class="mobile-nav" id="mobileNav">
+  <a href="https://econforyouth.com/#about">About</a>
+  <a href="https://econforyouth.com/#mission">Mission</a>
+  <a href="https://econforyouth.com/articles">Articles</a>
+  <a href="https://econforyouth.com/opportunities/volunteer">Join Our Team</a>
+</div>
+
+<!-- ================= ARTICLE HEADER ================= -->
+<header class="article-header">
+  <div class="wrap">
+    <div class="inner">
+      <a class="back-link" href="https://econforyouth.com/articles">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+        Back to Articles
+      </a>
+      <div class="tag">Macroeconomics</div>
+      <h1>The Reasons Behind Pakistan's Inflation</h1>
+      <p class="dek">What's driving rising prices in Pakistan, and how is inflation affecting everyday life?</p>
+      <div class="byline">
+        <div class="byline-avatar">AM</div>
+        <div class="byline-text">
+          <strong>Asadullah bin Munir</strong>
+          Published <time datetime="2026-11-05">November 5, 2026</time> · 5 min read
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<main class="wrap">
+
+  <!-- ================= ARTICLE BODY ================= -->
+  <!--
+    Article content goes here. Use <h2> for major sections, <h3> for
+    sub-sections, <p> for body copy, and <blockquote> to pull out a
+    key line. Swap the placeholder paragraphs below for the real text.
+  -->
+  <article class="article-body">
+
+    <h2>Introduction</h2>
+
+    <p>While inflation can often just be seen as increasing prices in general, in Pakistan, it is putting pressure on many families who are struggling to get by. The average wage for employees in 2024–25 was around PKR 39,042 per month (Pakistan Bureau of Statistics (PBS)).<sup class="cite"><a href="#ref-1" aria-label="Reference 1">[1]</a></sup> This has a large impact on how comfortably people can afford their essential needs.</p>
+
+    <p>According to the World Bank, Pakistan had an annual consumer price inflation rate of 19.87% in 2022. This increased to 30.77% in 2023 before decreasing to 12.63% in 2024 and 3.55% in 2025.<sup class="cite"><a href="#ref-2" aria-label="Reference 2">[2]</a></sup> While the inflation rate has decreased, it does not mean that prices have returned to their previous levels. It simply means that prices are not increasing as quickly. It is important to keep essential goods affordable while also improving people’s incomes.</p>
+
+    <h2>Main Reasons for Inflation in Pakistan</h2>
+
+    <h3>1. Fiscal Deficits and Monetary Pressures</h3>
+
+    <p>Pakistan has suffered from high inflation partly due to having a large fiscal deficit. The fiscal deficit in FY2024 was 6.9% of GDP, compared to 7.8% in FY2023 (Pakistan Economic Survey 2024–25). The tax-to-GDP ratio was around 9.6% in FY2024.<sup class="cite"><a href="#ref-3" aria-label="Reference 3">[3]</a></sup></p>
+
+    <p>This means the government has to borrow money or find other ways to fund its spending. Depending on how this is financed, it can increase inflation by adding more money into circulation without a corresponding increase in the production of goods and services.</p>
+
+    <p>The Economic Survey highlighted that the growth in broad money supply (M2) was 4.5% between July and March in FY2025, compared to 7.2% during the same period last year. The government needs to ensure sustainable public finances, improve tax collection, and invest in more productive areas.</p>
+
+    <h3>2. Energy Prices</h3>
+
+    <p>Pakistan’s energy sector has also contributed to inflation. In September 2025, an announcement was made about plans to resolve PKR 1.225 trillion in power sector circular debt.<sup class="cite"><a href="#ref-4" aria-label="Reference 4">[4]</a></sup></p>
+
+    <p>Between July and April 2024–25, housing, water, electricity, gas, and other fuels made up 23.6% of the national CPI basket (Economic Survey). This means that changes in utility and petroleum prices can increase people’s bills, as well as production and transportation costs for businesses.</p>
+
+    <p>Improving energy efficiency and reducing financial losses in the energy sector could help lower these costs and reduce pressure on households and businesses.</p>
+
+    <h3>3. Agricultural Challenges and Food Inflation</h3>
+
+    <p>Problems in the agricultural sector can affect people’s ability to afford food. Major crops such as wheat and cotton experienced decreased production in the previous financial year due to extreme weather events.</p>
+
+    <p>Food and Non-Alcoholic Beverages made up 34.6% of the national CPI basket between July and April 2024–25.<sup class="cite"><a href="#ref-5" aria-label="Reference 5">[5]</a></sup> Water shortages, bad weather, increasing fertilizer costs, and poor storage facilities can cause problems with food supplies, leading to higher prices.</p>
+
+    <p>Improving crop yields, investing in water management and storage, and ensuring clear market regulations could help improve agricultural production and keep food supplies more stable.</p>
+
+    <h3>4. Inflationary Expectations and Market Behaviour</h3>
+
+    <p>If people expect prices to continue increasing, this can also contribute to inflation. The Inflation Expectations Index increased to 69.0 in July 2025, from 65.6 in June, according to the State Bank of Pakistan’s Consumer Confidence Survey.<sup class="cite"><a href="#ref-6" aria-label="Reference 6">[6]</a></sup> This shows what people think about future inflation, not exactly how much they expect prices to increase.</p>
+
+    <p>Businesses may increase prices if they expect their production costs to rise. Workers may also ask for higher wages so they can continue affording their daily needs. While these decisions can contribute to further inflation, their impact depends on production costs, demand, and monetary policy.</p>
+
+    <p>Having credible monetary policies will help manage these expectations and maintain people’s confidence in the economy.</p>
+
+    <h2>Human Impact</h2>
+
+    <p>Inflation can cause problems for families who have to make difficult choices between essential expenses. If the prices of food, electricity, transportation, and healthcare increase while their income stays the same, people will have less money available for other needs and may struggle to maintain their standard of living.</p>
+
+    <p>For example, if essential items cost PKR 10,000 and prices increase by 20%, the same basket of goods will now cost PKR 12,000. If income has not changed, a household will either need to find an extra PKR 2,000 or reduce its spending in other areas.</p>
+
+    <p>Inflation can also cause savings to lose value when prices increase faster than the returns people earn on their money. Small businesses will also suffer from increased costs of inputs and production. People on lower incomes will struggle more to cope with unexpected expenses because they have less financial flexibility. This means inflation has a bigger impact on some groups in society than others.</p>
+
+    <h2>How to Control Inflation in Pakistan</h2>
+
+    <p>To control inflation, long-term changes will need to happen. Improving agriculture will increase productivity and help stabilize food supplies. Investing in water management and storage will also help. Improving local manufacturing can increase domestic supplies and reduce reliance on certain imports.</p>
+
+    <p>Having sustainable public finances, improving tax collection, and investing in productive areas will help reduce financial pressures. Improving the energy sector will also help reduce inefficiencies and unnecessary costs.</p>
+
+    <p>Having credible monetary policies will help keep prices stable. Supporting those most in need will help families manage rising living costs without putting too much pressure on public finances. Ensuring fair competition and monitoring markets can also help address specific pricing and supply issues.</p>
+
+    <p>There isn’t one solution to all the causes of inflation. Changes need to be made together and consistently to create a more stable economy.</p>
+
+    <h2>Conclusion</h2>
+
+    <p>Inflation in Pakistan is not just about increasing prices, but is also caused by deeper issues with public finances, energy, agriculture, and purchasing power. While the inflation rate is decreasing, it does not mean that essential goods and services have become affordable again.</p>
+
+    <p>Responsible economic management, increased local production, and supporting those most in need will help create long-term improvements. Overall, we should look at how people’s lives improve rather than just focusing on the statistics. We want to create an economy where people can afford essentials, savings can retain their value, and everyone can benefit from economic growth.</p>
+  </article>
+
+  <div class="share-row">
+    <span class="tag-pill">Inflation</span>
+    <a class="btn solid" href="https://econforyouth.com/articles"><span>More articles</span></a>
+  </div>
+
+  <!-- ================= REFERENCES ================= -->
+  <!--
+    Add one <li> per source. The number is generated automatically —
+    just paste the citation text and link.
+  -->
+  <section class="references">
+    <h2>References</h2>
+    <ol>
+      <li id="ref-1"><a href="https://www.ceicdata.com/en/pakistan/average-monthly-wages-by-industry/average-monthly-wages" target="_blank" rel="noopener">Pakistan Bureau of Statistics. (2025). <em>Pakistan average monthly wages.</em> CEIC Data.</a></li>
+      <li id="ref-2"><a href="https://tradingeconomics.com/pakistan/inflation-consumer-prices-annual-percent-wb-data.html" target="_blank" rel="noopener">World Bank. (2026, October). <em>Pakistan – Inflation, consumer prices (annual %).</em> Trading Economics.</a></li>
+      <li id="ref-3"><a href="https://tribune.com.pk/story/2550006/pakistan-economic-survey-202425-wins-warnings-and-whats-next" target="_blank" rel="noopener">Government of Pakistan. (2025). <em>Pakistan Economic Survey 2024–25.</em> The Express Tribune.</a></li>
+      <li id="ref-4"><a href="https://pid.gov.pk/site/press_detail/30458" target="_blank" rel="noopener">Ministry of Finance, Government of Pakistan. (2025, September 25). <em>Rs. 1,225 billion power sector circular debt resolution a decisive step toward fiscal discipline, investor confidence through collective effort</em> (Press Release No. 264). Press Information Department, Government of Pakistan.</a></li>
+      <li id="ref-5"><a href="https://tribune.com.pk/story/2550006/pakistan-economic-survey-202425-wins-warnings-and-whats-next" target="_blank" rel="noopener">Government of Pakistan. (2025). <em>Pakistan Economic Survey 2024–25.</em></a></li>
+      <li id="ref-6"><a href="https://www.sbp.org.pk/assets/document/CCS_Report_July_2025.pdf" target="_blank" rel="noopener">State Bank of Pakistan. (2025, July). <em>Consumer Confidence Survey – July 2025</em> (Report No. CCS_Report_July_2025).</a></li>
+    </ol>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="foot-top">
+      <div class="foot-cta">
+        <a href="https://ig.me/m/econforyouth" class="btn solid"><span>DM for collaborations</span></a>
+        <div class="foot-links">
+          <a href="https://econforyouth.com/#about">About</a>
+          <a href="https://econforyouth.com/#mission">Mission</a>
+          <a href="https://econforyouth.com/articles">Articles</a>
+          <a href="https://econforyouth.com/opportunities/volunteer">Volunteer</a>
+          <a href="https://instagram.com/econforyouth">Instagram</a>
+        </div>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>© 2026 Econ For Youth — Student-Led Initiative</span>
+      <span>Exploring Economics Together Through Curiosity</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+  // reveal the page only once fonts are ready, so there's no visible font swap/glitch,
+  // and it triggers the header's entrance animation for a smooth open
+  function revealPage(){ document.body.classList.add('loaded'); }
+  if (document.fonts && document.fonts.ready) {
+    document.fonts.ready.then(revealPage);
+    setTimeout(revealPage, 600); // safety fallback if fonts take too long
+  } else {
+    revealPage();
+  }
+
+  const nav = document.getElementById('nav');
+  window.addEventListener('scroll', () => {
+    nav.classList.toggle('scrolled', window.scrollY > 40);
+  }, { passive: true });
+
+  const navBurger = document.getElementById('navBurger');
+  const mobileNav = document.getElementById('mobileNav');
+  function closeMobileNav(){
+    navBurger.classList.remove('open');
+    mobileNav.classList.remove('open');
+    navBurger.setAttribute('aria-expanded','false');
+  }
+  navBurger.addEventListener('click', () => {
+    const isOpen = navBurger.classList.toggle('open');
+    mobileNav.classList.toggle('open', isOpen);
+    navBurger.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+  });
+  mobileNav.querySelectorAll('a').forEach(a => {
+    a.addEventListener('click', closeMobileNav);
+  });
+
+  if (window.matchMedia('(hover: hover)').matches) {
+    document.querySelectorAll('.btn').forEach(btn => {
+      btn.addEventListener('mousemove', (e) => {
+        const r = btn.getBoundingClientRect();
+        const x = (e.clientX - r.left - r.width / 2) * 0.18;
+        const y = (e.clientY - r.top - r.height / 2) * 0.3;
+        btn.style.transform = `translate(${x}px, ${y}px)`;
+      });
+      btn.addEventListener('mouseleave', () => { btn.style.transform = 'translate(0,0)'; });
+    });
+  }
+</script>
+</body>
+</html>

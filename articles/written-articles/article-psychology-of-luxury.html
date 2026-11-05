@@ -1,0 +1,717 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+<title>The Psychology of Luxury: Why We Keep Paying More for Luxury | Econ For Youth</title>
+<meta name="description" content="How status, exclusivity and consumer psychology shape the appeal of luxury goods, and why their value goes beyond practical function. An Econ For Youth article by Calista Ng.">
+<link rel="canonical" href="https://econforyouth.com/articles/psychology-of-luxury">
+<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+<meta name="author" content="Calista Ng">
+<meta name="theme-color" content="#1f4d3a">
+
+<!-- Open Graph -->
+<meta property="og:site_name" content="Econ For Youth">
+<meta property="og:type" content="article">
+<meta property="og:locale" content="en_US">
+<meta property="og:url" content="https://econforyouth.com/articles/psychology-of-luxury">
+<meta property="og:title" content="The Psychology of Luxury: Why We Keep Paying More for Luxury | Econ For Youth">
+<meta property="og:description" content="How status, exclusivity and consumer psychology shape the appeal of luxury goods, and why their value goes beyond practical function.">
+<meta property="og:image" content="https://econforyouth.com/assets/og-image.jpg">
+
+<!-- Twitter / X -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="The Psychology of Luxury: Why We Keep Paying More for Luxury | Econ For Youth">
+<meta name="twitter:description" content="How status, exclusivity and consumer psychology shape the appeal of luxury goods, and why their value goes beyond practical function.">
+<meta name="twitter:image" content="https://econforyouth.com/assets/og-image.jpg">
+
+<link rel="apple-touch-icon" sizes="180x180" href="https://econforyouth.com/icons/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://econforyouth.com/icons/android-chrome-512x512.png">
+<link rel="icon" type="image/png" sizes="16x16" href="https://econforyouth.com/icons/android-chrome-192x192.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,700&family=Source+Serif+4:opsz,wght@8..60,400;8..60,500;8..60,600;8..60,700&family=Montserrat:ital,wght@0,100;0,400;0,500;0,600;0,700;1,500&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink:#101d16;
+    --paper:#f6f4ec;
+    --paper-dim:#ece8db;
+    --forest:#1f4d3a;
+    --forest-deep:#122b20;
+    --lime:#c6ff6b;
+    --pink:#ff5fa2;
+    --line: rgba(16,29,22,.16);
+    --line-strong: rgba(16,29,22,.4);
+    --display: 'Source Serif 4', Georgia, serif;
+    --body: 'Montserrat', sans-serif;
+    --mono: 'Space Mono', monospace;
+    --maxw: 1180px;
+    --article-w: 720px;
+  }
+  *{margin:0;padding:0;box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    background:var(--paper);
+    color:var(--ink);
+    font-family:var(--body);
+    font-size:16px;
+    line-height:1.55;
+    overflow-x:hidden;
+    opacity:0;
+    transition:opacity .5s ease;
+  }
+  body.loaded{opacity:1;}
+  ::selection{background:#f6dbdf;color:var(--ink);}
+  a{color:inherit;text-decoration:none;}
+  img{max-width:100%;display:block;}
+
+  .wrap{max-width:var(--maxw); margin:0 auto; padding:0 28px;}
+  .eyebrow{
+    font-family:var(--mono);
+    font-size:12px;
+    letter-spacing:.14em;
+    text-transform:uppercase;
+    display:inline-flex;
+    align-items:center;
+    gap:8px;
+    color:var(--ink);
+  }
+  .eyebrow::before{content:"";width:7px;height:7px;background:var(--pink);border-radius:50%;display:inline-block;}
+
+  h1,h2,h3{font-family:var(--display); font-weight:600; letter-spacing:0; color:var(--ink);}
+
+  .btn{
+    font-family:var(--mono);
+    font-size:13px;
+    letter-spacing:.06em;
+    text-transform:uppercase;
+    border:1.5px solid var(--ink);
+    padding:13px 22px;
+    background:transparent;
+    border-radius:999px;
+    display:inline-flex;
+    align-items:center;
+    gap:10px;
+    cursor:pointer;
+    position:relative;
+    overflow:hidden;
+    transition: color .35s ease, border-color .35s ease;
+  }
+  .btn::before{
+    content:"";
+    position:absolute; inset:0;
+    background:var(--ink);
+    transform:translateY(101%);
+    transition:transform .35s cubic-bezier(.6,0,.3,1);
+    z-index:0;
+  }
+  .btn span{position:relative; z-index:1; transition:color .35s ease;}
+  .btn:hover{color:var(--paper);}
+  .btn:hover::before{transform:translateY(0);}
+  .btn.solid{background:var(--ink); color:var(--paper);}
+  .btn.solid::before{background:var(--lime);}
+  .btn.solid:hover{color:var(--ink);}
+
+  /* ---------- NAV ---------- */
+  nav{
+    position:fixed; top:0; left:0; right:0; z-index:150;
+    display:flex; align-items:center; justify-content:space-between;
+    padding:18px 28px;
+    transition:background .3s ease, border-color .3s ease;
+    border-bottom:1px solid transparent;
+  }
+  nav.scrolled{background:rgba(246,244,236,.86); backdrop-filter:blur(10px); border-color:var(--line);}
+  .nav-logo{
+    display:flex; align-items:center; gap:10px;
+    font-family:'Bricolage Grotesque', sans-serif; font-weight:700; font-size:17px;
+  }
+  .nav-globe{width:22px;height:22px;}
+  .nav-links{display:flex; gap:28px; font-family:var(--mono); font-size:12px; text-transform:uppercase; letter-spacing:.08em;}
+  .nav-links a{position:relative; padding-bottom:3px;}
+  .nav-links a::after{content:"";position:absolute;left:0;bottom:0;width:0;height:1.5px;background:var(--forest);transition:width .3s ease;}
+  .nav-links a:hover::after{width:100%;}
+  .nav-links a.current::after{width:100%;}
+  @media (max-width:720px){ .nav-links{display:none;} }
+
+  .nav-right{display:flex; align-items:center; gap:28px;}
+  .nav-cta{
+    padding:8px 16px;
+    border:1.5px solid var(--ink);
+    border-radius:999px;
+    transition:background .3s ease, color .3s ease;
+    font-family:var(--mono);
+    font-size:12px;
+    text-transform:uppercase;
+    letter-spacing:.08em;
+    position:relative;
+  }
+  .nav-cta::after{ display:none; }
+  .nav-cta:hover{ background:var(--ink); color:var(--paper); }
+  @media (max-width:720px){ .nav-cta{display:none;} }
+
+  .nav-burger{
+    display:none;
+    flex-direction:column;
+    justify-content:space-between;
+    width:26px; height:18px;
+    background:none; border:none; padding:0; cursor:pointer;
+    z-index:110;
+  }
+  .nav-burger span{
+    display:block; width:100%; height:2px;
+    background:var(--ink);
+    border-radius:2px;
+    transition:transform .3s ease, opacity .3s ease;
+  }
+  .nav-burger.open span:nth-child(1){ transform:translateY(8px) rotate(45deg); }
+  .nav-burger.open span:nth-child(2){ opacity:0; }
+  .nav-burger.open span:nth-child(3){ transform:translateY(-8px) rotate(-45deg); }
+
+  .mobile-nav{
+    display:none;
+    position:fixed;
+    top:0; left:0; right:0;
+    background:var(--paper);
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+    gap:20px;
+    padding:88px 28px 28px;
+    height:auto;
+    transform:translateY(-100%);
+    transition:transform .4s cubic-bezier(.2,.7,.3,1);
+    z-index:105;
+    font-family:var(--mono);
+    font-size:15px;
+    text-transform:uppercase;
+    letter-spacing:.08em;
+    border-bottom:1px solid var(--line-strong);
+    box-shadow:0 20px 40px -24px rgba(0,0,0,.3);
+  }
+  .mobile-nav.open{ transform:translateY(0); }
+
+  @media (max-width:720px){
+    .nav-burger{ display:flex; }
+    .mobile-nav{ display:flex; }
+  }
+
+  /* ---------- ARTICLE HEADER ---------- */
+  .article-header{
+    padding:150px 0 50px;
+    background: linear-gradient(356deg, rgba(246, 244, 236, 1) 0%, rgba(209, 255, 240, 0.77) 91%, rgba(246, 244, 236, 1) 100%);
+    border-bottom:1px solid var(--line-strong);
+  }
+  .article-header .inner{max-width:var(--article-w); margin:0 auto;}
+  .back-link{
+    font-family:var(--mono); font-size:12px; letter-spacing:.06em; text-transform:uppercase;
+    display:inline-flex; align-items:center; gap:8px; color:#33453b;
+    margin-bottom:26px;
+  }
+  .back-link svg{width:14px; height:14px;}
+  .back-link:hover{color:var(--ink);}
+  .article-header .tag{
+    font-family:var(--mono); font-size:11px; text-transform:uppercase; letter-spacing:.08em; color:var(--pink);
+  }
+  .article-header h1{
+    font-size:clamp(2rem,4.6vw,3.2rem);
+    line-height:1.1;
+    margin-top:16px;
+    max-width:22ch;
+  }
+  .article-header .dek{
+    font-size:18px;
+    color:#33453b;
+    margin-top:20px;
+    max-width:56ch;
+    line-height:1.6;
+  }
+  .byline{
+    display:flex; align-items:center; gap:14px;
+    margin-top:34px;
+    padding-top:24px;
+    border-top:1px solid var(--line);
+  }
+  .byline-avatar{
+    width:38px; height:38px; border-radius:50%;
+    background:var(--forest);
+    color:var(--paper);
+    display:flex; align-items:center; justify-content:center;
+    font-family:var(--display); font-weight:700; font-size:14px;
+    flex-shrink:0;
+  }
+  .byline-text{font-family:var(--mono); font-size:12px; letter-spacing:.02em; color:#33453b; line-height:1.5;}
+  .byline-text strong{color:var(--ink); font-weight:700; display:block; font-size:13px; margin-bottom:2px;}
+
+  /* ---------- smooth entrance ---------- */
+  .article-header .back-link,
+  .article-header .tag,
+  .article-header h1,
+  .article-header .dek,
+  .article-header .byline{
+    opacity:0;
+    transform:translateY(14px);
+  }
+  body.loaded .article-header .back-link{ animation: header-in .6s cubic-bezier(.2,.7,.3,1) .05s forwards; }
+  body.loaded .article-header .tag{ animation: header-in .6s cubic-bezier(.2,.7,.3,1) .12s forwards; }
+  body.loaded .article-header h1{ animation: header-in .6s cubic-bezier(.2,.7,.3,1) .18s forwards; }
+  body.loaded .article-header .dek{ animation: header-in .6s cubic-bezier(.2,.7,.3,1) .26s forwards; }
+  body.loaded .article-header .byline{ animation: header-in .6s cubic-bezier(.2,.7,.3,1) .34s forwards; }
+  @keyframes header-in{
+    to{ opacity:1; transform:translateY(0); }
+  }
+  @media (prefers-reduced-motion: reduce){
+    .article-header .back-link, .article-header .tag, .article-header h1, .article-header .dek, .article-header .byline{
+      animation:none !important; opacity:1; transform:none;
+    }
+  }
+
+  /* ---------- ARTICLE BODY ---------- */
+  .article-body{
+    max-width:var(--article-w);
+    margin:0 auto;
+    padding:56px 0 20px;
+  }
+  .article-body p{
+    font-size:17px;
+    line-height:1.75;
+    color:#1c2921;
+    margin-bottom:24px;
+  }
+  .article-body p:first-of-type{
+    font-size:19px;
+    color:var(--ink);
+  }
+  .article-body h2{
+    font-size:clamp(1.4rem,3vw,1.9rem);
+    line-height:1.25;
+    margin:52px 0 20px;
+  }
+  .article-body h3{
+    font-size:1.2rem;
+    line-height:1.3;
+    margin:38px 0 14px;
+  }
+  .article-body ul, .article-body ol{
+    margin:0 0 24px 22px;
+    font-size:17px;
+    line-height:1.75;
+    color:#1c2921;
+  }
+  .article-body li{margin-bottom:8px;}
+  .article-body figure{margin:40px 0;}
+  .article-body figure img{width:100%; border:1px solid var(--line-strong);}
+  .article-body figcaption{
+    font-family:var(--mono);
+    font-size:12px;
+    color:#5b6a5f;
+    margin-top:10px;
+    line-height:1.5;
+  }
+  blockquote{
+    margin:40px 0;
+    padding:4px 0 4px 26px;
+    border-left:2px solid var(--pink);
+    font-family:var(--display);
+    font-style:italic;
+    font-weight:500;
+    font-size:1.3rem;
+    line-height:1.45;
+    color:var(--ink);
+  }
+  .article-body strong{font-weight:700;}
+  .article-body a.inline-link{
+    text-decoration:underline;
+    text-decoration-color:var(--line-strong);
+    text-underline-offset:3px;
+    transition:text-decoration-color .25s ease;
+  }
+  .article-body a.inline-link:hover{text-decoration-color:var(--ink);}
+
+  .share-row{
+    display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:16px;
+    max-width:var(--article-w); margin:0 auto; padding:36px 0 60px; border-bottom:1px solid var(--line);
+  }
+  .tag-pill{
+    font-family:var(--mono); font-size:11px; text-transform:uppercase; letter-spacing:.06em;
+    border:1px solid var(--line-strong); padding:7px 14px;
+  }
+
+  /* ---------- REFERENCES ---------- */
+  .references{
+    max-width:var(--article-w);
+    margin:0 auto;
+    padding:56px 0 90px;
+  }
+  .references h2{
+    font-size:1.15rem;
+    text-transform:uppercase;
+    letter-spacing:.04em;
+    margin-bottom:26px;
+  }
+  .references ol{
+    list-style:none;
+    counter-reset:refs;
+    font-family:var(--body);
+    font-size:14px;
+    line-height:1.7;
+    color:#33453b;
+  }
+  .references li{
+    counter-increment:refs;
+    display:flex;
+    gap:14px;
+    padding:14px 0;
+    border-top:1px solid var(--line);
+  }
+  .references li:first-child{border-top:1px solid var(--line-strong);}
+  .references li::before{
+    content:counter(refs);
+    font-family:var(--mono);
+    font-size:12px;
+    color:var(--pink);
+    flex-shrink:0;
+    padding-top:1px;
+  }
+  .references li a{
+    text-decoration:underline;
+    text-decoration-color:var(--line-strong);
+    text-underline-offset:3px;
+    word-break:break-word;
+  }
+  .references li a:hover{text-decoration-color:var(--ink);}
+
+  /* ---------- FOOTER ---------- */
+  footer{background:var(--forest-deep); color:var(--paper); padding:70px 0 28px;}
+  .foot-top{display:flex; justify-content:center; gap:30px; flex-wrap:wrap; padding-bottom:50px; border-bottom:1px solid rgba(246,244,236,.15);}
+  .foot-cta{display:flex; flex-direction:column; gap:16px; align-items:center; text-align:center;}
+  .foot-links{font-family:var(--mono); font-size:12px; text-transform:uppercase; letter-spacing:.06em; display:flex; justify-content:center; gap:22px; flex-wrap:wrap;}
+  .foot-bottom{display:flex; justify-content:space-between; padding-top:24px; font-family:var(--mono); font-size:11px; color:#a9b3ab; flex-wrap:wrap; gap:10px;}
+
+  /* ---------- RESPONSIVE: tablet / iPad ---------- */
+  html{-webkit-text-size-adjust:100%; text-size-adjust:100%;}
+  .article-body p, .article-body li, .references li{overflow-wrap:break-word;}
+  .nav-burger{position:relative;}
+  .nav-burger::after{content:"";position:absolute; inset:-14px;} /* bigger tap area */
+  .mobile-nav a{padding:6px 0;}
+
+  @media (max-width:1024px){
+    .wrap{padding:0 40px;}
+    nav{padding:16px 32px;}
+    .article-header{padding:128px 0 44px;}
+    .article-header h1{max-width:none;}
+    .article-body, .share-row, .references{max-width:680px;}
+  }
+
+  /* ---------- RESPONSIVE: phones ---------- */
+  @media (max-width:720px){
+    .wrap{padding:0 20px;}
+    nav{padding:14px 20px; padding-top:max(14px, env(safe-area-inset-top));}
+    .mobile-nav{padding:84px 24px 28px;}
+    .article-header{padding:100px 0 32px;}
+    .back-link{margin-bottom:20px;}
+    .article-header h1{font-size:clamp(1.75rem,7.4vw,2.3rem); line-height:1.15; margin-top:12px;}
+    .article-header .dek{font-size:16px; line-height:1.6; margin-top:16px;}
+    .byline{margin-top:26px; padding-top:20px;}
+
+    .article-body{padding:34px 0 8px;}
+    .article-body p{font-size:16.5px; line-height:1.7; margin-bottom:20px;}
+    .article-body p:first-of-type{font-size:17.5px;}
+    .article-body h2{margin:38px 0 14px;}
+    .article-body h3{margin:30px 0 12px;}
+    .article-body ul, .article-body ol{font-size:16.5px; margin-left:20px;}
+    blockquote{margin:28px 0; padding-left:18px; font-size:1.12rem; line-height:1.45;}
+
+    .share-row{flex-direction:column; align-items:flex-start; padding:26px 0 40px;}
+    .share-row .btn{width:100%; justify-content:center;}
+    .btn{min-height:46px;}
+
+    .references{padding:36px 0 60px;}
+    .references h2{font-size:1.05rem; margin-bottom:20px;}
+    .references li{font-size:13.5px; gap:12px; padding:13px 0; line-height:1.65;}
+
+    footer{padding:52px 0 calc(24px + env(safe-area-inset-bottom));}
+    .foot-top{padding-bottom:36px;}
+    .foot-cta .btn{width:100%; justify-content:center;}
+    .foot-links{gap:14px 20px;}
+    .foot-bottom{flex-direction:column; align-items:center; text-align:center; gap:8px;}
+  }
+
+  @media (max-width:380px){
+    .wrap{padding:0 16px;}
+    .article-body p{font-size:16px;}
+    .article-body p:first-of-type{font-size:17px;}
+  }
+
+  /* landscape phones: don't let the dropdown menu overflow */
+  @media (max-height:480px) and (max-width:900px){
+    .mobile-nav{padding-top:70px; gap:10px; overflow-y:auto; max-height:100vh;}
+  }
+
+  /* ---------- READABILITY & DEVICE POLISH ---------- */
+  .article-body p, .article-body li, .article-header .dek{text-wrap:pretty;}
+  .article-header h1, .article-body h2, .article-body h3, blockquote{text-wrap:balance;}
+  nav.scrolled{backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px);}
+  a, button{-webkit-tap-highlight-color:rgba(31,77,58,.12);}
+  .references li a{overflow-wrap:anywhere;}
+  .references li::before{min-width:1.6em;}
+  .byline{flex-wrap:wrap;}
+
+  /* iPad / tablets */
+  @media (min-width:721px) and (max-width:1024px){
+    .article-body p, .article-body ul, .article-body ol{font-size:17.5px; line-height:1.75;}
+    .article-body p:first-of-type{font-size:19px;}
+    .article-body h2{margin-top:48px;}
+    .references li{font-size:14.5px;}
+  }
+
+  /* phones */
+  @media (max-width:720px){
+    .byline-text{font-size:12.5px;}
+    .tag-pill{font-size:10.5px;}
+    .mobile-nav{max-height:100vh; max-height:100dvh; overflow-y:auto;}
+  }
+
+  @media (prefers-reduced-motion: reduce){
+    body{transition:none;}
+    html{scroll-behavior:auto;}
+  }
+
+  /* ---------- in-text citation markers ---------- */
+  .article-body sup.cite{font-family:var(--mono); font-size:.68em; line-height:0; margin-left:2px; white-space:nowrap;}
+  .article-body sup.cite a{color:var(--pink); text-decoration:none; padding:0 1px;}
+  .article-body sup.cite a:hover{text-decoration:underline;}
+  .references li{scroll-margin-top:100px;}
+  .references li:target{background:rgba(198,255,107,.28);}
+
+  .article-body ul li strong{font-weight:700;}
+
+</style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+{
+  "@type": "Article",
+  "@id": "https://econforyouth.com/articles/psychology-of-luxury#article",
+  "headline": "The Psychology of Luxury: Why We Keep Paying More for Luxury",
+  "description": "How status, exclusivity and consumer psychology shape the appeal of luxury goods, and why their value goes beyond practical function.",
+  "author": { "@type": "Person", "name": "Calista Ng" },
+  "publisher": { "@type": "NGO", "name": "Econ For Youth", "url": "https://econforyouth.com/" },
+  "mainEntityOfPage": "https://econforyouth.com/articles/psychology-of-luxury",
+  "datePublished": "2026-11-05",
+  "inLanguage": "en"
+},
+{
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://econforyouth.com/" },
+      { "@type": "ListItem", "position": 2, "name": "Articles", "item": "https://econforyouth.com/articles" },
+      { "@type": "ListItem", "position": 3, "name": "The Psychology of Luxury: Why We Keep Paying More for Luxury", "item": "https://econforyouth.com/articles/psychology-of-luxury" }
+  ]
+}
+]
+}
+</script>
+</head>
+<body>
+
+<nav id="nav">
+  <a class="nav-logo" href="https://econforyouth.com/">
+    <svg class="nav-globe" viewBox="0 0 100 100" fill="none" stroke="currentColor" stroke-width="1.4">
+      <circle cx="50" cy="50" r="42"/>
+      <ellipse cx="50" cy="50" rx="18" ry="42"/>
+      <ellipse cx="50" cy="50" rx="42" ry="18"/>
+      <path d="M8,50 A42,42 0 0,1 92,50" />
+      <path d="M14,32 A42,42 0 0,1 86,32" />
+      <path d="M14,68 A42,42 0 0,1 86,68" />
+    </svg>
+    Econ For Youth
+  </a>
+  <div class="nav-right">
+    <div class="nav-links">
+      <a href="https://econforyouth.com/#about">About</a>
+      <a href="https://econforyouth.com/#mission">Mission</a>
+      <a href="https://econforyouth.com/articles" class="current">Articles</a>
+    </div>
+    <a href="https://econforyouth.com/opportunities/volunteer" class="nav-cta">Join Our Team</a>
+    <button class="nav-burger" id="navBurger" aria-label="Open menu" aria-expanded="false">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+  </div>
+</nav>
+
+<div class="mobile-nav" id="mobileNav">
+  <a href="https://econforyouth.com/#about">About</a>
+  <a href="https://econforyouth.com/#mission">Mission</a>
+  <a href="https://econforyouth.com/articles">Articles</a>
+  <a href="https://econforyouth.com/opportunities/volunteer">Join Our Team</a>
+</div>
+
+<!-- ================= ARTICLE HEADER ================= -->
+<header class="article-header">
+  <div class="wrap">
+    <div class="inner">
+      <a class="back-link" href="https://econforyouth.com/articles">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+        Back to Articles
+      </a>
+      <div class="tag">Behavioral</div>
+      <h1>The Psychology of Luxury: Why We Keep Paying More for Luxury</h1>
+      <p class="dek">Exploring how status, exclusivity and consumer psychology shape the human appeal of luxury goods — and why an item’s value often goes beyond its practical function.</p>
+      <div class="byline">
+        <div class="byline-avatar">CN</div>
+        <div class="byline-text">
+          <strong>Calista Ng</strong>
+          Published <time datetime="2026-11-05">November 5, 2026</time> · 6 min read
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<main class="wrap">
+
+  <!-- ================= ARTICLE BODY ================= -->
+  <!--
+    Article content goes here. Use <h2> for major sections, <h3> for
+    sub-sections, <p> for body copy, and <blockquote> to pull out a
+    key line. Swap the placeholder paragraphs below for the real text.
+  -->
+  <article class="article-body">
+    <p>Two handbags sit side by side. One is a designer bag, while the other is an unbranded alternative. Putting aside financial, practical and personal considerations, the branded handbag likely appears as the more desirable choice. Both serve the same fundamental purpose: carrying personal belongings. While cheaper alternatives are undoubtedly more economical, performing the same function at a fraction of the price, luxury handbags, and luxury goods in general, remain highly coveted for their exquisite craftsmanship, exclusivity and the prestige associated with their brand names. The promise of sophistication and distinction offered by high-end goods and services is precisely what makes luxury items desirable for reasons extending far beyond their practical value.</p>
+
+    <h2>More than just a price tag</h2>
+
+    <p>What makes a handbag worth thousands of dollars when another, costing a fraction of the price, is able to serve the same purpose just as well?</p>
+
+    <blockquote>Luxury goods appeal to consumers through promises of status, identity, exclusivity and personal achievement.</blockquote>
+
+    <p>This extends beyond conventional notions of product value, as demonstrated by Akarsu et al.<sup class="cite"><a href="#ref-1" aria-label="Reference 1">[1]</a></sup>, whose meta-analysis of 74 studies involving 32,587 participants identified six dimensions of luxury value perception, namely functional, social, emotional, conditional, epistemic and economic value. These findings underscore that consumers assess luxury goods not only through their tangible attributes, but also through the emotional satisfaction, social recognition and perceived prestige associated with owning high-end products.</p>
+
+    <p>Aside from the perceived value of goods, the desire for luxury is also deeply rooted in human mentality. Dubois et al.<sup class="cite"><a href="#ref-2" aria-label="Reference 2">[2]</a></sup>, in their review of the psychology of luxury consumption, explain how consumers’ desire for luxury stems from implicit biological, sociopsychological and structural influences. It highlights the underlying tension between what luxury represents to individuals and the external forces in society that shape its meaning. Consequently, societal perception of luxury consumption has shifted from viewing it as a symbol of wealth and high status to an expression of personal ambition, self-identity, and people’s desire to receive social recognition.</p>
+
+    <p>In society today, luxury consumption is shaped by an interplay of economic factors and psychological motivations. To understand this phenomenon, one must look beyond conventional ideas of pricing and examine the behavioural tendencies that influence consumers’ perceptions of value.</p>
+
+    <h2>The Economics of Luxury: When Higher Prices Become Part of the Appeal</h2>
+
+    <p>Alongside psychological motivations, the consumption of luxury goods is also governed by fundamental economic principles, in particular, the relationship between income and demand.</p>
+
+    <p>This relationship is reflected in the income elasticity of demand (YED), which measures the extent to which demand responds to changes in consumer income. A good is generally classified as a luxury when its YED exceeds one, indicating that demand rises more than proportionately as income increases. For instance, a rise in income may lead consumers to spend considerably more on designer fashion, luxury watches and high-end vehicles. As purchasing power grows, consumers are often more willing to allocate their income towards goods that offer prestige and exclusivity. However, income alone cannot fully explain the appeal of luxury. In certain circumstances, a product’s high price can itself enhance its desirability, giving rise to what economists call the Veblen Effect.</p>
+
+    <p>First introduced by Thorstein Veblen<sup class="cite"><a href="#ref-3" aria-label="Reference 3">[3]</a></sup>, conspicuous consumption describes how individuals purchase and display expensive goods to demonstrate their wealth and social standing. In relation to this, Bagwell and Bernheim<sup class="cite"><a href="#ref-4" aria-label="Reference 4">[4]</a></sup> examine the conditions under which Veblen effects emerge, whereby consumers may perceive higher-priced products as more desirable because their prices signal wealth and status. This helps explain why luxury brands such as Rolex and Hermès can command premium prices while maintaining an image of exclusivity. Through carefully managed pricing, selective distribution and limited availability, brands can reinforce the perception that their products are distinctive and difficult to obtain. The Hermès Birkin bag, for example, is particularly associated with restricted availability and controlled distribution, further contributing to its desirability among consumers<sup class="cite"><a href="#ref-5" aria-label="Reference 5">[5]</a></sup>. In this sense, luxury brands sell more than the functional qualities of their products: they also cultivate an image of prestige, where the high price adds desirability to the product, in addition to being a mandatory cost of ownership.</p>
+
+    <h2>The Psychology Behind the Purchase</h2>
+
+    <p>Beyond the desire for social recognition, luxury consumption is also shaped by consumers’ need for identity, belonging and emotional fulfilment. Luxury brands can serve as extensions of an individual’s self-image, allowing consumers to express their personal tastes while associating themselves with particular social groups<sup class="cite"><a href="#ref-2" aria-label="Reference 2">[2]</a></sup>. This desire for distinction is further reinforced by scarcity and exclusivity, as limited releases, waiting lists and restricted availability can make products appear more unique and desirable<sup class="cite"><a href="#ref-1" aria-label="Reference 1">[1]</a></sup>. Interestingly, however, not all consumers seek recognition through conspicuous displays of wealth. Brandão and Barbedo<sup class="cite"><a href="#ref-6" aria-label="Reference 6">[6]</a></sup> highlight the distinction between conspicuous and inconspicuous luxury consumption, suggesting that some individuals favour understated products that communicate exclusivity through subtle details rather than prominent logos. This is reflected in the growing appeal of quiet luxury, where quality, craftsmanship and discreet branding take precedence over obvious displays of wealth. Ultimately, luxury purchases may offer more than material satisfaction, providing consumers with a sense of achievement, individuality and emotional gratification.</p>
+
+    <h2>How Luxury Brands Create Perceived Value</h2>
+
+    <p>Apart from their effect on consumer psychology, luxury brands also create perceived value through their heritage, craftsmanship and carefully shaped identities. A brand’s history and reputation serve as valuable intangible assets that distinguish the brand from its competitors and give it the ability to command higher prices from consumers. This is evident in brands such as Chanel, whose longstanding association with elegance and fashion heritage indirectly strengthens its prestigious image in today’s brand market. Similarly, Hermès emphasises specialised craftsmanship and traditional production techniques, positioning its products as more than ordinary consumer goods. Fuentes et al.<sup class="cite"><a href="#ref-7" aria-label="Reference 7">[7]</a></sup> highlight precisely how intangible brand attributes, including heritage, personality and values, contribute to consumers’ perceptions of brand status and distinction. Consequently, two products with similar practical functions may carry vastly different perceived values, as consumers are also paying for the reputation, identity and exclusivity embodied by the brand.</p>
+
+    <h2>The Other Side of Luxury: Is It Really Worth the Price?</h2>
+
+    <p>Despite the appeal of luxury goods, their perceived value does not always correspond to their practical worth. Consumers may place greater importance on the symbolic and emotional benefits of ownership than on a product’s actual functionality. This can be influenced by social comparison, through which individuals evaluate their own status and possessions against those of others, potentially placing pressure on individuals to purchase increasingly expensive goods to maintain a desired social image. Furthermore, the psychological satisfaction associated with luxury purchases may be closely tied to anticipation, prestige and the excitement of ownership, rather than the product’s functional benefits alone. Akarsu et al.<sup class="cite"><a href="#ref-1" aria-label="Reference 1">[1]</a></sup> highlight the multiple dimensions through which consumers perceive luxury value, suggesting that its appeal cannot be measured through economic value alone. However, this raises an important question:</p>
+
+    <blockquote>When consumers pay a premium for luxury, are they truly purchasing superior products, or are they paying for the psychological satisfaction and social meaning attached to ownership?</blockquote>
+
+    <h2>Conclusion: The Value Beyond the Product</h2>
+
+    <p>Ultimately, luxury consumption is shaped by an intricate relationship between economic principles and psychological motivations. While rising incomes and pricing strategies help explain the demand for luxury goods, factors such as social recognition, personal identity, emotional fulfilment and exclusivity further shape consumers’ perceptions of value. As a result, the worth of a luxury product cannot be measured solely by its production cost or practical functionality, but also by the intangible meanings consumers attach to ownership. Whether through the prestige of a recognisable brand or the understated appeal of exclusivity, luxury brands offer more than material possessions: they sell experiences, aspirations and identities.</p>
+
+    <blockquote>Perhaps, then, the true appeal of luxury lies not simply in what a product offers, but in what owning it represents.</blockquote>
+  </article>
+
+  <div class="share-row">
+    <span class="tag-pill">Luxury Goods</span>
+    <a class="btn solid" href="https://econforyouth.com/articles"><span>More articles</span></a>
+  </div>
+
+  <!-- ================= REFERENCES ================= -->
+  <!--
+    Add one <li> per source. The number is generated automatically —
+    just paste the citation text and link.
+  -->
+  <section class="references">
+    <h2>References</h2>
+    <ol>
+      <li id="ref-1"><a href="https://doi.org/10.1002/mar.22120" target="_blank" rel="noopener">Akarsu, T., Shaikh, S., &amp; Moutusi Maity. (2025). Luxury value perceptions and consumer outcomes: A meta‐analysis. <em>Psychology and Marketing, 42</em>(1).</a></li>
+      <li id="ref-2"><a href="https://doi.org/10.1016/j.copsyc.2020.07.011" target="_blank" rel="noopener">Dubois, D., Jung, S., &amp; Ordabayeva, N. (2021). The psychology of luxury consumption. <em>Current Opinion in Psychology, 39,</em> 82–87.</a></li>
+      <li id="ref-3">Veblen, T. (2005). <em>The theory of the leisure class: An economic study in the evolution of institutions.</em> Elibron Classics, Adamant Media Corp. (Original work published 1899)</li>
+      <li id="ref-4"><a href="https://www.researchgate.net/publication/4980724_Veblen_Effects_in_a_Theory_of_Conspicuous_Consumption" target="_blank" rel="noopener"><em>(PDF) Veblen effects in a theory of conspicuous consumption.</em> (n.d.). ResearchGate. Retrieved November 4, 2026.</a></li>
+      <li id="ref-5"><a href="https://www.businessoffashion.com/articles/luxury/how-the-hermes-birkin-bag-purchasing-system-works/" target="_blank" rel="noopener">Kennedy, J. (2024, March 26). Who gets to buy a Birkin bag? <em>The Business of Fashion.</em></a></li>
+      <li id="ref-6"><a href="https://doi.org/10.1057/s41270-022-00157-8" target="_blank" rel="noopener">da Cunha Brandão, A. M. P., &amp; Barbedo, H. E. M. (2023). Going (in)conspicuous: Antecedents and moderators of luxury consumption. <em>Journal of Marketing Analytics, 11</em>(2).</a></li>
+      <li id="ref-7"><a href="https://doi.org/10.1111/ijcs.12852" target="_blank" rel="noopener">Fuentes, H., Vera‐Martinez, J., &amp; Kolbe, D. (2023). The role of intangible attributes of luxury brands for signaling status: A systematic literature review. <em>International Journal of Consumer Studies, 47</em>(6).</a></li>
+    </ol>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="foot-top">
+      <div class="foot-cta">
+        <a href="https://ig.me/m/econforyouth" class="btn solid"><span>DM for collaborations</span></a>
+        <div class="foot-links">
+          <a href="https://econforyouth.com/#about">About</a>
+          <a href="https://econforyouth.com/#mission">Mission</a>
+          <a href="https://econforyouth.com/articles">Articles</a>
+          <a href="https://econforyouth.com/opportunities/volunteer">Volunteer</a>
+          <a href="https://instagram.com/econforyouth">Instagram</a>
+        </div>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>© 2026 Econ For Youth — Student-Led Initiative</span>
+      <span>Exploring Economics Together Through Curiosity</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+  // reveal the page only once fonts are ready, so there's no visible font swap/glitch,
+  // and it triggers the header's entrance animation for a smooth open
+  function revealPage(){ document.body.classList.add('loaded'); }
+  if (document.fonts && document.fonts.ready) {
+    document.fonts.ready.then(revealPage);
+    setTimeout(revealPage, 600); // safety fallback if fonts take too long
+  } else {
+    revealPage();
+  }
+
+  const nav = document.getElementById('nav');
+  window.addEventListener('scroll', () => {
+    nav.classList.toggle('scrolled', window.scrollY > 40);
+  }, { passive: true });
+
+  const navBurger = document.getElementById('navBurger');
+  const mobileNav = document.getElementById('mobileNav');
+  function closeMobileNav(){
+    navBurger.classList.remove('open');
+    mobileNav.classList.remove('open');
+    navBurger.setAttribute('aria-expanded','false');
+  }
+  navBurger.addEventListener('click', () => {
+    const isOpen = navBurger.classList.toggle('open');
+    mobileNav.classList.toggle('open', isOpen);
+    navBurger.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+  });
+  mobileNav.querySelectorAll('a').forEach(a => {
+    a.addEventListener('click', closeMobileNav);
+  });
+
+  if (window.matchMedia('(hover: hover)').matches) {
+    document.querySelectorAll('.btn').forEach(btn => {
+      btn.addEventListener('mousemove', (e) => {
+        const r = btn.getBoundingClientRect();
+        const x = (e.clientX - r.left - r.width / 2) * 0.18;
+        const y = (e.clientY - r.top - r.height / 2) * 0.3;
+        btn.style.transform = `translate(${x}px, ${y}px)`;
+      });
+      btn.addEventListener('mouseleave', () => { btn.style.transform = 'translate(0,0)'; });
+    });
+  }
+</script>
+</body>
+</html>
