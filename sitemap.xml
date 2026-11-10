@@ -91,4 +91,16 @@
     <priority>0.8</priority>
   </url>
 
+    <url>
+    <loc>https://econforyouth.com/articles/written-articles/article-hoisted-in-ones-petard</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+    <url>
+    <loc>https://econforyouth.com/articles/written-articles/article-crumble-bakery-item-to-luxury-accessory</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
 </urlset>

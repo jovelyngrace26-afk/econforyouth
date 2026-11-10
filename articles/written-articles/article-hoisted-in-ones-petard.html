@@ -1,0 +1,719 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+<title>Hoisted in One’s Petard: Navigating Dependency Theory as an Economic Framework | Econ For Youth</title>
+<meta name="description" content="How the Core–Periphery divide keeps poor countries poor, from the price of a pair of Gap jeans to the limits of self-sufficiency. An Econ For Youth article by Author Name.">
+<link rel="canonical" href="https://econforyouth.com/articles/hoisted-in-ones-petard">
+<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+<meta name="author" content="Author Name">
+<meta name="theme-color" content="#1f4d3a">
+
+<!-- Open Graph -->
+<meta property="og:site_name" content="Econ For Youth">
+<meta property="og:type" content="article">
+<meta property="og:locale" content="en_US">
+<meta property="og:url" content="https://econforyouth.com/articles/hoisted-in-ones-petard">
+<meta property="og:title" content="Hoisted in One’s Petard: Navigating Dependency Theory as an Economic Framework | Econ For Youth">
+<meta property="og:description" content="How the Core–Periphery divide keeps poor countries poor, from the price of a pair of Gap jeans to the limits of self-sufficiency.">
+<meta property="og:image" content="https://econforyouth.com/assets/og-image.jpg">
+
+<!-- Twitter / X -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Hoisted in One’s Petard: Navigating Dependency Theory as an Economic Framework | Econ For Youth">
+<meta name="twitter:description" content="How the Core–Periphery divide keeps poor countries poor, from the price of a pair of Gap jeans to the limits of self-sufficiency.">
+<meta name="twitter:image" content="https://econforyouth.com/assets/og-image.jpg">
+
+<link rel="apple-touch-icon" sizes="180x180" href="https://econforyouth.com/icons/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://econforyouth.com/icons/android-chrome-512x512.png">
+<link rel="icon" type="image/png" sizes="16x16" href="https://econforyouth.com/icons/android-chrome-192x192.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,700&family=Source+Serif+4:opsz,wght@8..60,400;8..60,500;8..60,600;8..60,700&family=Montserrat:ital,wght@0,100;0,400;0,500;0,600;0,700;1,500&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink:#101d16;
+    --paper:#f6f4ec;
+    --paper-dim:#ece8db;
+    --forest:#1f4d3a;
+    --forest-deep:#122b20;
+    --lime:#c6ff6b;
+    --pink:#ff5fa2;
+    --line: rgba(16,29,22,.16);
+    --line-strong: rgba(16,29,22,.4);
+    --display: 'Source Serif 4', Georgia, serif;
+    --body: 'Montserrat', sans-serif;
+    --mono: 'Space Mono', monospace;
+    --maxw: 1180px;
+    --article-w: 720px;
+  }
+  *{margin:0;padding:0;box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    background:var(--paper);
+    color:var(--ink);
+    font-family:var(--body);
+    font-size:16px;
+    line-height:1.55;
+    overflow-x:hidden;
+    opacity:0;
+    transition:opacity .5s ease;
+  }
+  body.loaded{opacity:1;}
+  ::selection{background:#f6dbdf;color:var(--ink);}
+  a{color:inherit;text-decoration:none;}
+  img{max-width:100%;display:block;}
+
+  .wrap{max-width:var(--maxw); margin:0 auto; padding:0 28px;}
+  .eyebrow{
+    font-family:var(--mono);
+    font-size:12px;
+    letter-spacing:.14em;
+    text-transform:uppercase;
+    display:inline-flex;
+    align-items:center;
+    gap:8px;
+    color:var(--ink);
+  }
+  .eyebrow::before{content:"";width:7px;height:7px;background:var(--pink);border-radius:50%;display:inline-block;}
+
+  h1,h2,h3{font-family:var(--display); font-weight:600; letter-spacing:0; color:var(--ink);}
+
+  .btn{
+    font-family:var(--mono);
+    font-size:13px;
+    letter-spacing:.06em;
+    text-transform:uppercase;
+    border:1.5px solid var(--ink);
+    padding:13px 22px;
+    background:transparent;
+    border-radius:999px;
+    display:inline-flex;
+    align-items:center;
+    gap:10px;
+    cursor:pointer;
+    position:relative;
+    overflow:hidden;
+    transition: color .35s ease, border-color .35s ease;
+  }
+  .btn::before{
+    content:"";
+    position:absolute; inset:0;
+    background:var(--ink);
+    transform:translateY(101%);
+    transition:transform .35s cubic-bezier(.6,0,.3,1);
+    z-index:0;
+  }
+  .btn span{position:relative; z-index:1; transition:color .35s ease;}
+  .btn:hover{color:var(--paper);}
+  .btn:hover::before{transform:translateY(0);}
+  .btn.solid{background:var(--ink); color:var(--paper);}
+  .btn.solid::before{background:var(--lime);}
+  .btn.solid:hover{color:var(--ink);}
+
+  /* ---------- NAV ---------- */
+  nav{
+    position:fixed; top:0; left:0; right:0; z-index:150;
+    display:flex; align-items:center; justify-content:space-between;
+    padding:18px 28px;
+    transition:background .3s ease, border-color .3s ease;
+    border-bottom:1px solid transparent;
+  }
+  nav.scrolled{background:rgba(246,244,236,.86); backdrop-filter:blur(10px); border-color:var(--line);}
+  .nav-logo{
+    display:flex; align-items:center; gap:10px;
+    font-family:'Bricolage Grotesque', sans-serif; font-weight:700; font-size:17px;
+  }
+  .nav-globe{width:22px;height:22px;}
+  .nav-links{display:flex; gap:28px; font-family:var(--mono); font-size:12px; text-transform:uppercase; letter-spacing:.08em;}
+  .nav-links a{position:relative; padding-bottom:3px;}
+  .nav-links a::after{content:"";position:absolute;left:0;bottom:0;width:0;height:1.5px;background:var(--forest);transition:width .3s ease;}
+  .nav-links a:hover::after{width:100%;}
+  .nav-links a.current::after{width:100%;}
+  @media (max-width:720px){ .nav-links{display:none;} }
+
+  .nav-right{display:flex; align-items:center; gap:28px;}
+  .nav-cta{
+    padding:8px 16px;
+    border:1.5px solid var(--ink);
+    border-radius:999px;
+    transition:background .3s ease, color .3s ease;
+    font-family:var(--mono);
+    font-size:12px;
+    text-transform:uppercase;
+    letter-spacing:.08em;
+    position:relative;
+  }
+  .nav-cta::after{ display:none; }
+  .nav-cta:hover{ background:var(--ink); color:var(--paper); }
+  @media (max-width:720px){ .nav-cta{display:none;} }
+
+  .nav-burger{
+    display:none;
+    flex-direction:column;
+    justify-content:space-between;
+    width:26px; height:18px;
+    background:none; border:none; padding:0; cursor:pointer;
+    z-index:110;
+  }
+  .nav-burger span{
+    display:block; width:100%; height:2px;
+    background:var(--ink);
+    border-radius:2px;
+    transition:transform .3s ease, opacity .3s ease;
+  }
+  .nav-burger.open span:nth-child(1){ transform:translateY(8px) rotate(45deg); }
+  .nav-burger.open span:nth-child(2){ opacity:0; }
+  .nav-burger.open span:nth-child(3){ transform:translateY(-8px) rotate(-45deg); }
+
+  .mobile-nav{
+    display:none;
+    position:fixed;
+    top:0; left:0; right:0;
+    background:var(--paper);
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+    gap:20px;
+    padding:88px 28px 28px;
+    height:auto;
+    transform:translateY(-100%);
+    transition:transform .4s cubic-bezier(.2,.7,.3,1);
+    z-index:105;
+    font-family:var(--mono);
+    font-size:15px;
+    text-transform:uppercase;
+    letter-spacing:.08em;
+    border-bottom:1px solid var(--line-strong);
+    box-shadow:0 20px 40px -24px rgba(0,0,0,.3);
+  }
+  .mobile-nav.open{ transform:translateY(0); }
+
+  @media (max-width:720px){
+    .nav-burger{ display:flex; }
+    .mobile-nav{ display:flex; }
+  }
+
+  /* ---------- ARTICLE HEADER ---------- */
+  .article-header{
+    padding:150px 0 50px;
+    background: linear-gradient(356deg, rgba(246, 244, 236, 1) 0%, rgba(209, 255, 240, 0.77) 91%, rgba(246, 244, 236, 1) 100%);
+    border-bottom:1px solid var(--line-strong);
+  }
+  .article-header .inner{max-width:var(--article-w); margin:0 auto;}
+  .back-link{
+    font-family:var(--mono); font-size:12px; letter-spacing:.06em; text-transform:uppercase;
+    display:inline-flex; align-items:center; gap:8px; color:#33453b;
+    margin-bottom:26px;
+  }
+  .back-link svg{width:14px; height:14px;}
+  .back-link:hover{color:var(--ink);}
+  .article-header .tag{
+    font-family:var(--mono); font-size:11px; text-transform:uppercase; letter-spacing:.08em; color:var(--pink);
+  }
+  .article-header h1{
+    font-size:clamp(2rem,4.6vw,3.2rem);
+    line-height:1.1;
+    margin-top:16px;
+    max-width:22ch;
+  }
+  .article-header .dek{
+    font-size:18px;
+    color:#33453b;
+    margin-top:20px;
+    max-width:56ch;
+    line-height:1.6;
+  }
+  .byline{
+    display:flex; align-items:center; gap:14px;
+    margin-top:34px;
+    padding-top:24px;
+    border-top:1px solid var(--line);
+  }
+  .byline-avatar{
+    width:38px; height:38px; border-radius:50%;
+    background:var(--forest);
+    color:var(--paper);
+    display:flex; align-items:center; justify-content:center;
+    font-family:var(--display); font-weight:700; font-size:14px;
+    flex-shrink:0;
+  }
+  .byline-text{font-family:var(--mono); font-size:12px; letter-spacing:.02em; color:#33453b; line-height:1.5;}
+  .byline-text strong{color:var(--ink); font-weight:700; display:block; font-size:13px; margin-bottom:2px;}
+
+  /* ---------- smooth entrance ---------- */
+  .article-header .back-link,
+  .article-header .tag,
+  .article-header h1,
+  .article-header .dek,
+  .article-header .byline{
+    opacity:0;
+    transform:translateY(14px);
+  }
+  body.loaded .article-header .back-link{ animation: header-in .6s cubic-bezier(.2,.7,.3,1) .05s forwards; }
+  body.loaded .article-header .tag{ animation: header-in .6s cubic-bezier(.2,.7,.3,1) .12s forwards; }
+  body.loaded .article-header h1{ animation: header-in .6s cubic-bezier(.2,.7,.3,1) .18s forwards; }
+  body.loaded .article-header .dek{ animation: header-in .6s cubic-bezier(.2,.7,.3,1) .26s forwards; }
+  body.loaded .article-header .byline{ animation: header-in .6s cubic-bezier(.2,.7,.3,1) .34s forwards; }
+  @keyframes header-in{
+    to{ opacity:1; transform:translateY(0); }
+  }
+  @media (prefers-reduced-motion: reduce){
+    .article-header .back-link, .article-header .tag, .article-header h1, .article-header .dek, .article-header .byline{
+      animation:none !important; opacity:1; transform:none;
+    }
+  }
+
+  /* ---------- ARTICLE BODY ---------- */
+  .article-body{
+    max-width:var(--article-w);
+    margin:0 auto;
+    padding:56px 0 20px;
+  }
+  .article-body p{
+    font-size:17px;
+    line-height:1.75;
+    color:#1c2921;
+    margin-bottom:24px;
+  }
+  .article-body p:first-of-type{
+    font-size:19px;
+    color:var(--ink);
+  }
+  .article-body h2{
+    font-size:clamp(1.4rem,3vw,1.9rem);
+    line-height:1.25;
+    margin:52px 0 20px;
+  }
+  .article-body h3{
+    font-size:1.2rem;
+    line-height:1.3;
+    margin:38px 0 14px;
+  }
+  .article-body ul, .article-body ol{
+    margin:0 0 24px 22px;
+    font-size:17px;
+    line-height:1.75;
+    color:#1c2921;
+  }
+  .article-body li{margin-bottom:8px;}
+  .article-body figure{margin:40px 0;}
+  .article-body figure img{width:100%; border:1px solid var(--line-strong);}
+  .article-body figcaption{
+    font-family:var(--mono);
+    font-size:12px;
+    color:#5b6a5f;
+    margin-top:10px;
+    line-height:1.5;
+  }
+  blockquote{
+    margin:40px 0;
+    padding:4px 0 4px 26px;
+    border-left:2px solid var(--pink);
+    font-family:var(--display);
+    font-style:italic;
+    font-weight:500;
+    font-size:1.3rem;
+    line-height:1.45;
+    color:var(--ink);
+  }
+  .article-body strong{font-weight:700;}
+  .article-body a.inline-link{
+    text-decoration:underline;
+    text-decoration-color:var(--line-strong);
+    text-underline-offset:3px;
+    transition:text-decoration-color .25s ease;
+  }
+  .article-body a.inline-link:hover{text-decoration-color:var(--ink);}
+
+  .share-row{
+    display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:16px;
+    max-width:var(--article-w); margin:0 auto; padding:36px 0 60px; border-bottom:1px solid var(--line);
+  }
+  .tag-pill{
+    font-family:var(--mono); font-size:11px; text-transform:uppercase; letter-spacing:.06em;
+    border:1px solid var(--line-strong); padding:7px 14px;
+  }
+
+  /* ---------- REFERENCES ---------- */
+  .references{
+    max-width:var(--article-w);
+    margin:0 auto;
+    padding:56px 0 90px;
+  }
+  .references h2{
+    font-size:1.15rem;
+    text-transform:uppercase;
+    letter-spacing:.04em;
+    margin-bottom:26px;
+  }
+  .references ol{
+    list-style:none;
+    counter-reset:refs;
+    font-family:var(--body);
+    font-size:14px;
+    line-height:1.7;
+    color:#33453b;
+  }
+  .references li{
+    counter-increment:refs;
+    display:flex;
+    gap:14px;
+    padding:14px 0;
+    border-top:1px solid var(--line);
+  }
+  .references li:first-child{border-top:1px solid var(--line-strong);}
+  .references li::before{
+    content:counter(refs);
+    font-family:var(--mono);
+    font-size:12px;
+    color:var(--pink);
+    flex-shrink:0;
+    padding-top:1px;
+  }
+  .references li a{
+    text-decoration:underline;
+    text-decoration-color:var(--line-strong);
+    text-underline-offset:3px;
+    word-break:break-word;
+  }
+  .references li a:hover{text-decoration-color:var(--ink);}
+
+  /* ---------- FOOTER ---------- */
+  footer{background:var(--forest-deep); color:var(--paper); padding:70px 0 28px;}
+  .foot-top{display:flex; justify-content:center; gap:30px; flex-wrap:wrap; padding-bottom:50px; border-bottom:1px solid rgba(246,244,236,.15);}
+  .foot-cta{display:flex; flex-direction:column; gap:16px; align-items:center; text-align:center;}
+  .foot-links{font-family:var(--mono); font-size:12px; text-transform:uppercase; letter-spacing:.06em; display:flex; justify-content:center; gap:22px; flex-wrap:wrap;}
+  .foot-bottom{display:flex; justify-content:space-between; padding-top:24px; font-family:var(--mono); font-size:11px; color:#a9b3ab; flex-wrap:wrap; gap:10px;}
+
+  /* ---------- RESPONSIVE: tablet / iPad ---------- */
+  html{-webkit-text-size-adjust:100%; text-size-adjust:100%;}
+  .article-body p, .article-body li, .references li{overflow-wrap:break-word;}
+  .nav-burger{position:relative;}
+  .nav-burger::after{content:"";position:absolute; inset:-14px;} /* bigger tap area */
+  .mobile-nav a{padding:6px 0;}
+
+  @media (max-width:1024px){
+    .wrap{padding:0 40px;}
+    nav{padding:16px 32px;}
+    .article-header{padding:128px 0 44px;}
+    .article-header h1{max-width:none;}
+    .article-body, .share-row, .references{max-width:680px;}
+  }
+
+  /* ---------- RESPONSIVE: phones ---------- */
+  @media (max-width:720px){
+    .wrap{padding:0 20px;}
+    nav{padding:14px 20px; padding-top:max(14px, env(safe-area-inset-top));}
+    .mobile-nav{padding:84px 24px 28px;}
+    .article-header{padding:100px 0 32px;}
+    .back-link{margin-bottom:20px;}
+    .article-header h1{font-size:clamp(1.75rem,7.4vw,2.3rem); line-height:1.15; margin-top:12px;}
+    .article-header .dek{font-size:16px; line-height:1.6; margin-top:16px;}
+    .byline{margin-top:26px; padding-top:20px;}
+
+    .article-body{padding:34px 0 8px;}
+    .article-body p{font-size:16.5px; line-height:1.7; margin-bottom:20px;}
+    .article-body p:first-of-type{font-size:17.5px;}
+    .article-body h2{margin:38px 0 14px;}
+    .article-body h3{margin:30px 0 12px;}
+    .article-body ul, .article-body ol{font-size:16.5px; margin-left:20px;}
+    blockquote{margin:28px 0; padding-left:18px; font-size:1.12rem; line-height:1.45;}
+
+    .share-row{flex-direction:column; align-items:flex-start; padding:26px 0 40px;}
+    .share-row .btn{width:100%; justify-content:center;}
+    .btn{min-height:46px;}
+
+    .references{padding:36px 0 60px;}
+    .references h2{font-size:1.05rem; margin-bottom:20px;}
+    .references li{font-size:13.5px; gap:12px; padding:13px 0; line-height:1.65;}
+
+    footer{padding:52px 0 calc(24px + env(safe-area-inset-bottom));}
+    .foot-top{padding-bottom:36px;}
+    .foot-cta .btn{width:100%; justify-content:center;}
+    .foot-links{gap:14px 20px;}
+    .foot-bottom{flex-direction:column; align-items:center; text-align:center; gap:8px;}
+  }
+
+  @media (max-width:380px){
+    .wrap{padding:0 16px;}
+    .article-body p{font-size:16px;}
+    .article-body p:first-of-type{font-size:17px;}
+  }
+
+  /* landscape phones: don't let the dropdown menu overflow */
+  @media (max-height:480px) and (max-width:900px){
+    .mobile-nav{padding-top:70px; gap:10px; overflow-y:auto; max-height:100vh;}
+  }
+
+  /* ---------- READABILITY & DEVICE POLISH ---------- */
+  .article-body p, .article-body li, .article-header .dek{text-wrap:pretty;}
+  .article-header h1, .article-body h2, .article-body h3, blockquote{text-wrap:balance;}
+  nav.scrolled{backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px);}
+  a, button{-webkit-tap-highlight-color:rgba(31,77,58,.12);}
+  .references li a{overflow-wrap:anywhere;}
+  .references li::before{min-width:1.6em;}
+  .byline{flex-wrap:wrap;}
+
+  /* iPad / tablets */
+  @media (min-width:721px) and (max-width:1024px){
+    .article-body p, .article-body ul, .article-body ol{font-size:17.5px; line-height:1.75;}
+    .article-body p:first-of-type{font-size:19px;}
+    .article-body h2{margin-top:48px;}
+    .references li{font-size:14.5px;}
+  }
+
+  /* phones */
+  @media (max-width:720px){
+    .byline-text{font-size:12.5px;}
+    .tag-pill{font-size:10.5px;}
+    .mobile-nav{max-height:100vh; max-height:100dvh; overflow-y:auto;}
+  }
+
+  @media (prefers-reduced-motion: reduce){
+    body{transition:none;}
+    html{scroll-behavior:auto;}
+  }
+
+  /* ---------- in-text citation markers ---------- */
+  .article-body sup.cite{font-family:var(--mono); font-size:.68em; line-height:0; margin-left:2px; white-space:nowrap;}
+  .article-body sup.cite a{color:var(--pink); text-decoration:none; padding:0 1px;}
+  .article-body sup.cite a:hover{text-decoration:underline;}
+  .references li{scroll-margin-top:100px;}
+  .references li:target{background:rgba(198,255,107,.28);}
+
+  .article-body ul li strong{font-weight:700;}
+
+  .article-body figcaption a{text-decoration:underline; text-decoration-color:var(--line-strong); text-underline-offset:3px;}
+
+  /* justified text */
+  .article-body p, .article-body li{
+    text-align:justify;
+    text-justify:inter-word;
+    -webkit-hyphens:none;
+    hyphens:none;
+  }
+  .article-body blockquote{text-align:left;}
+
+  .article-body h2{font-weight:700;}
+</style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+{
+  "@type": "Article",
+  "@id": "https://econforyouth.com/articles/hoisted-in-ones-petard#article",
+  "headline": "Hoisted in One’s Petard: Navigating Dependency Theory as an Economic Framework",
+  "description": "How the Core–Periphery divide keeps poor countries poor, from the price of a pair of Gap jeans to the limits of self-sufficiency.",
+  "author": { "@type": "Person", "name": "Divine Grace G. Planto" },
+  "publisher": { "@type": "NGO", "name": "Econ For Youth", "url": "https://econforyouth.com/" },
+  "mainEntityOfPage": "https://econforyouth.com/articles/hoisted-in-ones-petard",
+  "datePublished": "2026-11-10",
+  "inLanguage": "en"
+},
+{
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://econforyouth.com/" },
+      { "@type": "ListItem", "position": 2, "name": "Articles", "item": "https://econforyouth.com/articles" },
+      { "@type": "ListItem", "position": 3, "name": "Hoisted in One’s Petard: Navigating Dependency Theory as an Economic Framework", "item": "https://econforyouth.com/articles/hoisted-in-ones-petard" }
+  ]
+}
+]
+}
+</script>
+</head>
+<body>
+
+<nav id="nav">
+  <a class="nav-logo" href="https://econforyouth.com/">
+    <svg class="nav-globe" viewBox="0 0 100 100" fill="none" stroke="currentColor" stroke-width="1.4">
+      <circle cx="50" cy="50" r="42"/>
+      <ellipse cx="50" cy="50" rx="18" ry="42"/>
+      <ellipse cx="50" cy="50" rx="42" ry="18"/>
+      <path d="M8,50 A42,42 0 0,1 92,50" />
+      <path d="M14,32 A42,42 0 0,1 86,32" />
+      <path d="M14,68 A42,42 0 0,1 86,68" />
+    </svg>
+    Econ For Youth
+  </a>
+  <div class="nav-right">
+    <div class="nav-links">
+      <a href="https://econforyouth.com/#about">About</a>
+      <a href="https://econforyouth.com/#mission">Mission</a>
+      <a href="https://econforyouth.com/articles" class="current">Articles</a>
+    </div>
+    <a href="https://econforyouth.com/opportunities/volunteer" class="nav-cta">Join Our Team</a>
+    <button class="nav-burger" id="navBurger" aria-label="Open menu" aria-expanded="false">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+  </div>
+</nav>
+
+<div class="mobile-nav" id="mobileNav">
+  <a href="https://econforyouth.com/#about">About</a>
+  <a href="https://econforyouth.com/#mission">Mission</a>
+  <a href="https://econforyouth.com/articles">Articles</a>
+  <a href="https://econforyouth.com/opportunities/volunteer">Join Our Team</a>
+</div>
+
+<!-- ================= ARTICLE HEADER ================= -->
+<header class="article-header">
+  <div class="wrap">
+    <div class="inner">
+      <a class="back-link" href="https://econforyouth.com/articles">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+        Back to Articles
+      </a>
+      <div class="tag">Macroeconomics</div>
+      <h1>Hoisted in One’s Petard: Navigating Dependency Theory as an Economic Framework</h1>
+      <p class="dek">How the Core–Periphery divide keeps poor countries poor, from the price of a pair of Gap jeans to the limits of self-sufficiency.</p>
+      <div class="byline">
+        <div class="byline-avatar">DG</div>
+        <div class="byline-text">
+          <strong>Divine Grace G. Planto</strong>
+          Published <time datetime="2026-11-10">November 10, 2026</time> · 5 min read
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<main class="wrap">
+
+  <!-- ================= ARTICLE BODY ================= -->
+  <article class="article-body">
+    <p>The world has turned into an immense and bizarre hazard of circumstances that could often be categorized as being <strong>hoisted by one’s own petard</strong>. Economically speaking, one detrimental setback could cause tremendous consequences that may generally affect the foundation of a nation’s daily survival, progress, and security. It creates a domino effect across every sector under the umbrella of economics.</p>
+
+    <p>Say, for instance, there is a spike in crude oil prices in a certain country. Oil, being a fundamental resource in everyday activities, triggers a chain reaction that impacts almost every household and business. It first begins to affect transportation and shipping, then the costs of retail goods soar, and the next thing you know, the broader economy slows down. That is how imperative this overarching system is in our lives.</p>
+
+    <p>Now, what if your country’s economy is dependent on another? Its systems’ functionality heavily relies on dominant nations for the mere sake of survival.</p>
+
+    <p>The <strong>Dependency Theory</strong>—a macro-level framework—further expounds on global economic inequality as a structural result of how poor countries are integrated into the global capitalist system. Nations are divided into two spatial hierarchy labels: the Core and Periphery. <strong>Core Countries</strong> are dominant, capitalist, and industrialized nations that profit from the global economic system. Nations such as the United States, Canada, Germany, Japan, and Singapore are considered core countries due to their immense influence on political, economic, and military leverage. <strong>Periphery Countries</strong>, on the other hand, are those referred to as “least-developed” nations, where their economic focus relies on low-skill, labor-intensive jobs, agriculture, or raw material extraction. Examples of Periphery countries include Bangladesh, the Central African Republic, and Zambia. The key characteristics involve being heavily reliant on primary industries, providing cheap labor to wealthier nations, often lacking advancements in transportation, health care, education, and technology systems, and, most visibly, being vulnerable to market shifts and economic dependence on core nations.<sup class="cite"><a href="#ref-1" aria-label="Reference 1">[1]</a></sup></p>
+
+    <p>Hence, this is where major problems occur. When developing nations are structurally exploited through low-wage labor and the extraction of natural resources and raw materials, it is in great despair that the Core countries are the ones who benefit from their conscientiousness and diligence.</p>
+
+    <h2>An Economic Gap for Gap Jeans</h2>
+
+    <p>Gap jeans are your casual, everyday denim pants. A very comfortable bottom garment for routine life activities; however, what if this piece of fabric cuts penetrating holes into your country’s economic standing?</p>
+
+    <p>The first factor to scrutinize is the “wage gap”, or “the human cost” of producing a single pair of jeans. A garment worker in a country like Bangladesh or Cambodia might earn a minimum wage of roughly $100 to $200 USD per month, often translating to approximately $1 an hour. This massive structural exploitation is the main reason why some families remain below the poverty line, struggling to afford basic food, housing, and health care.</p>
+
+    <p>The subsequent factor is its value once it is sold in the market within the Core’s proximity. The finished Gap jeans are sold in these markets for $50 to $80 USD a pair. Hence, a consumer in a wealthy nation might spend what a periphery worker earns in an entire week just to buy a single piece of clothing.</p>
+
+    <p>Aside from the factor of labor wages, the element of widespread labor violation unveiled from this company way back then, hailed “the first of its kind,” which pushes the company itself to utilize its sourcing power to enhance its service.<sup class="cite"><a href="#ref-2" aria-label="Reference 2">[2]</a></sup></p>
+
+    <p>And the great dismay is that these polished Gap jeans will then be sold to these developing nations for more than what their workers could ever earn in a week. Utterly stripping away the labor of real individuals and slapping a tag on the fruit of their labor. Trapping them in a wealth maze, where all they get is a single kernel, and those on top get the whole cob.</p>
+
+    <blockquote>“Unequal exchange (of labour) is understood to be driven in part by systematic wage inequalities.”<sup class="cite"><a href="#ref-3" aria-label="Reference 3">[3]</a></sup></blockquote>
+
+    <p>Thus, unveiling why poor countries remain poor and rich nations remain on top.</p>
+
+    <h2>Why Self-Sufficiency Is Not an Option</h2>
+
+    <p>Periphery countries find it insurmountable to find an exit from this wealth maze due to the fact that they lack capital and technology. Advanced machinery and domestic financial capital are some of the shortcomings of these developing nations. They must rely on foreign investments and loans, fully inclining them to depend on these systems of support in all varying aspects.</p>
+
+    <p>Therefore, trapping them in the maze—wealth is actively drained from poor countries to enrich wealthy ones. The Prebisch-Singer Thesis (or hypothesis) fully encapsulates the essence of this economic dilemma. Periphery countries must export more goods, resources, and services just to import the same technological advancements from the Core. It’s like a farmer trading with a tech company.</p>
+
+    <p>This imbalance means that even if a developing country produces or exports more physical goods every year, the economic value it gets in return keeps shrinking relative to the cost of high-tech imports.</p>
+
+    <blockquote>“They (poor countries) do not have the opportunities for specialization and trade that are available to those who live in more prosperous countries.”<sup class="cite"><a href="#ref-4" aria-label="Reference 4">[4]</a></sup></blockquote>
+
+    <h2>Hoisted by One’s Own Petard</h2>
+
+    <p>Before the century of laptops, cellular devices, and technological breakthroughs, physical objects and labor were mostly looked upon. The heart of every product lies in the warmth of a person’s palm: the way it is woven, stitched, and formed together. However, that was in the past, when agrarian states and barter systems were more prevalent. Today, economics is far more different than ever. The world is far more interconnected, data-driven, and complex, making global decisions ripple much faster and stronger.</p>
+
+    <p>A nation always has its chance to demonstrate self-reliance and break free from its current economic standing by picking the correct and deserving leader to guide it toward a brighter tomorrow. With that, a country can start by simply <strong>delinking</strong>: prioritizing its domestic and regional needs rather than the demands of global markets. The goal is to insulate the national economy from the volatile and unequal rules set by Western- or Core-dominated financial systems.<sup class="cite"><a href="#ref-5" aria-label="Reference 5">[5]</a></sup></p>
+
+    <p>Little by little, it can salvage itself from its own past calamity and turn it into a rainbow after the storm. Because when push comes to shove, no nation wants to remain dependent while gaining little to no substance, and surely no one wants to be hoisted by their own petard.</p>
+  </article>
+
+  <div class="share-row">
+    <span class="tag-pill">Dependency Theory</span>
+    <a class="btn solid" href="https://econforyouth.com/articles"><span>More articles</span></a>
+  </div>
+
+  <!-- ================= REFERENCES ================= -->
+  <section class="references">
+    <h2>References</h2>
+    <ol>
+      <li id="ref-1"><a href="https://www.britannica.com/money/dependency-theory" target="_blank" rel="noopener">Munro, A. (2018, October 15). <em>Dependency theory.</em> Encyclopedia Britannica.</a></li>
+      <li id="ref-2"><a href="https://www.nbcnews.com/id/wbna4963367" target="_blank" rel="noopener"><em>Gap reports widespread labor violations.</em> (2004, May 12). NBC News.</a></li>
+      <li id="ref-3"><a href="https://doi.org/10.1038/s41467-024-49687-y" target="_blank" rel="noopener">Hickel, J., Hanbury Lemos, M., &amp; Barbour, F. (2024). Unequal exchange of labour in the world economy. <em>Nature Communications, 15</em>(1), 6298.</a></li>
+      <li id="ref-4"><a href="https://www.johndcook.com/blog/2010/02/17/self-sufficiency-is-the-road-to-poverty/" target="_blank" rel="noopener"><em>Self-sufficiency is the road to poverty.</em> (n.d.). johndcook.com. Retrieved November 8, 2026.</a></li>
+      <li id="ref-5"><a href="https://billmitchell.org/blog/?p=61989" target="_blank" rel="noopener">bill. (2024, September 5). <em>Delinking and degrowth – William Mitchell – modern monetary theory.</em> Billmitchell.org.</a></li>
+    </ol>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="foot-top">
+      <div class="foot-cta">
+        <a href="https://ig.me/m/econforyouth" class="btn solid"><span>DM for collaborations</span></a>
+        <div class="foot-links">
+          <a href="https://econforyouth.com/#about">About</a>
+          <a href="https://econforyouth.com/#mission">Mission</a>
+          <a href="https://econforyouth.com/articles">Articles</a>
+          <a href="https://econforyouth.com/opportunities/volunteer">Volunteer</a>
+          <a href="https://instagram.com/econforyouth">Instagram</a>
+        </div>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>© 2026 Econ For Youth — Student-Led Initiative</span>
+      <span>Exploring Economics Together Through Curiosity</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+
+  function revealPage(){ document.body.classList.add('loaded'); }
+  if (document.fonts && document.fonts.ready) {
+    document.fonts.ready.then(revealPage);
+    setTimeout(revealPage, 600); 
+  } else {
+    revealPage();
+  }
+
+  const nav = document.getElementById('nav');
+  window.addEventListener('scroll', () => {
+    nav.classList.toggle('scrolled', window.scrollY > 40);
+  }, { passive: true });
+
+  const navBurger = document.getElementById('navBurger');
+  const mobileNav = document.getElementById('mobileNav');
+  function closeMobileNav(){
+    navBurger.classList.remove('open');
+    mobileNav.classList.remove('open');
+    navBurger.setAttribute('aria-expanded','false');
+  }
+  navBurger.addEventListener('click', () => {
+    const isOpen = navBurger.classList.toggle('open');
+    mobileNav.classList.toggle('open', isOpen);
+    navBurger.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+  });
+  mobileNav.querySelectorAll('a').forEach(a => {
+    a.addEventListener('click', closeMobileNav);
+  });
+
+  if (window.matchMedia('(hover: hover)').matches) {
+    document.querySelectorAll('.btn').forEach(btn => {
+      btn.addEventListener('mousemove', (e) => {
+        const r = btn.getBoundingClientRect();
+        const x = (e.clientX - r.left - r.width / 2) * 0.18;
+        const y = (e.clientY - r.top - r.height / 2) * 0.3;
+        btn.style.transform = `translate(${x}px, ${y}px)`;
+      });
+      btn.addEventListener('mouseleave', () => { btn.style.transform = 'translate(0,0)'; });
+    });
+  }
+</script>
+</body>
+</html>
