@@ -1,0 +1,745 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+<title>Understanding the Attention Economy | Econ For Youth</title>
+<meta name="description" content="Why human attention has become a scarce and valuable resource online, and what that means for platforms, advertisers and the way we spend our time. An Econ For Youth article by Amanah Capal.">
+<link rel="canonical" href="https://econforyouth.com/articles/understanding-the-attention-economy">
+<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+<meta name="author" content="Amanah Capal">
+<meta name="theme-color" content="#1f4d3a">
+
+<!-- Open Graph -->
+<meta property="og:site_name" content="Econ For Youth">
+<meta property="og:type" content="article">
+<meta property="og:locale" content="en_US">
+<meta property="og:url" content="https://econforyouth.com/articles/understanding-the-attention-economy">
+<meta property="og:title" content="Understanding the Attention Economy | Econ For Youth">
+<meta property="og:description" content="Why human attention has become a scarce and valuable resource online, and what that means for platforms, advertisers and the way we spend our time.">
+<meta property="og:image" content="https://econforyouth.com/assets/og-image.jpg">
+
+<!-- Twitter / X -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Understanding the Attention Economy | Econ For Youth">
+<meta name="twitter:description" content="Why human attention has become a scarce and valuable resource online, and what that means for platforms, advertisers and the way we spend our time.">
+<meta name="twitter:image" content="https://econforyouth.com/assets/og-image.jpg">
+
+<link rel="apple-touch-icon" sizes="180x180" href="https://econforyouth.com/icons/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://econforyouth.com/icons/android-chrome-512x512.png">
+<link rel="icon" type="image/png" sizes="16x16" href="https://econforyouth.com/icons/android-chrome-192x192.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,700&family=Source+Serif+4:opsz,wght@8..60,400;8..60,500;8..60,600;8..60,700&family=Montserrat:ital,wght@0,100;0,400;0,500;0,600;0,700;1,500&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink:#101d16;
+    --paper:#f6f4ec;
+    --paper-dim:#ece8db;
+    --forest:#1f4d3a;
+    --forest-deep:#122b20;
+    --lime:#c6ff6b;
+    --pink:#ff5fa2;
+    --line: rgba(16,29,22,.16);
+    --line-strong: rgba(16,29,22,.4);
+    --display: 'Source Serif 4', Georgia, serif;
+    --body: 'Montserrat', sans-serif;
+    --mono: 'Space Mono', monospace;
+    --maxw: 1180px;
+    --article-w: 720px;
+  }
+  *{margin:0;padding:0;box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    background:var(--paper);
+    color:var(--ink);
+    font-family:var(--body);
+    font-size:16px;
+    line-height:1.55;
+    overflow-x:hidden;
+    opacity:0;
+    transition:opacity .5s ease;
+  }
+  body.loaded{opacity:1;}
+  ::selection{background:#f6dbdf;color:var(--ink);}
+  a{color:inherit;text-decoration:none;}
+  img{max-width:100%;display:block;}
+
+  .wrap{max-width:var(--maxw); margin:0 auto; padding:0 28px;}
+  .eyebrow{
+    font-family:var(--mono);
+    font-size:12px;
+    letter-spacing:.14em;
+    text-transform:uppercase;
+    display:inline-flex;
+    align-items:center;
+    gap:8px;
+    color:var(--ink);
+  }
+  .eyebrow::before{content:"";width:7px;height:7px;background:var(--pink);border-radius:50%;display:inline-block;}
+
+  h1,h2,h3{font-family:var(--display); font-weight:600; letter-spacing:0; color:var(--ink);}
+
+  .btn{
+    font-family:var(--mono);
+    font-size:13px;
+    letter-spacing:.06em;
+    text-transform:uppercase;
+    border:1.5px solid var(--ink);
+    padding:13px 22px;
+    background:transparent;
+    border-radius:999px;
+    display:inline-flex;
+    align-items:center;
+    gap:10px;
+    cursor:pointer;
+    position:relative;
+    overflow:hidden;
+    transition: color .35s ease, border-color .35s ease;
+  }
+  .btn::before{
+    content:"";
+    position:absolute; inset:0;
+    background:var(--ink);
+    transform:translateY(101%);
+    transition:transform .35s cubic-bezier(.6,0,.3,1);
+    z-index:0;
+  }
+  .btn span{position:relative; z-index:1; transition:color .35s ease;}
+  .btn:hover{color:var(--paper);}
+  .btn:hover::before{transform:translateY(0);}
+  .btn.solid{background:var(--ink); color:var(--paper);}
+  .btn.solid::before{background:var(--lime);}
+  .btn.solid:hover{color:var(--ink);}
+
+  /* ---------- NAV ---------- */
+  nav{
+    position:fixed; top:0; left:0; right:0; z-index:150;
+    display:flex; align-items:center; justify-content:space-between;
+    padding:18px 28px;
+    transition:background .3s ease, border-color .3s ease;
+    border-bottom:1px solid transparent;
+  }
+  nav.scrolled{background:rgba(246,244,236,.86); backdrop-filter:blur(10px); border-color:var(--line);}
+  .nav-logo{
+    display:flex; align-items:center; gap:10px;
+    font-family:'Bricolage Grotesque', sans-serif; font-weight:700; font-size:17px;
+  }
+  .nav-globe{width:22px;height:22px;}
+  .nav-links{display:flex; gap:28px; font-family:var(--mono); font-size:12px; text-transform:uppercase; letter-spacing:.08em;}
+  .nav-links a{position:relative; padding-bottom:3px;}
+  .nav-links a::after{content:"";position:absolute;left:0;bottom:0;width:0;height:1.5px;background:var(--forest);transition:width .3s ease;}
+  .nav-links a:hover::after{width:100%;}
+  .nav-links a.current::after{width:100%;}
+  @media (max-width:720px){ .nav-links{display:none;} }
+
+  .nav-right{display:flex; align-items:center; gap:28px;}
+  .nav-cta{
+    padding:8px 16px;
+    border:1.5px solid var(--ink);
+    border-radius:999px;
+    transition:background .3s ease, color .3s ease;
+    font-family:var(--mono);
+    font-size:12px;
+    text-transform:uppercase;
+    letter-spacing:.08em;
+    position:relative;
+  }
+  .nav-cta::after{ display:none; }
+  .nav-cta:hover{ background:var(--ink); color:var(--paper); }
+  @media (max-width:720px){ .nav-cta{display:none;} }
+
+  .nav-burger{
+    display:none;
+    flex-direction:column;
+    justify-content:space-between;
+    width:26px; height:18px;
+    background:none; border:none; padding:0; cursor:pointer;
+    z-index:110;
+  }
+  .nav-burger span{
+    display:block; width:100%; height:2px;
+    background:var(--ink);
+    border-radius:2px;
+    transition:transform .3s ease, opacity .3s ease;
+  }
+  .nav-burger.open span:nth-child(1){ transform:translateY(8px) rotate(45deg); }
+  .nav-burger.open span:nth-child(2){ opacity:0; }
+  .nav-burger.open span:nth-child(3){ transform:translateY(-8px) rotate(-45deg); }
+
+  .mobile-nav{
+    display:none;
+    position:fixed;
+    top:0; left:0; right:0;
+    background:var(--paper);
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+    gap:20px;
+    padding:88px 28px 28px;
+    height:auto;
+    transform:translateY(-100%);
+    transition:transform .4s cubic-bezier(.2,.7,.3,1);
+    z-index:105;
+    font-family:var(--mono);
+    font-size:15px;
+    text-transform:uppercase;
+    letter-spacing:.08em;
+    border-bottom:1px solid var(--line-strong);
+    box-shadow:0 20px 40px -24px rgba(0,0,0,.3);
+  }
+  .mobile-nav.open{ transform:translateY(0); }
+
+  @media (max-width:720px){
+    .nav-burger{ display:flex; }
+    .mobile-nav{ display:flex; }
+  }
+
+  /* ---------- ARTICLE HEADER ---------- */
+  .article-header{
+    padding:150px 0 50px;
+    background: linear-gradient(356deg, rgba(246, 244, 236, 1) 0%, rgba(209, 255, 240, 0.77) 91%, rgba(246, 244, 236, 1) 100%);
+    border-bottom:1px solid var(--line-strong);
+  }
+  .article-header .inner{max-width:var(--article-w); margin:0 auto;}
+  .back-link{
+    font-family:var(--mono); font-size:12px; letter-spacing:.06em; text-transform:uppercase;
+    display:inline-flex; align-items:center; gap:8px; color:#33453b;
+    margin-bottom:26px;
+  }
+  .back-link svg{width:14px; height:14px;}
+  .back-link:hover{color:var(--ink);}
+  .article-header .tag{
+    font-family:var(--mono); font-size:11px; text-transform:uppercase; letter-spacing:.08em; color:var(--pink);
+  }
+  .article-header h1{
+    font-size:clamp(2rem,4.6vw,3.2rem);
+    line-height:1.1;
+    margin-top:16px;
+    max-width:22ch;
+  }
+  .article-header .dek{
+    font-size:18px;
+    color:#33453b;
+    margin-top:20px;
+    max-width:56ch;
+    line-height:1.6;
+  }
+  .byline{
+    display:flex; align-items:center; gap:14px;
+    margin-top:34px;
+    padding-top:24px;
+    border-top:1px solid var(--line);
+  }
+  .byline-avatar{
+    width:38px; height:38px; border-radius:50%;
+    background:var(--forest);
+    color:var(--paper);
+    display:flex; align-items:center; justify-content:center;
+    font-family:var(--display); font-weight:700; font-size:14px;
+    flex-shrink:0;
+  }
+  .byline-text{font-family:var(--mono); font-size:12px; letter-spacing:.02em; color:#33453b; line-height:1.5;}
+  .byline-text strong{color:var(--ink); font-weight:700; display:block; font-size:13px; margin-bottom:2px;}
+
+  /* ---------- smooth entrance ---------- */
+  .article-header .back-link,
+  .article-header .tag,
+  .article-header h1,
+  .article-header .dek,
+  .article-header .byline{
+    opacity:0;
+    transform:translateY(14px);
+  }
+  body.loaded .article-header .back-link{ animation: header-in .6s cubic-bezier(.2,.7,.3,1) .05s forwards; }
+  body.loaded .article-header .tag{ animation: header-in .6s cubic-bezier(.2,.7,.3,1) .12s forwards; }
+  body.loaded .article-header h1{ animation: header-in .6s cubic-bezier(.2,.7,.3,1) .18s forwards; }
+  body.loaded .article-header .dek{ animation: header-in .6s cubic-bezier(.2,.7,.3,1) .26s forwards; }
+  body.loaded .article-header .byline{ animation: header-in .6s cubic-bezier(.2,.7,.3,1) .34s forwards; }
+  @keyframes header-in{
+    to{ opacity:1; transform:translateY(0); }
+  }
+  @media (prefers-reduced-motion: reduce){
+    .article-header .back-link, .article-header .tag, .article-header h1, .article-header .dek, .article-header .byline{
+      animation:none !important; opacity:1; transform:none;
+    }
+  }
+
+  /* ---------- ARTICLE BODY ---------- */
+  .article-body{
+    max-width:var(--article-w);
+    margin:0 auto;
+    padding:56px 0 20px;
+  }
+  .article-body p{
+    font-size:17px;
+    line-height:1.75;
+    color:#1c2921;
+    margin-bottom:24px;
+  }
+  .article-body p:first-of-type{
+    font-size:19px;
+    color:var(--ink);
+  }
+  .article-body h2{
+    font-size:clamp(1.4rem,3vw,1.9rem);
+    line-height:1.25;
+    margin:52px 0 20px;
+  }
+  .article-body h3{
+    font-size:1.2rem;
+    line-height:1.3;
+    margin:38px 0 14px;
+  }
+  .article-body ul, .article-body ol{
+    margin:0 0 24px 22px;
+    font-size:17px;
+    line-height:1.75;
+    color:#1c2921;
+  }
+  .article-body li{margin-bottom:8px;}
+  .article-body figure{margin:40px 0;}
+  .article-body figure img{width:100%; border:1px solid var(--line-strong);}
+  .article-body figcaption{
+    font-family:var(--mono);
+    font-size:12px;
+    color:#5b6a5f;
+    margin-top:10px;
+    line-height:1.5;
+  }
+  blockquote{
+    margin:40px 0;
+    padding:4px 0 4px 26px;
+    border-left:2px solid var(--pink);
+    font-family:var(--display);
+    font-style:italic;
+    font-weight:500;
+    font-size:1.3rem;
+    line-height:1.45;
+    color:var(--ink);
+  }
+  .article-body strong{font-weight:700;}
+  .article-body a.inline-link{
+    text-decoration:underline;
+    text-decoration-color:var(--line-strong);
+    text-underline-offset:3px;
+    transition:text-decoration-color .25s ease;
+  }
+  .article-body a.inline-link:hover{text-decoration-color:var(--ink);}
+
+  .share-row{
+    display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:16px;
+    max-width:var(--article-w); margin:0 auto; padding:36px 0 60px; border-bottom:1px solid var(--line);
+  }
+  .tag-pill{
+    font-family:var(--mono); font-size:11px; text-transform:uppercase; letter-spacing:.06em;
+    border:1px solid var(--line-strong); padding:7px 14px;
+  }
+
+  /* ---------- REFERENCES ---------- */
+  .references{
+    max-width:var(--article-w);
+    margin:0 auto;
+    padding:56px 0 90px;
+  }
+  .references h2{
+    font-size:1.15rem;
+    text-transform:uppercase;
+    letter-spacing:.04em;
+    margin-bottom:26px;
+  }
+  .references ol{
+    list-style:none;
+    counter-reset:refs;
+    font-family:var(--body);
+    font-size:14px;
+    line-height:1.7;
+    color:#33453b;
+  }
+  .references li{
+    counter-increment:refs;
+    display:flex;
+    gap:14px;
+    padding:14px 0;
+    border-top:1px solid var(--line);
+  }
+  .references li:first-child{border-top:1px solid var(--line-strong);}
+  .references li::before{
+    content:counter(refs);
+    font-family:var(--mono);
+    font-size:12px;
+    color:var(--pink);
+    flex-shrink:0;
+    padding-top:1px;
+  }
+  .references li a{
+    text-decoration:underline;
+    text-decoration-color:var(--line-strong);
+    text-underline-offset:3px;
+    word-break:break-word;
+  }
+  .references li a:hover{text-decoration-color:var(--ink);}
+
+  /* ---------- FOOTER ---------- */
+  footer{background:var(--forest-deep); color:var(--paper); padding:70px 0 28px;}
+  .foot-top{display:flex; justify-content:center; gap:30px; flex-wrap:wrap; padding-bottom:50px; border-bottom:1px solid rgba(246,244,236,.15);}
+  .foot-cta{display:flex; flex-direction:column; gap:16px; align-items:center; text-align:center;}
+  .foot-links{font-family:var(--mono); font-size:12px; text-transform:uppercase; letter-spacing:.06em; display:flex; justify-content:center; gap:22px; flex-wrap:wrap;}
+  .foot-bottom{display:flex; justify-content:space-between; padding-top:24px; font-family:var(--mono); font-size:11px; color:#a9b3ab; flex-wrap:wrap; gap:10px;}
+
+  /* ---------- RESPONSIVE: tablet / iPad ---------- */
+  html{-webkit-text-size-adjust:100%; text-size-adjust:100%;}
+  .article-body p, .article-body li, .references li{overflow-wrap:break-word;}
+  .nav-burger{position:relative;}
+  .nav-burger::after{content:"";position:absolute; inset:-14px;} /* bigger tap area */
+  .mobile-nav a{padding:6px 0;}
+
+  @media (max-width:1024px){
+    .wrap{padding:0 40px;}
+    nav{padding:16px 32px;}
+    .article-header{padding:128px 0 44px;}
+    .article-header h1{max-width:none;}
+    .article-body, .share-row, .references{max-width:680px;}
+  }
+
+  /* ---------- RESPONSIVE: phones ---------- */
+  @media (max-width:720px){
+    .wrap{padding:0 20px;}
+    nav{padding:14px 20px; padding-top:max(14px, env(safe-area-inset-top));}
+    .mobile-nav{padding:84px 24px 28px;}
+    .article-header{padding:100px 0 32px;}
+    .back-link{margin-bottom:20px;}
+    .article-header h1{font-size:clamp(1.75rem,7.4vw,2.3rem); line-height:1.15; margin-top:12px;}
+    .article-header .dek{font-size:16px; line-height:1.6; margin-top:16px;}
+    .byline{margin-top:26px; padding-top:20px;}
+
+    .article-body{padding:34px 0 8px;}
+    .article-body p{font-size:16.5px; line-height:1.7; margin-bottom:20px;}
+    .article-body p:first-of-type{font-size:17.5px;}
+    .article-body h2{margin:38px 0 14px;}
+    .article-body h3{margin:30px 0 12px;}
+    .article-body ul, .article-body ol{font-size:16.5px; margin-left:20px;}
+    blockquote{margin:28px 0; padding-left:18px; font-size:1.12rem; line-height:1.45;}
+
+    .share-row{flex-direction:column; align-items:flex-start; padding:26px 0 40px;}
+    .share-row .btn{width:100%; justify-content:center;}
+    .btn{min-height:46px;}
+
+    .references{padding:36px 0 60px;}
+    .references h2{font-size:1.05rem; margin-bottom:20px;}
+    .references li{font-size:13.5px; gap:12px; padding:13px 0; line-height:1.65;}
+
+    footer{padding:52px 0 calc(24px + env(safe-area-inset-bottom));}
+    .foot-top{padding-bottom:36px;}
+    .foot-cta .btn{width:100%; justify-content:center;}
+    .foot-links{gap:14px 20px;}
+    .foot-bottom{flex-direction:column; align-items:center; text-align:center; gap:8px;}
+  }
+
+  @media (max-width:380px){
+    .wrap{padding:0 16px;}
+    .article-body p{font-size:16px;}
+    .article-body p:first-of-type{font-size:17px;}
+  }
+
+  /* landscape phones: don't let the dropdown menu overflow */
+  @media (max-height:480px) and (max-width:900px){
+    .mobile-nav{padding-top:70px; gap:10px; overflow-y:auto; max-height:100vh;}
+  }
+
+  /* ---------- READABILITY & DEVICE POLISH ---------- */
+  .article-body p, .article-body li, .article-header .dek{text-wrap:pretty;}
+  .article-header h1, .article-body h2, .article-body h3, blockquote{text-wrap:balance;}
+  nav.scrolled{backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px);}
+  a, button{-webkit-tap-highlight-color:rgba(31,77,58,.12);}
+  .references li a{overflow-wrap:anywhere;}
+  .references li::before{min-width:1.6em;}
+  .byline{flex-wrap:wrap;}
+
+  /* iPad / tablets */
+  @media (min-width:721px) and (max-width:1024px){
+    .article-body p, .article-body ul, .article-body ol{font-size:17.5px; line-height:1.75;}
+    .article-body p:first-of-type{font-size:19px;}
+    .article-body h2{margin-top:48px;}
+    .references li{font-size:14.5px;}
+  }
+
+  /* phones */
+  @media (max-width:720px){
+    .byline-text{font-size:12.5px;}
+    .tag-pill{font-size:10.5px;}
+    .mobile-nav{max-height:100vh; max-height:100dvh; overflow-y:auto;}
+  }
+
+  @media (prefers-reduced-motion: reduce){
+    body{transition:none;}
+    html{scroll-behavior:auto;}
+  }
+
+  /* ---------- in-text citation markers ---------- */
+  .article-body sup.cite{font-family:var(--mono); font-size:.68em; line-height:0; margin-left:2px; white-space:nowrap;}
+  .article-body sup.cite a{color:var(--pink); text-decoration:none; padding:0 1px;}
+  .article-body sup.cite a:hover{text-decoration:underline;}
+  .references li{scroll-margin-top:100px;}
+  .references li:target{background:rgba(198,255,107,.28);}
+
+  .article-body ul li strong{font-weight:700;}
+
+  .article-body figcaption a{text-decoration:underline; text-decoration-color:var(--line-strong); text-underline-offset:3px;}
+
+  /* justified text */
+  .article-body p, .article-body li{
+    text-align:justify;
+    text-justify:inter-word;
+    -webkit-hyphens:none;
+    hyphens:none;
+  }
+  .article-body blockquote{text-align:left;}
+</style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+{
+  "@type": "Article",
+  "@id": "https://econforyouth.com/articles/understanding-the-attention-economy#article",
+  "headline": "Understanding the Attention Economy",
+  "description": "Why human attention has become a scarce and valuable resource online, and what that means for platforms, advertisers and the way we spend our time.",
+  "author": { "@type": "Person", "name": "Amanah Capal" },
+  "publisher": { "@type": "NGO", "name": "Econ For Youth", "url": "https://econforyouth.com/" },
+  "mainEntityOfPage": "https://econforyouth.com/articles/understanding-the-attention-economy",
+  "datePublished": "2026-11-11",
+  "inLanguage": "en"
+},
+{
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://econforyouth.com/" },
+      { "@type": "ListItem", "position": 2, "name": "Articles", "item": "https://econforyouth.com/articles" },
+      { "@type": "ListItem", "position": 3, "name": "Understanding the Attention Economy", "item": "https://econforyouth.com/articles/understanding-the-attention-economy" }
+  ]
+}
+]
+}
+</script>
+</head>
+<body>
+
+<nav id="nav">
+  <a class="nav-logo" href="https://econforyouth.com/">
+    <svg class="nav-globe" viewBox="0 0 100 100" fill="none" stroke="currentColor" stroke-width="1.4">
+      <circle cx="50" cy="50" r="42"/>
+      <ellipse cx="50" cy="50" rx="18" ry="42"/>
+      <ellipse cx="50" cy="50" rx="42" ry="18"/>
+      <path d="M8,50 A42,42 0 0,1 92,50" />
+      <path d="M14,32 A42,42 0 0,1 86,32" />
+      <path d="M14,68 A42,42 0 0,1 86,68" />
+    </svg>
+    Econ For Youth
+  </a>
+  <div class="nav-right">
+    <div class="nav-links">
+      <a href="https://econforyouth.com/#about">About</a>
+      <a href="https://econforyouth.com/#mission">Mission</a>
+      <a href="https://econforyouth.com/articles" class="current">Articles</a>
+    </div>
+    <a href="https://econforyouth.com/opportunities/volunteer" class="nav-cta">Join Our Team</a>
+    <button class="nav-burger" id="navBurger" aria-label="Open menu" aria-expanded="false">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+  </div>
+</nav>
+
+<div class="mobile-nav" id="mobileNav">
+  <a href="https://econforyouth.com/#about">About</a>
+  <a href="https://econforyouth.com/#mission">Mission</a>
+  <a href="https://econforyouth.com/articles">Articles</a>
+  <a href="https://econforyouth.com/opportunities/volunteer">Join Our Team</a>
+</div>
+
+<!-- ================= ARTICLE HEADER ================= -->
+<header class="article-header">
+  <div class="wrap">
+    <div class="inner">
+      <a class="back-link" href="https://econforyouth.com/articles">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+        Back to Articles
+      </a>
+      <div class="tag">Behavioral</div>
+      <h1>Understanding the Attention Economy</h1>
+      <p class="dek">Why human attention has become one of the most valuable resources online, and what that means for how we spend our time.</p>
+      <div class="byline">
+        <div class="byline-avatar">AC</div>
+        <div class="byline-text">
+          <strong>Amanah Capal</strong>
+          Published <time datetime="2026-11-11">November 11, 2026</time> · 7 min read
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<main class="wrap">
+
+  <!-- ================= ARTICLE BODY ================= -->
+  <!--
+    Article content goes here. Use <h2> for major sections, <h3> for
+    sub-sections, <p> for body copy, and <blockquote> to pull out a
+    key line. Swap the placeholder paragraphs below for the real text.
+  -->
+  <article class="article-body">
+    <p>In today’s world, people are constantly exposed to large amounts of online content, including social media posts, advertisements, videos, and news articles. With the press of a few buttons, people can find information from almost anywhere. However, we have limited time to give to this content. Due to this, digital platforms and companies are fighting to gain our attention. This has resulted in a huge competition to gain our attention through targeted suggestions, advertisements and constantly updated feeds. This has developed into the attention economy, where human attention is seen as a valuable asset.</p>
+
+    <h2>What is The Attention Economy?</h2>
+
+    <p>The attention economy is when human attention is seen as a scarce resource. In today’s digital marketplace, attention has become a valuable aspect of the economy. Companies and digital platforms are competing to gain our attention. As said by economist Herbert A. Simon<sup class="cite"><a href="#ref-1" aria-label="Reference 1">[1]</a></sup>, “A wealth of information creates a poverty of attention” (p. 40). This means the more information we have, the harder it is to gain our attention.</p>
+
+    <p>The rise of digital technology has meant we have a surge in information available to us. This has caused us to move from an information-scarce society to an information-rich society. However, this has not increased our ability to process this information. We have limited time and cognitive ability to pay attention to this information. As a result, human attention has become a valuable asset to companies.</p>
+
+    <h2>Understanding the Economics of Human Attention</h2>
+
+    <p>Human attention can be viewed from a supply, demand, and scarcity perspective. Digital platforms are constantly increasing the supply of information however, people have limited attention spans. This has created a mismatch between the amount of information available and the amount of attention people can give<sup class="cite"><a href="#ref-2" aria-label="Reference 2">[2]</a></sup>. The supply of attention is limited due to how much time people have and how much they can concentrate. The demand for attention comes from companies, advertisers, and content creators.</p>
+
+    <p>Companies and digital platforms are trying to gain our attention. Çetin and Bingöl<sup class="cite"><a href="#ref-3" aria-label="Reference 3">[3]</a></sup> developed a model examining how advertising competes for attention. Their findings suggest that advertising can become more effective when attention capacity is extremely limited.</p>
+
+    <p>Gaining our attention can create opportunities for companies. Digital platforms can gain revenue by allowing advertisers to target their users. As a result, gaining user engagement is vital to their business<sup class="cite"><a href="#ref-4" aria-label="Reference 4">[4]</a></sup>. However, simply gaining our attention will not guarantee us sales.</p>
+
+    <h2>Digital Platforms and Monetising Attention</h2>
+
+    <blockquote>If you’re not paying for the product, you are the product.</blockquote>
+
+    <p>Many platforms such as TikTok, Instagram and YouTube rely on advertising to gain revenue. Instead of charging users, they provide services to allow companies to advertise their products to potential customers. Many social media and video streaming companies were found to have advertising as their main source of revenue<sup class="cite"><a href="#ref-5" aria-label="Reference 5">[5]</a></sup>. This means gaining our attention is a valuable asset. This creates opportunities for companies to advertise to us.</p>
+
+    <p>Advertising is embedded into the content we consume. Whilst using TikTok, we may see sponsored videos; whilst using Instagram, there may be promotions between posts. On YouTube, there will be video adverts. This allows companies to connect with their audience whilst providing opportunities for the platform to gain revenue<sup class="cite"><a href="#ref-5" aria-label="Reference 5">[5]</a></sup>.</p>
+
+    <p>Recommendation algorithms are also used to keep users engaged. These look at different factors to provide users with targeted content. For example, TikTok<sup class="cite"><a href="#ref-6" aria-label="Reference 6">[6]</a></sup> explains that its recommendation system considers how users interact with content, including likes, shares, comments, and whether they watch a video in full. YouTube also uses data such as watch history and search history to provide targeted recommendations<sup class="cite"><a href="#ref-7" aria-label="Reference 7">[7]</a></sup>. This can encourage users to stay engaged with the platform by providing them with relevant content.</p>
+
+    <p>User data is also a large part of this. Knowing what users are doing, interested in, and interacting with allows platforms to provide targeted recommendations and advertising. Companies will use this data to help advertisers connect with specific audiences<sup class="cite"><a href="#ref-5" aria-label="Reference 5">[5]</a></sup>. Whilst we aren’t literally a product being sold, our attention and the advertising opportunities we provide have become a valuable part of the digital economy.</p>
+
+    <p>This is often referred to as: if you’re not paying for the product, you are the product. Whilst this isn’t entirely true, it shows how platforms gain financial benefits from us using their service for free. Our attention allows them to advertise, and the data they gain from our interests and behaviours allows them to personalise content. Whilst we aren’t being sold, we are providing them with opportunities through our attention and advertising opportunities.</p>
+
+    <h2>Consumer Behaviour in the Attention Economy</h2>
+
+    <p>Many digital platforms have features to encourage us to spend more time engaging with their content. These include notifications, infinite scrolling, and autoplay. This makes it easier for us to continue engaging with the platform. For example, notifications can grab our attention and encourage us to go back onto the app. Infinite scrolling means new content will constantly be shown to us. A study carried out by Bartoli and Benedetto<sup class="cite"><a href="#ref-8" aria-label="Reference 8">[8]</a></sup> found that having notification badges made users more likely to click on an application. Schaffner et al.<sup class="cite"><a href="#ref-9" aria-label="Reference 9">[9]</a></sup> found that turning off autoplay on Netflix decreased the average time users spent watching. This shows how some features on platforms can affect how much time we spend online.</p>
+
+    <p>Constantly using these features and digital platforms can affect our behaviour. We may become used to constantly checking our notifications, scrolling through, and watching recommended videos. Constant notifications and updates may encourage users to develop habits of regularly checking their devices<sup class="cite"><a href="#ref-10" aria-label="Reference 10">[10]</a></sup>. This may interrupt our concentration and make it harder to focus on other activities. Over time, this can cause us to become used to checking our devices.</p>
+
+    <p>Digital advertising and targeted content can also affect our awareness, preferences and purchasing behaviour. If we are constantly seeing targeted advertising and recommendations based on our interests, we may become more aware of certain brands, products and services. A meta-analysis of 53 experimental studies was carried out by Yeo et al.<sup class="cite"><a href="#ref-11" aria-label="Reference 11">[11]</a></sup> and found that personalised advertising generally performs better than generic advertising. This means advertising based on our interests can increase the relevance of products and encourage us to consider buying them. However, not all advertising will result in us purchasing.</p>
+
+    <p>However, constantly being exposed to digital content can cause information overload and digital fatigue. We may struggle to keep up with the constant notifications, advertising, updates, and recommendations. Constant digital interruptions can cause us to become overloaded with attention<sup class="cite"><a href="#ref-10" aria-label="Reference 10">[10]</a></sup>. Tyrväinen et al.<sup class="cite"><a href="#ref-12" aria-label="Reference 12">[12]</a></sup> found that different forms of social media overload can cause exhaustion.</p>
+
+    <h2>Opportunities and Challenges of the Attention Economy</h2>
+
+    <p>There are many opportunities within the attention economy. It has increased our access to information, digital services, and education. We can use online platforms to learn about different topics, gain new skills, and access educational resources. Social media and other digital platforms can connect us to communities with similar interests. The Organisation for Economic Co-operation and Development (OECD)<sup class="cite"><a href="#ref-13" aria-label="Reference 13">[13]</a></sup> acknowledges that digital services can help us learn, discover information, and connect with others. This shows how digital platforms can help us learn and connect if used correctly.</p>
+
+    <p>Digital platforms have also created new opportunities for content creators, entrepreneurs and companies. Individuals can showcase their creative content, build an online presence and promote their products/services. Digitalisation has increased our access to markets and audiences, creating new opportunities for creative businesses and individuals<sup class="cite"><a href="#ref-14" aria-label="Reference 14">[14]</a></sup>. Digital platforms can help businesses by connecting consumers and service providers<sup class="cite"><a href="#ref-15" aria-label="Reference 15">[15]</a></sup>. This shows how the attention economy can create opportunities for us to get involved with the economy. Especially for individuals and smaller companies looking to connect with potential customers.</p>
+
+    <p>However, there are also challenges within the attention economy. Constant exposure to online content can cause information overload and digital fatigue. There are also concerns regarding our privacy and data. OECD<sup class="cite"><a href="#ref-16" aria-label="Reference 16">[16]</a></sup> discusses how privacy concerns can influence people’s use of digital services. Many people feel concerned about how much control they have over their personal data. There is also a lot of information being shared online, which can make it difficult to know what is genuine. We need to address misinformation and ensure individuals can still have access to information and freedom of expression<sup class="cite"><a href="#ref-17" aria-label="Reference 17">[17]</a></sup>.</p>
+
+    <p>Persuasive design can also be a concern. Whilst features such as targeted recommendations and constant content can improve our experience, they may not show us how our attention is being manipulated. If the platforms aren’t taking our interests and wellbeing into consideration when designing their platforms to gain engagement, it can make it harder for us to make informed decisions regarding our time, information and online activities. Overall, there are opportunities and challenges within the attention economy. If digital platforms are being responsible, protecting our information and providing us with genuine content, then we can maximise the benefits.</p>
+  </article>
+
+  <div class="share-row">
+    <span class="tag-pill">Attention Economy</span>
+    <a class="btn solid" href="https://econforyouth.com/articles"><span>More articles</span></a>
+  </div>
+
+  <!-- ================= REFERENCES ================= -->
+  <!--
+    Add one <li> per source. The number is generated automatically —
+    just paste the citation text and link.
+  -->
+  <section class="references">
+    <h2>References</h2>
+    <ol>
+      <li id="ref-1">Simon, H. A. (1971). Designing organizations for an information-rich world. In M. Greenberger (Ed.), <em>Computers, communications, and the public interest</em> (pp. 37–72). The Johns Hopkins Press.</li>
+      <li id="ref-2"><a href="https://www.un.org/sites/un2.un.org/files/attention_economy_feb.pdf" target="_blank" rel="noopener">Carpentier, C.L. (2023). <em>Attention economy.</em> United Nations Economist Network.</a></li>
+      <li id="ref-3"><a href="https://doi.org/10.1103/PhysRevE.90.032801" target="_blank" rel="noopener">Çetin, U., &amp; Bingöl, H. O. (2014). Attention competition with advertisement. <em>Physical Review E, 90</em>(3), 032801.</a></li>
+      <li id="ref-4"><a href="https://doi.org/10.1016/j.jet.2020.105039" target="_blank" rel="noopener">Galperti, S., &amp; Treviño, I. (2020). Coordination motives and competition for attention in information markets. <em>Journal of Economic Theory, 190,</em> 105039.</a></li>
+      <li id="ref-5"><a href="https://www.ftc.gov/system/files/ftc_gov/pdf/Social-Media-6b-Report-9-11-2024.pdf" target="_blank" rel="noopener">Federal Trade Commission. (2024, September). <em>A look behind the screens: Examining the data practices of social media and video streaming services.</em></a></li>
+      <li id="ref-6"><a href="https://newsroom.tiktok.com/how-tiktok-recommends-videos-for-you" target="_blank" rel="noopener">TikTok. (2020, June 18). <em>How TikTok recommends videos #ForYou.</em></a></li>
+      <li id="ref-7"><a href="https://support.google.com/youtube/answer/16089387?hl=en" target="_blank" rel="noopener">YouTube. (n.d.). <em>How YouTube recommendations work.</em> YouTube Help.</a></li>
+      <li id="ref-8"><a href="https://doi.org/10.1371/journal.pone.0270888" target="_blank" rel="noopener">Bartoli, N., &amp; Benedetto, S. (2022). Driven by notifications – exploring the effects of badge notifications on user experience. <em>PLOS ONE, 17</em>(6), e0270888.</a></li>
+      <li id="ref-9"><a href="https://doi.org/10.1145/3710928" target="_blank" rel="noopener">Schaffner, B., Ulloa, Y., Sahni, R., Li, J., Cohen, A.K., Messier, N., Gao, L., &amp; Chetty, M. (2025). An Experimental Study Of Netflix Use and the Effects of Autoplay on Watching Behaviors. <em>Proceedings of the ACM on Human-Computer Interaction, 9</em>(2), Article CSCW030.</a></li>
+      <li id="ref-10"><a href="https://doi.org/10.3389/fcogn.2023.1203077" target="_blank" rel="noopener">Shanmugasundaram, M., &amp; Tamilarasu, A. (2023). The impact of digital technology, social media, and artificial intelligence on cognitive functions: a review. <em>Frontiers in Cognition, 2-2023,</em> 1203077.</a></li>
+      <li id="ref-11"><a href="https://doi.org/10.1080/00218499.2025.2467763" target="_blank" rel="noopener">Yeo, T. E. D., Chu, T. H., &amp; Li, Q. (2025). How persuasive is personalized advertising? A meta-analytic review of experimental evidence of the effects of personalization on ad effectiveness. <em>Journal of Advertising Research, 65</em>(4), 616–631.</a></li>
+      <li id="ref-12"><a href="https://doi.org/10.1016/j.tele.2025.102247" target="_blank" rel="noopener">Tyrväinen, O., Pirkkalainen, H., Salo, M., &amp; Karjaluoto, M. (2025). Overloaded yet addicted? A meta-analysis of the outcomes of social media overload. <em>Telematics and Informatics, 98,</em> 102247.</a></li>
+      <li id="ref-13"><a href="https://doi.org/10.1787/0854b900-en" target="_blank" rel="noopener">OECD. (2025). <em>How’s life for children in the digital age?</em></a></li>
+      <li id="ref-14"><a href="https://doi.org/10.1787/991bb520-en" target="_blank" rel="noopener">OECD. (2022). <em>The culture fix: Creative people, places and industries.</em></a></li>
+      <li id="ref-15"><a href="https://doi.org/10.62986/dp2020.52" target="_blank" rel="noopener">Serafica, R. B., &amp; Oren, Q. C. A. (2020). Understanding the Costs and Benefits of Digital Platforms and the Implications for Policymaking and Regulation. Philippine Institute for Development Studies.</a></li>
+      <li id="ref-16"><a href="https://doi.org/10.1787/3adf705b-en" target="_blank" rel="noopener">OECD. (2024). <em>OECD digital economy outlook 2024 (Volume 2): Strengthening connectivity, innovation and trust.</em> OECD Publishing.</a></li>
+      <li id="ref-17"><a href="https://unesdoc.unesco.org/ark:/48223/pf0000387339" target="_blank" rel="noopener">UNESCO. (2023). <em>Guidelines for the governance of digital platforms: Safeguarding freedom of expression and access to information through a multi-stakeholder approach.</em> UNESCO.</a></li>
+    </ol>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="foot-top">
+      <div class="foot-cta">
+        <a href="https://ig.me/m/econforyouth" class="btn solid"><span>DM for collaborations</span></a>
+        <div class="foot-links">
+          <a href="https://econforyouth.com/#about">About</a>
+          <a href="https://econforyouth.com/#mission">Mission</a>
+          <a href="https://econforyouth.com/articles">Articles</a>
+          <a href="https://econforyouth.com/opportunities/volunteer">Volunteer</a>
+          <a href="https://instagram.com/econforyouth">Instagram</a>
+        </div>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>© 2026 Econ For Youth — Student-Led Initiative</span>
+      <span>Exploring Economics Together Through Curiosity</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+  // reveal the page only once fonts are ready, so there's no visible font swap/glitch,
+  // and it triggers the header's entrance animation for a smooth open
+  function revealPage(){ document.body.classList.add('loaded'); }
+  if (document.fonts && document.fonts.ready) {
+    document.fonts.ready.then(revealPage);
+    setTimeout(revealPage, 600); // safety fallback if fonts take too long
+  } else {
+    revealPage();
+  }
+
+  const nav = document.getElementById('nav');
+  window.addEventListener('scroll', () => {
+    nav.classList.toggle('scrolled', window.scrollY > 40);
+  }, { passive: true });
+
+  const navBurger = document.getElementById('navBurger');
+  const mobileNav = document.getElementById('mobileNav');
+  function closeMobileNav(){
+    navBurger.classList.remove('open');
+    mobileNav.classList.remove('open');
+    navBurger.setAttribute('aria-expanded','false');
+  }
+  navBurger.addEventListener('click', () => {
+    const isOpen = navBurger.classList.toggle('open');
+    mobileNav.classList.toggle('open', isOpen);
+    navBurger.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+  });
+  mobileNav.querySelectorAll('a').forEach(a => {
+    a.addEventListener('click', closeMobileNav);
+  });
+
+  if (window.matchMedia('(hover: hover)').matches) {
+    document.querySelectorAll('.btn').forEach(btn => {
+      btn.addEventListener('mousemove', (e) => {
+        const r = btn.getBoundingClientRect();
+        const x = (e.clientX - r.left - r.width / 2) * 0.18;
+        const y = (e.clientY - r.top - r.height / 2) * 0.3;
+        btn.style.transform = `translate(${x}px, ${y}px)`;
+      });
+      btn.addEventListener('mouseleave', () => { btn.style.transform = 'translate(0,0)'; });
+    });
+  }
+</script>
+</body>
+</html>
