@@ -1,0 +1,714 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+<title>Will Money Still Matter in 2036? The Economics of an AI World | Econ For Youth</title>
+<meta name="description" content="Elon Musk says money won’t matter in 2036. What the evidence on AI, jobs and inequality says about abundance, ownership and ambition. An Econ For Youth article by Saanvi Aditi.">
+<link rel="canonical" href="https://econforyouth.com/articles/will-money-still-matter-in-2036">
+<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+<meta name="author" content="Saanvi Aditi">
+<meta name="theme-color" content="#1f4d3a">
+
+<!-- Open Graph -->
+<meta property="og:site_name" content="Econ For Youth">
+<meta property="og:type" content="article">
+<meta property="og:locale" content="en_US">
+<meta property="og:url" content="https://econforyouth.com/articles/will-money-still-matter-in-2036">
+<meta property="og:title" content="Will Money Still Matter in 2036? The Economics of an AI World | Econ For Youth">
+<meta property="og:description" content="Elon Musk says money won’t matter in 2036. What the evidence on AI, jobs and inequality says about abundance, ownership and ambition.">
+<meta property="og:image" content="https://econforyouth.com/assets/og-image.jpg">
+
+<!-- Twitter / X -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Will Money Still Matter in 2036? The Economics of an AI World | Econ For Youth">
+<meta name="twitter:description" content="Elon Musk says money won’t matter in 2036. What the evidence on AI, jobs and inequality says about abundance, ownership and ambition.">
+<meta name="twitter:image" content="https://econforyouth.com/assets/og-image.jpg">
+
+<link rel="apple-touch-icon" sizes="180x180" href="https://econforyouth.com/icons/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://econforyouth.com/icons/android-chrome-512x512.png">
+<link rel="icon" type="image/png" sizes="16x16" href="https://econforyouth.com/icons/android-chrome-192x192.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,700&family=Source+Serif+4:opsz,wght@8..60,400;8..60,500;8..60,600;8..60,700&family=Montserrat:ital,wght@0,100;0,400;0,500;0,600;0,700;1,500&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink:#101d16;
+    --paper:#f6f4ec;
+    --paper-dim:#ece8db;
+    --forest:#1f4d3a;
+    --forest-deep:#122b20;
+    --lime:#c6ff6b;
+    --pink:#ff5fa2;
+    --line: rgba(16,29,22,.16);
+    --line-strong: rgba(16,29,22,.4);
+    --display: 'Source Serif 4', Georgia, serif;
+    --body: 'Montserrat', sans-serif;
+    --mono: 'Space Mono', monospace;
+    --maxw: 1180px;
+    --article-w: 720px;
+  }
+  *{margin:0;padding:0;box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    background:var(--paper);
+    color:var(--ink);
+    font-family:var(--body);
+    font-size:16px;
+    line-height:1.55;
+    overflow-x:hidden;
+    opacity:0;
+    transition:opacity .5s ease;
+  }
+  body.loaded{opacity:1;}
+  ::selection{background:#f6dbdf;color:var(--ink);}
+  a{color:inherit;text-decoration:none;}
+  img{max-width:100%;display:block;}
+
+  .wrap{max-width:var(--maxw); margin:0 auto; padding:0 28px;}
+  .eyebrow{
+    font-family:var(--mono);
+    font-size:12px;
+    letter-spacing:.14em;
+    text-transform:uppercase;
+    display:inline-flex;
+    align-items:center;
+    gap:8px;
+    color:var(--ink);
+  }
+  .eyebrow::before{content:"";width:7px;height:7px;background:var(--pink);border-radius:50%;display:inline-block;}
+
+  h1,h2,h3{font-family:var(--display); font-weight:600; letter-spacing:0; color:var(--ink);}
+
+  .btn{
+    font-family:var(--mono);
+    font-size:13px;
+    letter-spacing:.06em;
+    text-transform:uppercase;
+    border:1.5px solid var(--ink);
+    padding:13px 22px;
+    background:transparent;
+    border-radius:999px;
+    display:inline-flex;
+    align-items:center;
+    gap:10px;
+    cursor:pointer;
+    position:relative;
+    overflow:hidden;
+    transition: color .35s ease, border-color .35s ease;
+  }
+  .btn::before{
+    content:"";
+    position:absolute; inset:0;
+    background:var(--ink);
+    transform:translateY(101%);
+    transition:transform .35s cubic-bezier(.6,0,.3,1);
+    z-index:0;
+  }
+  .btn span{position:relative; z-index:1; transition:color .35s ease;}
+  .btn:hover{color:var(--paper);}
+  .btn:hover::before{transform:translateY(0);}
+  .btn.solid{background:var(--ink); color:var(--paper);}
+  .btn.solid::before{background:var(--lime);}
+  .btn.solid:hover{color:var(--ink);}
+
+  /* ---------- NAV ---------- */
+  nav{
+    position:fixed; top:0; left:0; right:0; z-index:150;
+    display:flex; align-items:center; justify-content:space-between;
+    padding:18px 28px;
+    transition:background .3s ease, border-color .3s ease;
+    border-bottom:1px solid transparent;
+  }
+  nav.scrolled{background:rgba(246,244,236,.86); backdrop-filter:blur(10px); border-color:var(--line);}
+  .nav-logo{
+    display:flex; align-items:center; gap:10px;
+    font-family:'Bricolage Grotesque', sans-serif; font-weight:700; font-size:17px;
+  }
+  .nav-globe{width:22px;height:22px;}
+  .nav-links{display:flex; gap:28px; font-family:var(--mono); font-size:12px; text-transform:uppercase; letter-spacing:.08em;}
+  .nav-links a{position:relative; padding-bottom:3px;}
+  .nav-links a::after{content:"";position:absolute;left:0;bottom:0;width:0;height:1.5px;background:var(--forest);transition:width .3s ease;}
+  .nav-links a:hover::after{width:100%;}
+  .nav-links a.current::after{width:100%;}
+  @media (max-width:720px){ .nav-links{display:none;} }
+
+  .nav-right{display:flex; align-items:center; gap:28px;}
+  .nav-cta{
+    padding:8px 16px;
+    border:1.5px solid var(--ink);
+    border-radius:999px;
+    transition:background .3s ease, color .3s ease;
+    font-family:var(--mono);
+    font-size:12px;
+    text-transform:uppercase;
+    letter-spacing:.08em;
+    position:relative;
+  }
+  .nav-cta::after{ display:none; }
+  .nav-cta:hover{ background:var(--ink); color:var(--paper); }
+  @media (max-width:720px){ .nav-cta{display:none;} }
+
+  .nav-burger{
+    display:none;
+    flex-direction:column;
+    justify-content:space-between;
+    width:26px; height:18px;
+    background:none; border:none; padding:0; cursor:pointer;
+    z-index:110;
+  }
+  .nav-burger span{
+    display:block; width:100%; height:2px;
+    background:var(--ink);
+    border-radius:2px;
+    transition:transform .3s ease, opacity .3s ease;
+  }
+  .nav-burger.open span:nth-child(1){ transform:translateY(8px) rotate(45deg); }
+  .nav-burger.open span:nth-child(2){ opacity:0; }
+  .nav-burger.open span:nth-child(3){ transform:translateY(-8px) rotate(-45deg); }
+
+  .mobile-nav{
+    display:none;
+    position:fixed;
+    top:0; left:0; right:0;
+    background:var(--paper);
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+    gap:20px;
+    padding:88px 28px 28px;
+    height:auto;
+    transform:translateY(-100%);
+    transition:transform .4s cubic-bezier(.2,.7,.3,1);
+    z-index:105;
+    font-family:var(--mono);
+    font-size:15px;
+    text-transform:uppercase;
+    letter-spacing:.08em;
+    border-bottom:1px solid var(--line-strong);
+    box-shadow:0 20px 40px -24px rgba(0,0,0,.3);
+  }
+  .mobile-nav.open{ transform:translateY(0); }
+
+  @media (max-width:720px){
+    .nav-burger{ display:flex; }
+    .mobile-nav{ display:flex; }
+  }
+
+  /* ---------- ARTICLE HEADER ---------- */
+  .article-header{
+    padding:150px 0 50px;
+    background: linear-gradient(356deg, rgba(246, 244, 236, 1) 0%, rgba(209, 255, 240, 0.77) 91%, rgba(246, 244, 236, 1) 100%);
+    border-bottom:1px solid var(--line-strong);
+  }
+  .article-header .inner{max-width:var(--article-w); margin:0 auto;}
+  .back-link{
+    font-family:var(--mono); font-size:12px; letter-spacing:.06em; text-transform:uppercase;
+    display:inline-flex; align-items:center; gap:8px; color:#33453b;
+    margin-bottom:26px;
+  }
+  .back-link svg{width:14px; height:14px;}
+  .back-link:hover{color:var(--ink);}
+  .article-header .tag{
+    font-family:var(--mono); font-size:11px; text-transform:uppercase; letter-spacing:.08em; color:var(--pink);
+  }
+  .article-header h1{
+    font-size:clamp(2rem,4.6vw,3.2rem);
+    line-height:1.1;
+    margin-top:16px;
+    max-width:22ch;
+  }
+  .article-header .dek{
+    font-size:18px;
+    color:#33453b;
+    margin-top:20px;
+    max-width:56ch;
+    line-height:1.6;
+  }
+  .byline{
+    display:flex; align-items:center; gap:14px;
+    margin-top:34px;
+    padding-top:24px;
+    border-top:1px solid var(--line);
+  }
+  .byline-avatar{
+    width:38px; height:38px; border-radius:50%;
+    background:var(--forest);
+    color:var(--paper);
+    display:flex; align-items:center; justify-content:center;
+    font-family:var(--display); font-weight:700; font-size:14px;
+    flex-shrink:0;
+  }
+  .byline-text{font-family:var(--mono); font-size:12px; letter-spacing:.02em; color:#33453b; line-height:1.5;}
+  .byline-text strong{color:var(--ink); font-weight:700; display:block; font-size:13px; margin-bottom:2px;}
+
+  /* ---------- smooth entrance ---------- */
+  .article-header .back-link,
+  .article-header .tag,
+  .article-header h1,
+  .article-header .dek,
+  .article-header .byline{
+    opacity:0;
+    transform:translateY(14px);
+  }
+  body.loaded .article-header .back-link{ animation: header-in .6s cubic-bezier(.2,.7,.3,1) .05s forwards; }
+  body.loaded .article-header .tag{ animation: header-in .6s cubic-bezier(.2,.7,.3,1) .12s forwards; }
+  body.loaded .article-header h1{ animation: header-in .6s cubic-bezier(.2,.7,.3,1) .18s forwards; }
+  body.loaded .article-header .dek{ animation: header-in .6s cubic-bezier(.2,.7,.3,1) .26s forwards; }
+  body.loaded .article-header .byline{ animation: header-in .6s cubic-bezier(.2,.7,.3,1) .34s forwards; }
+  @keyframes header-in{
+    to{ opacity:1; transform:translateY(0); }
+  }
+  @media (prefers-reduced-motion: reduce){
+    .article-header .back-link, .article-header .tag, .article-header h1, .article-header .dek, .article-header .byline{
+      animation:none !important; opacity:1; transform:none;
+    }
+  }
+
+  /* ---------- ARTICLE BODY ---------- */
+  .article-body{
+    max-width:var(--article-w);
+    margin:0 auto;
+    padding:56px 0 20px;
+  }
+  .article-body p{
+    font-size:17px;
+    line-height:1.75;
+    color:#1c2921;
+    margin-bottom:24px;
+  }
+  .article-body p:first-of-type{
+    font-size:19px;
+    color:var(--ink);
+  }
+  .article-body h2{
+    font-size:clamp(1.4rem,3vw,1.9rem);
+    line-height:1.25;
+    margin:52px 0 20px;
+  }
+  .article-body h3{
+    font-size:1.2rem;
+    line-height:1.3;
+    margin:38px 0 14px;
+  }
+  .article-body ul, .article-body ol{
+    margin:0 0 24px 22px;
+    font-size:17px;
+    line-height:1.75;
+    color:#1c2921;
+  }
+  .article-body li{margin-bottom:8px;}
+  .article-body figure{margin:40px 0;}
+  .article-body figure img{width:100%; border:1px solid var(--line-strong);}
+  .article-body figcaption{
+    font-family:var(--mono);
+    font-size:12px;
+    color:#5b6a5f;
+    margin-top:10px;
+    line-height:1.5;
+  }
+  blockquote{
+    margin:40px 0;
+    padding:4px 0 4px 26px;
+    border-left:2px solid var(--pink);
+    font-family:var(--display);
+    font-style:italic;
+    font-weight:500;
+    font-size:1.3rem;
+    line-height:1.45;
+    color:var(--ink);
+  }
+  .article-body strong{font-weight:700;}
+  .article-body a.inline-link{
+    text-decoration:underline;
+    text-decoration-color:var(--line-strong);
+    text-underline-offset:3px;
+    transition:text-decoration-color .25s ease;
+  }
+  .article-body a.inline-link:hover{text-decoration-color:var(--ink);}
+
+  .share-row{
+    display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:16px;
+    max-width:var(--article-w); margin:0 auto; padding:36px 0 60px; border-bottom:1px solid var(--line);
+  }
+  .tag-pill{
+    font-family:var(--mono); font-size:11px; text-transform:uppercase; letter-spacing:.06em;
+    border:1px solid var(--line-strong); padding:7px 14px;
+  }
+
+  /* ---------- REFERENCES ---------- */
+  .references{
+    max-width:var(--article-w);
+    margin:0 auto;
+    padding:56px 0 90px;
+  }
+  .references h2{
+    font-size:1.15rem;
+    text-transform:uppercase;
+    letter-spacing:.04em;
+    margin-bottom:26px;
+  }
+  .references ol{
+    list-style:none;
+    counter-reset:refs;
+    font-family:var(--body);
+    font-size:14px;
+    line-height:1.7;
+    color:#33453b;
+  }
+  .references li{
+    counter-increment:refs;
+    display:flex;
+    gap:14px;
+    padding:14px 0;
+    border-top:1px solid var(--line);
+  }
+  .references li:first-child{border-top:1px solid var(--line-strong);}
+  .references li::before{
+    content:counter(refs);
+    font-family:var(--mono);
+    font-size:12px;
+    color:var(--pink);
+    flex-shrink:0;
+    padding-top:1px;
+  }
+  .references li a{
+    text-decoration:underline;
+    text-decoration-color:var(--line-strong);
+    text-underline-offset:3px;
+    word-break:break-word;
+  }
+  .references li a:hover{text-decoration-color:var(--ink);}
+
+  /* ---------- FOOTER ---------- */
+  footer{background:var(--forest-deep); color:var(--paper); padding:70px 0 28px;}
+  .foot-top{display:flex; justify-content:center; gap:30px; flex-wrap:wrap; padding-bottom:50px; border-bottom:1px solid rgba(246,244,236,.15);}
+  .foot-cta{display:flex; flex-direction:column; gap:16px; align-items:center; text-align:center;}
+  .foot-links{font-family:var(--mono); font-size:12px; text-transform:uppercase; letter-spacing:.06em; display:flex; justify-content:center; gap:22px; flex-wrap:wrap;}
+  .foot-bottom{display:flex; justify-content:space-between; padding-top:24px; font-family:var(--mono); font-size:11px; color:#a9b3ab; flex-wrap:wrap; gap:10px;}
+
+  /* ---------- RESPONSIVE: tablet / iPad ---------- */
+  html{-webkit-text-size-adjust:100%; text-size-adjust:100%;}
+  .article-body p, .article-body li, .references li{overflow-wrap:break-word;}
+  .nav-burger{position:relative;}
+  .nav-burger::after{content:"";position:absolute; inset:-14px;} /* bigger tap area */
+  .mobile-nav a{padding:6px 0;}
+
+  @media (max-width:1024px){
+    .wrap{padding:0 40px;}
+    nav{padding:16px 32px;}
+    .article-header{padding:128px 0 44px;}
+    .article-header h1{max-width:none;}
+    .article-body, .share-row, .references{max-width:680px;}
+  }
+
+  /* ---------- RESPONSIVE: phones ---------- */
+  @media (max-width:720px){
+    .wrap{padding:0 20px;}
+    nav{padding:14px 20px; padding-top:max(14px, env(safe-area-inset-top));}
+    .mobile-nav{padding:84px 24px 28px;}
+    .article-header{padding:100px 0 32px;}
+    .back-link{margin-bottom:20px;}
+    .article-header h1{font-size:clamp(1.75rem,7.4vw,2.3rem); line-height:1.15; margin-top:12px;}
+    .article-header .dek{font-size:16px; line-height:1.6; margin-top:16px;}
+    .byline{margin-top:26px; padding-top:20px;}
+
+    .article-body{padding:34px 0 8px;}
+    .article-body p{font-size:16.5px; line-height:1.7; margin-bottom:20px;}
+    .article-body p:first-of-type{font-size:17.5px;}
+    .article-body h2{margin:38px 0 14px;}
+    .article-body h3{margin:30px 0 12px;}
+    .article-body ul, .article-body ol{font-size:16.5px; margin-left:20px;}
+    blockquote{margin:28px 0; padding-left:18px; font-size:1.12rem; line-height:1.45;}
+
+    .share-row{flex-direction:column; align-items:flex-start; padding:26px 0 40px;}
+    .share-row .btn{width:100%; justify-content:center;}
+    .btn{min-height:46px;}
+
+    .references{padding:36px 0 60px;}
+    .references h2{font-size:1.05rem; margin-bottom:20px;}
+    .references li{font-size:13.5px; gap:12px; padding:13px 0; line-height:1.65;}
+
+    footer{padding:52px 0 calc(24px + env(safe-area-inset-bottom));}
+    .foot-top{padding-bottom:36px;}
+    .foot-cta .btn{width:100%; justify-content:center;}
+    .foot-links{gap:14px 20px;}
+    .foot-bottom{flex-direction:column; align-items:center; text-align:center; gap:8px;}
+  }
+
+  @media (max-width:380px){
+    .wrap{padding:0 16px;}
+    .article-body p{font-size:16px;}
+    .article-body p:first-of-type{font-size:17px;}
+  }
+
+  /* landscape phones: don't let the dropdown menu overflow */
+  @media (max-height:480px) and (max-width:900px){
+    .mobile-nav{padding-top:70px; gap:10px; overflow-y:auto; max-height:100vh;}
+  }
+
+  /* ---------- READABILITY & DEVICE POLISH ---------- */
+  .article-body p, .article-body li, .article-header .dek{text-wrap:pretty;}
+  .article-header h1, .article-body h2, .article-body h3, blockquote{text-wrap:balance;}
+  nav.scrolled{backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px);}
+  a, button{-webkit-tap-highlight-color:rgba(31,77,58,.12);}
+  .references li a{overflow-wrap:anywhere;}
+  .references li::before{min-width:1.6em;}
+  .byline{flex-wrap:wrap;}
+
+  /* iPad / tablets */
+  @media (min-width:721px) and (max-width:1024px){
+    .article-body p, .article-body ul, .article-body ol{font-size:17.5px; line-height:1.75;}
+    .article-body p:first-of-type{font-size:19px;}
+    .article-body h2{margin-top:48px;}
+    .references li{font-size:14.5px;}
+  }
+
+  /* phones */
+  @media (max-width:720px){
+    .byline-text{font-size:12.5px;}
+    .tag-pill{font-size:10.5px;}
+    .mobile-nav{max-height:100vh; max-height:100dvh; overflow-y:auto;}
+  }
+
+  @media (prefers-reduced-motion: reduce){
+    body{transition:none;}
+    html{scroll-behavior:auto;}
+  }
+
+  /* ---------- in-text citation markers ---------- */
+  .article-body sup.cite{font-family:var(--mono); font-size:.68em; line-height:0; margin-left:2px; white-space:nowrap;}
+  .article-body sup.cite a{color:var(--pink); text-decoration:none; padding:0 1px;}
+  .article-body sup.cite a:hover{text-decoration:underline;}
+  .references li{scroll-margin-top:100px;}
+  .references li:target{background:rgba(198,255,107,.28);}
+
+  .article-body ul li strong{font-weight:700;}
+
+  .article-body figcaption a{text-decoration:underline; text-decoration-color:var(--line-strong); text-underline-offset:3px;}
+
+  /* justified text */
+  .article-body p, .article-body li{
+    text-align:justify;
+    text-justify:inter-word;
+    -webkit-hyphens:none;
+    hyphens:none;
+  }
+  .article-body blockquote{text-align:left;}
+
+  .article-body h2{font-weight:700;}
+</style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+{
+  "@type": "Article",
+  "@id": "https://econforyouth.com/articles/will-money-still-matter-in-2036#article",
+  "headline": "Will Money Still Matter in 2036? The Economics of an AI World",
+  "description": "Elon Musk says money won’t matter in 2036. What the evidence on AI, jobs and inequality says about abundance, ownership and ambition.",
+  "author": { "@type": "Person", "name": "Saanvi Aditi" },
+  "publisher": { "@type": "NGO", "name": "Econ For Youth", "url": "https://econforyouth.com/" },
+  "mainEntityOfPage": "https://econforyouth.com/articles/will-money-still-matter-in-2036",
+  "datePublished": "2026-11-21",
+  "inLanguage": "en"
+},
+{
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://econforyouth.com/" },
+      { "@type": "ListItem", "position": 2, "name": "Articles", "item": "https://econforyouth.com/articles" },
+      { "@type": "ListItem", "position": 3, "name": "Will Money Still Matter in 2036? The Economics of an AI World", "item": "https://econforyouth.com/articles/will-money-still-matter-in-2036" }
+  ]
+}
+]
+}
+</script>
+</head>
+<body>
+
+<nav id="nav">
+  <a class="nav-logo" href="https://econforyouth.com/">
+    <svg class="nav-globe" viewBox="0 0 100 100" fill="none" stroke="currentColor" stroke-width="1.4">
+      <circle cx="50" cy="50" r="42"/>
+      <ellipse cx="50" cy="50" rx="18" ry="42"/>
+      <ellipse cx="50" cy="50" rx="42" ry="18"/>
+      <path d="M8,50 A42,42 0 0,1 92,50" />
+      <path d="M14,32 A42,42 0 0,1 86,32" />
+      <path d="M14,68 A42,42 0 0,1 86,68" />
+    </svg>
+    Econ For Youth
+  </a>
+  <div class="nav-right">
+    <div class="nav-links">
+      <a href="https://econforyouth.com/#about">About</a>
+      <a href="https://econforyouth.com/#mission">Mission</a>
+      <a href="https://econforyouth.com/articles" class="current">Articles</a>
+    </div>
+    <a href="https://econforyouth.com/opportunities/volunteer" class="nav-cta">Join Our Team</a>
+    <button class="nav-burger" id="navBurger" aria-label="Open menu" aria-expanded="false">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+  </div>
+</nav>
+
+<div class="mobile-nav" id="mobileNav">
+  <a href="https://econforyouth.com/#about">About</a>
+  <a href="https://econforyouth.com/#mission">Mission</a>
+  <a href="https://econforyouth.com/articles">Articles</a>
+  <a href="https://econforyouth.com/opportunities/volunteer">Join Our Team</a>
+</div>
+
+<!-- ================= ARTICLE HEADER ================= -->
+<header class="article-header">
+  <div class="wrap">
+    <div class="inner">
+      <a class="back-link" href="https://econforyouth.com/articles">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+        Back to Articles
+      </a>
+      <div class="tag">Macroeconomics</div>
+      <h1>Will Money Still Matter in 2036? The Economics of an AI World</h1>
+      <p class="dek">Elon Musk says money won’t matter in 2036. What the evidence on AI, jobs and inequality says about abundance, ownership and ambition.</p>
+      <div class="byline">
+        <div class="byline-avatar">SA</div>
+        <div class="byline-text">
+          <strong>Saanvi Aditi</strong>
+          Published <time datetime="2026-11-21">November 21, 2026</time> · 5 min read
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<main class="wrap">
+
+  <!-- ================= ARTICLE BODY ================= -->
+  <article class="article-body">
+    <p>In a recent interview with <em>The Economist</em>, Elon Musk predicted that money will not matter in 2036. And everywhere on social media, people became crazy about this prediction. Some say this is not true, some say this is too crazy, and some say that it might be possible. But before we move on, we should look closely at the real prediction Elon Musk made.</p>
+
+    <h2>What Did Elon Actually Say?</h2>
+
+    <p>This is what Elon actually said:</p>
+
+    <blockquote>“I’ll make another prediction. Money won’t matter in 2036. What do you want money for? You want money for goods and services, right? You want money for obviously food, housing, transport, entertainment. Well, if that is so abundant that there’s more, that the robots and AI are providing more goods and services than any human could possibly consume. What do you need money for? In that case?”<sup class="cite"><a href="#ref-1" aria-label="Reference 1">[1]</a></sup></blockquote>
+
+    <p>So basically, he is saying that in future AI and robots will provide more goods and services than any human can possibly consume. So the resources will be so abundant that you will not need to buy and earn money. But if it’s true, what would humans do on Earth then? What will happen to jobs, wealth, and human ambition? While this sounds like a fiction movie, this prediction, I think, needs some serious research.</p>
+
+    <h2>What if Work Becomes Optional?</h2>
+
+    <p>The main argument of Elon’s prediction is that AI could make production so efficient that people would no longer need traditional jobs. People might spend less time earning a living and more time pursuing education, creativity, research, or personal interests. Goods and services could become cheaper and more widely available. However, this is not simple in the real future. A 2024 International Monetary Fund (IMF) analysis estimated that almost 40% of global employment is exposed to AI. Here exposure doesn’t mean that all these jobs will disappear, but AI here can help workers to perform more efficiently.<sup class="cite"><a href="#ref-2" aria-label="Reference 2">[2]</a></sup></p>
+
+    <p>The 2026 International Labour Organization (ILO) research study found that large-scale job displacement from AI remains limited so far. Although productivity improvements are showing, appearing, reported time savings have not yet consistently translated into higher output, wages, or employment.<sup class="cite"><a href="#ref-3" aria-label="Reference 3">[3]</a></sup> It means that AI is changing work, but a world without human employment remains a prediction rather than an established outcome.</p>
+
+    <h2>If Machines Create Goods, Who Gets It?</h2>
+
+    <p>I know some people say that AI can perform many tasks more efficiently than humans, and this is true, that AI can perform many tasks that humans may take more time than AI. But even if AI creates huge amounts of wealth, goods and services, there is no guarantee that everyone will benefit equally. This question is more about economics than technology. To connect with this, think of the paid plans of ChatGPT. Not everybody has these paid plans. Most people use free plans or cheaper plans of ChatGPT. Result? few get more efficient AI results, while others get general results.</p>
+
+    <p>The same happens with companies and businesses. Let’s say a company owns thousands of AI-powered machines. These machines can produce a huge amount of goods with very little human labor. Of course, the company will earn profit, but its workforce may no longer be needed. If ownership remains concentrated among a small group, that group could receive most of the economic benefits, while others struggle to afford what is produced.</p>
+
+    <p>There was a very useful warning in the 2026 IMF research paper, <em>Aggregate Gains from AI and their Distribution</em>. Using AI users’ data across more than 100 countries, the researchers estimated that the reinforced equivalent of time saved through AI could reach approximately $2.7 trillion annually under their assumptions. But here these gains were distributed unevenly, favoring high-paying occupations and wealthier economies. And this alone represents the estimated value of time saved, not an actual increase in global GDP.<sup class="cite"><a href="#ref-4" aria-label="Reference 4">[4]</a></sup></p>
+
+    <p>The OECD’s 2026 paper, <em>Skills in the AI Age</em>, also says that larger companies are adopting AI faster than many smaller businesses because they have greater financial resources and better access to skilled workers.<sup class="cite"><a href="#ref-5" aria-label="Reference 5">[5]</a></sup> This is how inequality still exists even if AI became AGI or SI. Therefore, even if production becomes abundant, ownership and access could remain major economic problems. After all, economics deals with issues such as inequality and scarcity. Money might become less important for purchasing basic necessities, but it could still matter when people compete for limited resources and opportunities.</p>
+
+    <h2>What About Ambition?</h2>
+
+    <p>Jobs and employment isn’t just about income and stable salaries. It also gives people independence, identity, social connections, and a sense of achievement. If machines perform the most economically necessary tasks, people may need to find new reasons to work towards their goals. Ambition is, however, a different thing. Ambition doesn’t exist because people need money. Think of scientists who pursue discoveries not to earn money, but to bring a change in humanity. Artists create their artwork not to majorly sell their paintings, but to show their creativity to the world. Entrepreneurs build businesses because they want to solve problems. In an AI world, human achievement might become less about earning a salary, but more about creating something meaningful for humanity.</p>
+
+    <h2>Abundance Does Not Mean Equality</h2>
+
+    <p>The fun fact is, in 1930, John Maynard Keynes wrote an essay about <em>Economic Possibilities for our Grandchildren</em>. He explored how technological progress could reduce the amount of work needed to satisfy human needs.<sup class="cite"><a href="#ref-6" aria-label="Reference 6">[6]</a></sup> Almost a century later, his prediction remains relevant, but economic insecurity and inequality have not disappeared.</p>
+
+    <p>So, Elon’s prediction may become possible in some areas, but technological progress alone cannot guarantee it. The future still depends on who owns productive technology, how its benefits are distributed, and whether governments ensure that ordinary people can access the opportunities.</p>
+
+    <p>Ultimately, AI may reduce the importance of jobs and make money less necessary for survival. However, making money irrelevant is such a bigger challenge than making machines capable of doing human work. The real measure of an advanced economy should not simply be how many goods machines can produce, but whether the abundance improves the lives of the people who use it.</p>
+  </article>
+
+  <div class="share-row">
+    <span class="tag-pill">Artificial Intelligence</span>
+    <a class="btn solid" href="https://econforyouth.com/articles"><span>More articles</span></a>
+  </div>
+
+  <!-- ================= REFERENCES ================= -->
+  <section class="references">
+    <h2>References</h2>
+    <ol>
+      <li id="ref-1"><a href="https://www.youtube.com/watch?v=XuoqKYxDHVc" target="_blank" rel="noopener">The Economist. (2026, July 29). <em>The full-length interview with Elon Musk</em> [Video]. YouTube.</a></li>
+      <li id="ref-2"><a href="https://www.imf.org/en/blogs/articles/2024/01/14/ai-will-transform-the-global-economy-lets-make-sure-it-benefits-humanity" target="_blank" rel="noopener">Georgieva, K. (2024, January 14). AI will transform the global economy. Let’s make sure it benefits humanity. <em>International Monetary Fund.</em></a></li>
+      <li id="ref-3"><a href="https://doi.org/10.54394/00034628" target="_blank" rel="noopener">Merola, R., Ernst, E., Samaan, D., del Rio-Chanona, M., &amp; Teutloff, O. (2026, June 1). <em>The impact of GenAI on jobs, productivity and work organization: A review of the empirical evidence.</em> International Labour Organization.</a></li>
+      <li id="ref-4"><a href="https://doi.org/10.5089/9798229051279.001" target="_blank" rel="noopener">Fan, R. Y., &amp; Nguyen, H. M. (2026). <em>Aggregate gains from AI and their distribution: Global evidence from usage data</em> (IMF Working Paper No. 2026/147). International Monetary Fund.</a></li>
+      <li id="ref-5"><a href="https://doi.org/10.1787/972bd15e-en" target="_blank" rel="noopener">Organisation for Economic Co-operation and Development. (2026). <em>Skills in the AI age</em> (OECD Artificial Intelligence Papers No. 60). OECD Publishing.</a></li>
+      <li id="ref-6"><a href="https://www.almendron.com/tribuna/wp-content/uploads/2024/03/intro-and-section-i.pdf" target="_blank" rel="noopener">Keynes, J. M. (1930). <em>Economic possibilities for our grandchildren.</em></a></li>
+    </ol>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="foot-top">
+      <div class="foot-cta">
+        <a href="https://ig.me/m/econforyouth" class="btn solid"><span>DM for collaborations</span></a>
+        <div class="foot-links">
+          <a href="https://econforyouth.com/#about">About</a>
+          <a href="https://econforyouth.com/#mission">Mission</a>
+          <a href="https://econforyouth.com/articles">Articles</a>
+          <a href="https://econforyouth.com/opportunities/volunteer">Volunteer</a>
+          <a href="https://instagram.com/econforyouth">Instagram</a>
+        </div>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>© 2026 Econ For Youth — Student-Led Initiative</span>
+      <span>Exploring Economics Together Through Curiosity</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+
+  function revealPage(){ document.body.classList.add('loaded'); }
+  if (document.fonts && document.fonts.ready) {
+    document.fonts.ready.then(revealPage);
+    setTimeout(revealPage, 600); 
+  } else {
+    revealPage();
+  }
+
+  const nav = document.getElementById('nav');
+  window.addEventListener('scroll', () => {
+    nav.classList.toggle('scrolled', window.scrollY > 40);
+  }, { passive: true });
+
+  const navBurger = document.getElementById('navBurger');
+  const mobileNav = document.getElementById('mobileNav');
+  function closeMobileNav(){
+    navBurger.classList.remove('open');
+    mobileNav.classList.remove('open');
+    navBurger.setAttribute('aria-expanded','false');
+  }
+  navBurger.addEventListener('click', () => {
+    const isOpen = navBurger.classList.toggle('open');
+    mobileNav.classList.toggle('open', isOpen);
+    navBurger.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+  });
+  mobileNav.querySelectorAll('a').forEach(a => {
+    a.addEventListener('click', closeMobileNav);
+  });
+
+  if (window.matchMedia('(hover: hover)').matches) {
+    document.querySelectorAll('.btn').forEach(btn => {
+      btn.addEventListener('mousemove', (e) => {
+        const r = btn.getBoundingClientRect();
+        const x = (e.clientX - r.left - r.width / 2) * 0.18;
+        const y = (e.clientY - r.top - r.height / 2) * 0.3;
+        btn.style.transform = `translate(${x}px, ${y}px)`;
+      });
+      btn.addEventListener('mouseleave', () => { btn.style.transform = 'translate(0,0)'; });
+    });
+  }
+</script>
+</body>
+</html>

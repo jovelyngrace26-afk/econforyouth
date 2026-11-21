@@ -3,6 +3,7 @@
 <head>
   <script async src="https://www.googletagmanager.com/gtm.js?id=GTM-PQZTC753"></script>
 <script>
+  document.documentElement.classList.add('js');
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
@@ -263,6 +264,14 @@
   .articles-grid .post{ width:340px; max-width:100%; border:1px solid var(--line-strong); }
   @media (max-width:900px){ }
   @media (max-width:600px){ .articles-grid .post{ width:100%; } }
+  .js .articles-grid .post{
+    opacity:0; transform:translateY(24px);
+    transition:opacity .6s cubic-bezier(.2,.6,.2,1), transform .6s cubic-bezier(.2,.6,.2,1);
+  }
+  .js .articles-grid .post.in{opacity:1; transform:none;}
+  @media (prefers-reduced-motion:reduce){
+    .js .articles-grid .post{opacity:1; transform:none; transition:none;}
+  }
   .post{
     background:var(--paper);
     padding:28px 22px 26px;
@@ -450,23 +459,24 @@
     <span class="chip" data-filter="behavioral">Behavioral</span>
     <span class="chip" data-filter="environmental">Environmental</span>
     <span class="chip" data-filter="industry">Industry</span>
-    <span class="chip" data-filter="economy">Macroeconomics</span>
+    <span class="chip" data-filter="macroeconomics">Macroeconomics</span>
     <span class="chip" data-filter="society">Society</span>
 
   </div>
 
   <!-- ================= ARTICLES GRID ================= -->
-   <div class="articles-grid reveal">
-    <a class="post post-white" data-tag="macroeconomics" href="written-articles/article-pakistan-economic-revival-from-crisis-to-growth.html">
-      <span class="tag">Macroeconomics</span>
-      <div class="post-image">
-        <img src="" alt="Pakistan economy icon" onerror="this.parentElement.style.display='none'">
-      </div>
-      <h3>Pakistan Economic Revival: From Crisis to Growth</h3>
-      <p class="author">By Asadullah bin Munir</p>
-      <p class="summary">Decades of boom-and-bust cycles, and three reforms in agriculture, taxation and foreign investment that could put Pakistan’s economy back on track.</p>
-      <div class="meta"><span>Nov 17, 2026</span><span>3 min read -></span></div>
-    </a>
+   <div class="articles-grid">
+
+  <a class="post post-white" data-tag="macroeconomics" href="written-articles/article-will-money-still-matter-in-2036.html">
+    <span class="tag">Macroeconomics</span>
+    <div class="post-image">
+      <img src="" alt="AI and money icon" onerror="this.parentElement.style.display='none'">
+    </div>
+    <h3>Will Money Still Matter in 2036? The Economics of an AI World</h3>
+    <p class="author">By Saanvi Aditi</p>
+    <p class="summary">Elon Musk says money won’t matter in 2036. What the evidence on AI, jobs and inequality says about abundance, ownership and ambition.</p>
+    <div class="meta"><span>Nov 21, 2026</span><span>5 min read -></span></div>
+  </a>
 
     <a class="post post-white" data-tag="society" href="written-articles/article-what-impact-can-music-have-on-a-political-scene.html">
       <span class="tag">Society</span>
@@ -671,25 +681,28 @@
     a.addEventListener('click', closeMobileNav);
   });
 
-  // scroll reveal
-  const revealEls = document.querySelectorAll('.reveal');
+// scroll reveal: hero + toolbar + each article card on its own
+const revealEls = document.querySelectorAll('.reveal');
+const cards = document.querySelectorAll('.articles-grid .post');
+
+if (!('IntersectionObserver' in window)) {
+  revealEls.forEach(el => el.classList.add('in'));
+  cards.forEach(el => el.classList.add('in'));
+} else {
   const io = new IntersectionObserver((entries) => {
+    let i = 0;
     entries.forEach(e => {
-      if (e.isIntersecting) {
-        e.target.classList.add('in');
-        io.unobserve(e.target);
-      }
+      if (!e.isIntersecting) return;
+      e.target.style.transitionDelay =
+        e.target.classList.contains('post') ? Math.min(i++, 5) * 70 + 'ms' : '0ms';
+      e.target.classList.add('in');
+      io.unobserve(e.target);
     });
-  }, { threshold: 0.15 });
+  }, { threshold: 0, rootMargin: '0px 0px 60px 0px' });
+
   revealEls.forEach(el => io.observe(el));
-
-  // stagger article grid children slightly
-  document.querySelectorAll('.articles-grid.reveal').forEach(grid => {
-    [...grid.children].forEach((child, i) => {
-      child.style.transitionDelay = (i * 60) + 'ms';
-    });
-  });
-
+  cards.forEach(el => io.observe(el));
+}
   // filter chips: show matching posts with a soft fade
   document.querySelectorAll('.chip').forEach(chip => {
     chip.addEventListener('click', () => {
@@ -719,5 +732,27 @@
     });
   }
 </script>
+
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  const posts = [...document.querySelectorAll('.articles-grid .post')];
+
+  document.querySelectorAll('.chip[data-filter]').forEach(chip => {
+    const filter = chip.dataset.filter;
+    const count = filter === 'all'
+      ? posts.length
+      : posts.filter(p => p.dataset.tag === filter).length;
+
+    let span = chip.querySelector('.filter-count');
+    if (!span) {
+      span = document.createElement('span');
+      span.className = 'filter-count';
+      chip.appendChild(span);
+    }
+    span.textContent = ` (${count})`;
+  });
+});
+</script>
+
 </body>
 </html>
