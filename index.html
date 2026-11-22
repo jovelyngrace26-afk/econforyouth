@@ -564,28 +564,39 @@
     color:#33453b;
     margin:0;
   }
+
+  /* ---------- MOBILE: swipeable row ---------- */
   @media (max-width:900px){
     .expect-row{
       display:flex;
       gap:12px;
       overflow-x:auto;
+      overflow-y:hidden;
       scroll-snap-type:x mandatory;
-      padding:2px 0 8px;
-      -ms-overflow-style:none;
-      scrollbar-width:none;
+      scroll-padding-left:28px;
+      overscroll-behavior-x:contain;
+      -webkit-overflow-scrolling:touch;
+      touch-action:pan-x pan-y;
       margin:0 -28px;
-      padding-left:28px;
-      padding-right:28px;
+      padding:6px 28px 14px;
+      scrollbar-width:none;
+      -ms-overflow-style:none;
     }
     .expect-row::-webkit-scrollbar{ display:none; height:0; }
+    .expect-row::after{ content:""; flex:0 0 16px; }
     .expect-card{
       scroll-snap-align:start;
-      flex:0 0 78%;
+      scroll-snap-stop:always;
+      flex:0 0 76%;
+      max-width:320px;
+      align-items:center;
     }
+    .expect-card:hover{ transform:none; }
+    .expect-card img{ margin-top:0; }
   }
   @media (max-width:540px){
-    .expect-card{ flex-basis:84%; }
-    .expect-card h3{ font-size:1.15rem; }
+    .expect-card{ flex-basis:80%; }
+    .expect-card h3{ font-size:1.1rem; }
     .expect-card p{ font-size:13px; }
   }
 
