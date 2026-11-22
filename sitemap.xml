@@ -115,4 +115,10 @@
     <priority>0.8</priority>
   </url>
 
+  <url>
+    <loc>https://econforyouth.com/articles/written-articles/article-will-money-still-matter-in-2036</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
 </urlset>

@@ -235,10 +235,17 @@
     background: linear-gradient(356deg, rgba(246, 244, 236, 1) 0%, rgba(209, 255, 240, 0.77) 91%, rgba(246, 244, 236, 1) 100%);
   }
   .articles-hero h1{
-    font-size:clamp(1.8rem,4.2vw,3.2rem);
-    line-height:1.15;
+    font-size:clamp(1.9rem,4.4vw,3.3rem);
+    font-weight:700;
+    line-height:1.14;
+    letter-spacing:-.025em;
     margin-top:18px;
-    max-width:26ch;
+    max-width:22ch;
+    color:var(--ink);
+  }
+  .articles-hero h1 .hl{
+    font-style:italic;
+    color:var(--forest);
   }
   .articles-hero p{
     margin-top:22px;
@@ -246,13 +253,44 @@
     font-size:17px;
     color:#33453b;
   }
+  @media (max-width:720px){
+    .articles-hero p{font-size:13px; line-height:1.6; margin-top:16px;}
+  }
 
   /* ---------- FILTERS ---------- */
-  .articles-toolbar{
-    display:flex; gap:10px; flex-wrap:wrap; margin:40px 0 44px;
-    font-family:var(--mono); font-size:12px; text-transform:uppercase; letter-spacing:.05em;
+  .filter-label{
+    margin:40px 0 14px;
+    font-family:var(--mono); font-size:12px; text-transform:uppercase; letter-spacing:.14em;
+    color:var(--ink);
   }
-  .chip{touch-action:manipulation; -webkit-tap-highlight-color:transparent; border:1px solid var(--line-strong); padding:7px 14px; border-radius:0; cursor:pointer; background:transparent; transition:background .25s ease, color .25s ease, border-color .25s ease;}
+  .filter-label + .articles-toolbar{margin-top:0;}
+  .articles-toolbar{
+    display:flex; flex-wrap:nowrap; gap:10px; margin:40px 0 44px;
+    font-family:var(--mono); font-size:12px; text-transform:uppercase; letter-spacing:.05em;
+    /* horizontal scroll, works with touch, trackpad, mouse wheel (shift) and drag */
+    overflow-x:auto; overflow-y:hidden;
+    -webkit-overflow-scrolling:touch;
+    overscroll-behavior-x:contain;
+    scroll-snap-type:x proximity;
+    scrollbar-width:none;            /* Firefox */
+    -ms-overflow-style:none;         /* old Edge/IE */
+    padding:2px 2px 4px;
+    cursor:grab;
+  }
+  .articles-toolbar::-webkit-scrollbar{display:none;}  /* Chrome, Safari, new Edge */
+  .articles-toolbar.dragging{cursor:grabbing; scroll-snap-type:none; user-select:none;}
+  .articles-toolbar.dragging .chip{pointer-events:none;}
+  @media (max-width:720px){
+    /* let the row run edge to edge on small screens */
+    .articles-toolbar{margin-left:-28px; margin-right:-28px; padding-left:28px; padding-right:28px; scroll-padding:0 28px;}
+  }
+  .chip{
+    flex:0 0 auto; white-space:nowrap; scroll-snap-align:start;
+    touch-action:manipulation; -webkit-tap-highlight-color:transparent;
+    border:1px solid var(--line-strong); padding:8px 16px; border-radius:999px;
+    cursor:pointer; background:transparent; user-select:none; -webkit-user-select:none;
+    transition:background .25s ease, color .25s ease, border-color .25s ease;
+  }
   .chip.active, .chip:hover{background:var(--ink); color:var(--paper); border-color:var(--ink);}
   .articles-grid .post.is-hidden{display:none;}
   @keyframes fadeIn{ from{opacity:0; transform:translateY(6px);} to{opacity:1; transform:none;} }
@@ -446,14 +484,15 @@
 <section class="articles-hero">
   <div class="wrap">
     <div class="eyebrow reveal">/ Articles</div>
-    <h1 class="reveal">Is there an economic explanation behind everything around us?</h1>
-    <p class="reveal">Econ For Youth publishes economics articles written by students, for students — covering behaviour and decision making, money and finance, markets and business, policy and society, and sustainability. Economics for youth, explained without the jargon.</p>
+    <h1 class="reveal">Is there an <span class="hl">economic explanation</span> behind everything around us?</h1>
+    <p class="reveal">From everyday decisions to global events, economics shapes more of our world than we often realize. EconForYouth brings together student authors from around the world to publish articles that offer diverse perspectives on economics and the world around us.</p>
   </div>
 </section>
 
 <main class="wrap">
 
   <!-- ================= FILTERS ================= -->
+  <div class="filter-label reveal">Filter —</div>
   <div class="articles-toolbar reveal">
     <span class="chip active" data-filter="all">All</span>
     <span class="chip" data-filter="behavioral">Behavioral</span>
@@ -752,6 +791,46 @@ document.addEventListener('DOMContentLoaded', () => {
     span.textContent = ` (${count})`;
   });
 });
+</script>
+
+<script>
+// make the filter chips scrollable on every device
+(function(){
+  const bar = document.querySelector('.articles-toolbar');
+  if(!bar) return;
+
+  // keep the active chip in view after a tap
+  bar.addEventListener('click', e => {
+    const chip = e.target.closest('.chip');
+    if(chip) chip.scrollIntoView({behavior:'smooth', inline:'center', block:'nearest'});
+  });
+
+  // mouse wheel scrolls the row sideways
+  bar.addEventListener('wheel', e => {
+    if(Math.abs(e.deltaY) > Math.abs(e.deltaX) && bar.scrollWidth > bar.clientWidth){
+      bar.scrollLeft += e.deltaY;
+      e.preventDefault();
+    }
+  }, {passive:false});
+
+  // click-and-drag for mouse users (touch/pen use native scrolling)
+  let down=false, startX=0, startLeft=0, moved=false;
+  bar.addEventListener('pointerdown', e => {
+    if(e.pointerType !== 'mouse') return;
+    down=true; moved=false; startX=e.clientX; startLeft=bar.scrollLeft;
+  });
+  window.addEventListener('pointermove', e => {
+    if(!down) return;
+    const dx = e.clientX - startX;
+    if(Math.abs(dx) > 5){ moved=true; bar.classList.add('dragging'); }
+    if(moved) bar.scrollLeft = startLeft - dx;
+  });
+  window.addEventListener('pointerup', () => {
+    if(!down) return;
+    down=false;
+    setTimeout(() => bar.classList.remove('dragging'), 0);
+  });
+})();
 </script>
 
 </body>
